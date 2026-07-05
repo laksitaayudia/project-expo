@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aplikasi Laundry"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Nama Pelanggan" />
+
+    <EditText
+        android:id="@+id/etBerat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Berat Cucian (kg)"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnHitung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hitung Total" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset" />
+
+    <TextView
+        android:id="@+id/tvHasil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:textSize="18sp" />
+
+</LinearLayout>
