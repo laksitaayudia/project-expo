@@ -3,7 +3,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 
 public class MainController {
 
@@ -68,11 +67,6 @@ public class MainController {
         alert.setContentText(pesan);
         alert.showAndWait();
 
-    }
-
-    public void start(Stage stage) throws Exception {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'start'");
     }
 
 }
