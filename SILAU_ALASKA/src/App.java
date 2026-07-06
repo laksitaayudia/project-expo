@@ -9,7 +9,7 @@ public class App extends Application {
     public void start(Stage stage) throws Exception {
 
         FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("MainController.fxml"));
+                getClass().getResource("/view/MainController.fxml"));
 
         Scene scene = new Scene(loader.load());
 
