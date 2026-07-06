@@ -58,7 +58,7 @@ public class RegistrasiController {
 
     private void kembaliKeLogin(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/MainController.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Registrasi.fxml"));
             Scene scene = new Scene(loader.load());
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -67,7 +67,6 @@ public class RegistrasiController {
 
         } catch (IOException e) {
             e.printStackTrace();
-            showAlert(Alert.AlertType.ERROR, "Error", "Gagal memuat halaman login.");
         }
     }
 
