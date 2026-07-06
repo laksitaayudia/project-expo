@@ -22,7 +22,7 @@ public class MainController {
     @FXML
     private PasswordField txtPassword;
 
-    // Data login sementara (hardcode). Nanti bisa diganti koneksi database.
+    // Data login sementara 
     private static final String USER_PELANGGAN = "pelanggan";
     private static final String PASS_PELANGGAN = "pelanggan123";
 
@@ -76,7 +76,7 @@ public class MainController {
         if (usernameBenar && passwordBenar) {
             showSukses("Login sebagai " + role + " berhasil!");
             System.out.println("Login " + role + " berhasil");
-            // TODO: pindah ke scene/halaman dashboard sesuai role di sini
+            // pindah ke scene/halaman dashboard sesuai role di sini
 
         } else if (!usernameBenar && !passwordBenar) {
             showAlert("Username dan Password salah.");
