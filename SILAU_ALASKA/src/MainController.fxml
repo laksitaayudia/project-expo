@@ -38,7 +38,7 @@
                                 left="30"/>
                     </padding>
 
-                    <Label text="🧺 Laundry Management">
+                    <Label text="Login Akun">
                         <font>
                             <Font size="24"/>
                         </font>
@@ -65,7 +65,7 @@
 
                     <TextField fx:id="txtUsername"
                                promptText="Username"
-                               prefWidth="280"/>
+                               prefWidth="285"/>
 
                     <PasswordField fx:id="txtPassword"
                                    promptText="Password"
@@ -79,7 +79,7 @@
                                    -fx-font-size:15;"
                             onAction="#login"/>
 
-                    <Hyperlink text="Daftar sebagai Pelanggan"
+                    <Hyperlink text="Tidak punya akun? Daftar disini"
                                onAction="#register"/>
 
                 </VBox>
