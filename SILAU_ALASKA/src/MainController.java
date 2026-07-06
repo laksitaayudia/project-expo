@@ -1,12 +1,11 @@
-package DashboardSilau;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-public class Main {
+public class MainController {
 
     @FXML
     private ComboBox<String> cbRole;
@@ -25,16 +24,17 @@ public class Main {
         String password = txtPassword.getText();
 
         if (role == null) {
-            showAlert("Pilih jenis login!");
+            showAlert("Silakan pilih jenis login.");
             return;
         }
 
         if (username.isEmpty() || password.isEmpty()) {
-            showAlert("Username dan Password harus diisi!");
+            showAlert("Username dan Password tidak boleh kosong.");
             return;
         }
 
         switch (role) {
+
             case "Pelanggan":
                 System.out.println("Login Pelanggan");
                 break;
@@ -51,14 +51,28 @@ public class Main {
 
     @FXML
     private void register() {
-        System.out.println("Menu Register");
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Informasi");
+        alert.setHeaderText(null);
+        alert.setContentText("Menu Registrasi Pelanggan");
+        alert.showAndWait();
+
     }
 
     private void showAlert(String pesan) {
+
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Peringatan");
         alert.setHeaderText(null);
         alert.setContentText(pesan);
         alert.showAndWait();
+
     }
+
+    public void start(Stage stage) throws Exception {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'start'");
+    }
+
 }
