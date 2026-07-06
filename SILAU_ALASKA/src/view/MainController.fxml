@@ -7,87 +7,77 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="500.0"
-            prefWidth="800.0"
-            xmlns="http://javafx.com/javafx/9"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="MainController"> 
+<StackPane prefHeight="500.0"
+           prefWidth="800.0"
+           style="-fx-background-color:#E3F2FD;"
+           xmlns="http://javafx.com/javafx/9"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="MainController">
 
     <children>
 
-        <Pane prefHeight="500.0"
-              prefWidth="800.0"
-              style="-fx-background-color:#E3F2FD;">
+        <VBox fx:id="cardLogin"
+              alignment="CENTER"
+              spacing="15"
+              maxWidth="360"
+              maxHeight="430"
+              style="-fx-background-color:white;
+                     -fx-background-radius:15;
+                     -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.2),15,0,0,5);">
 
-            <children>
+            <padding>
+                <Insets top="25"
+                        right="30"
+                        bottom="25"
+                        left="30"/>
+            </padding>
 
-                <VBox alignment="CENTER"
-                      layoutX="220"
-                      layoutY="55"
-                      prefHeight="390"
-                      prefWidth="360"
-                      spacing="15"
-                      style="-fx-background-color:white;
-                             -fx-background-radius:15;
-                             -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.2),15,0,0,5);">
+            <Label text="Login Akun">
+                <font>
+                    <Font size="24"/>
+                </font>
+            </Label>
 
-                    <padding>
-                        <Insets top="25"
-                                right="30"
-                                bottom="25"
-                                left="30"/>
-                    </padding>
+            <Label text="Silakan Login"/>
 
-                    <Label text="Login Akun">
-                        <font>
-                            <Font size="24"/>
-                        </font>
-                    </Label>
+            <Separator/>
 
-                    <Label text="Silakan Login"/>
+            <Label text="Login Sebagai"/>
 
-                    <Separator/>
+            <ComboBox fx:id="cbRole"
+                      prefWidth="280">
 
-                    <Label text="Login Sebagai"/>
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Pelanggan"/>
+                        <String fx:value="Karyawan"/>
+                        <String fx:value="Owner"/>
+                    </FXCollections>
+                </items>
 
-                    <ComboBox fx:id="cbRole"
-                              prefWidth="280">
+            </ComboBox>
 
-                        <items>
-                            <FXCollections fx:factory="observableArrayList">
-                                <String fx:value="Pelanggan"/>
-                                <String fx:value="Karyawan"/>
-                                <String fx:value="Owner"/>
-                            </FXCollections>
-                        </items>
+            <TextField fx:id="txtUsername"
+                       promptText="Username"
+                       prefWidth="285"/>
 
-                    </ComboBox>
+            <PasswordField fx:id="txtPassword"
+                           promptText="Password"
+                           prefWidth="280"/>
 
-                    <TextField fx:id="txtUsername"
-                               promptText="Username"
-                               prefWidth="285"/>
+            <Button text="LOGIN"
+                    prefWidth="280"
+                    prefHeight="40"
+                    style="-fx-background-color:#2196F3;
+                           -fx-text-fill:white;
+                           -fx-font-size:15;"
+                    onAction="#login"/>
 
-                    <PasswordField fx:id="txtPassword"
-                                   promptText="Password"
-                                   prefWidth="280"/>
+            <Hyperlink text="Tidak punya akun? Daftar disini"
+                       onAction="#register"/>
 
-                    <Button text="LOGIN"
-                            prefWidth="280"
-                            prefHeight="40"
-                            style="-fx-background-color:#2196F3;
-                                   -fx-text-fill:white;
-                                   -fx-font-size:15;"
-                            onAction="#login"/>
-
-                    <Hyperlink text="Tidak punya akun? Daftar disini"
-                               onAction="#register"/>
-
-                </VBox>
-
-            </children>
-
-        </Pane>
+        </VBox>
 
     </children>
 
-</AnchorPane>
+</StackPane>

@@ -16,7 +16,7 @@ public class App extends Application {
         stage.setTitle("SILAU");
 
         stage.setScene(scene);
-        stage.setResizable(false);
+        stage.setResizable(true);
         stage.show();
     }
 
