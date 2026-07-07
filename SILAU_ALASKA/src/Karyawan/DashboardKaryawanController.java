@@ -26,7 +26,8 @@ public class DashboardKaryawanController {
     @FXML private Button btnKeluar;
 
     @FXML private ScrollPane scrollDashboard;
-    @FXML private Parent pesananContent;
+
+    @FXML private Parent pesanan;
     @FXML private PesananController pesananController;
 
     @FXML private Label lblNamaUser;
@@ -124,8 +125,8 @@ public class DashboardKaryawanController {
         setActive(btnDashboard);
         scrollDashboard.setVisible(true);
         scrollDashboard.setManaged(true);
-        pesananContent.setVisible(false);
-        pesananContent.setManaged(false);
+        pesanan.setVisible(false);
+        pesanan.setManaged(false);
     }
 
     @FXML
@@ -133,8 +134,8 @@ public class DashboardKaryawanController {
         setActive(btnPesanan);
         scrollDashboard.setVisible(false);
         scrollDashboard.setManaged(false);
-        pesananContent.setVisible(true);
-        pesananContent.setManaged(true);
+        pesanan.setVisible(true);
+        pesanan.setManaged(true);
     }
 
     @FXML private void showTransaksi() { setActive(btnTransaksi); }
