@@ -14,11 +14,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<StackPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #6495ed;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.LoginController">
+<StackPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #6495ed;"
+    xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="Login.LoginController">
 
     <children>
 
-        <VBox fx:id="cardLogin" alignment="CENTER" maxHeight="430" maxWidth="360" spacing="15" style="-fx-background-color:white;                      -fx-background-radius:15;                      -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.2),15,0,0,5);">
+        <VBox fx:id="cardLogin" alignment="CENTER" maxHeight="350.0" maxWidth="320" spacing="8"
+            style="-fx-background-color:white;                      -fx-background-radius:15;                        -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.2),15,0,0,5);">
 
             <padding>
                 <Insets bottom="25" left="30" right="30" top="25" />
@@ -52,7 +55,9 @@
 
             <PasswordField fx:id="txtPassword" prefWidth="280" promptText="Password" />
 
-            <Button onAction="#login" prefHeight="40" prefWidth="280" style="-fx-background-color:#2196F3;                            -fx-text-fill:white;                            -fx-font-size:15;" text="LOGIN" />
+            <Button onAction="#login" prefHeight="40" prefWidth="280"
+                style="-fx-background-color:#2196F3;                            -fx-text-fill:white;                            -fx-font-size:15;"
+                text="LOGIN" />
 
             <Hyperlink onAction="#register" text="Tidak punya akun? Daftar disini" />
 

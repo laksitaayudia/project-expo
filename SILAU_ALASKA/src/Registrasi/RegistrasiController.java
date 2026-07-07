@@ -18,6 +18,15 @@ public class RegistrasiController {
     private TextField txtNama;
 
     @FXML
+    private TextField txtTelepon;
+
+    @FXML
+    private TextField txtEmail;
+
+    @FXML
+    private TextField txtAlamat;
+
+    @FXML
     private TextField txtUsername;
 
     @FXML
@@ -30,11 +39,15 @@ public class RegistrasiController {
     private void daftar(ActionEvent event) {
 
         String nama = txtNama.getText();
+        String telepon = txtTelepon.getText();
+        String email = txtEmail.getText();
+        String alamat = txtAlamat.getText();
         String username = txtUsername.getText();
         String password = txtPassword.getText();
         String konfirmasi = txtKonfirmasi.getText();
 
-        if (nama.isEmpty() || username.isEmpty() || password.isEmpty() || konfirmasi.isEmpty()) {
+        if (nama.isEmpty() || telepon.isEmpty() || email.isEmpty() || alamat.isEmpty()
+                || username.isEmpty() || password.isEmpty() || konfirmasi.isEmpty()) {
             showAlert(Alert.AlertType.WARNING, "Peringatan", "Semua kolom wajib diisi.");
             return;
         }
@@ -44,7 +57,7 @@ public class RegistrasiController {
             return;
         }
 
-        // simpan data (nama, username, password) di sini.
+        // simpan data (nama, telepon, email, alamat, username, password) di sini.
 
         showAlert(Alert.AlertType.INFORMATION, "Berhasil", "Pendaftaran berhasil! Silakan login.");
 
