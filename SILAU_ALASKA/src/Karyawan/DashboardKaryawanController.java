@@ -100,22 +100,7 @@ public class DashboardKaryawanController {
                     return;
                 }
                 setText(status);
-                String warna;
-                switch (status) {
-                    case "SELESAI":
-                        warna = "-fx-background-color:#d1fae5; -fx-text-fill:#059669;";
-                        break;
-                    case "DICUCI":
-                        warna = "-fx-background-color:#dbeafe; -fx-text-fill:#2196F3;";
-                        break;
-                    case "MENUNGGU":
-                        warna = "-fx-background-color:#fef3c7; -fx-text-fill:#d97706;";
-                        break;
-                    default:
-                        warna = "-fx-background-color:#f1f5f9; -fx-text-fill:#64748b;";
-                }
-                setStyle(warna + " -fx-background-radius:12; -fx-font-size:11; -fx-font-weight:bold; " +
-                          "-fx-padding:4 12; -fx-alignment:CENTER;");
+                setStyle("-fx-text-fill:black; -fx-font-size:12; -fx-font-weight:bold;");
             }
         });
     }
