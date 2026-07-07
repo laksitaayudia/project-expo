@@ -21,8 +21,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-import Karyawan.Transaksi.TransaksiController;
-
 public class DashboardKaryawanController {
 
     @FXML private Button btnDashboard;
@@ -35,9 +33,6 @@ public class DashboardKaryawanController {
 
     @FXML private Parent pesanan;
     @FXML private PesananController pesananController;
-
-    @FXML private Parent transaksi;
-    @FXML private TransaksiController transaksiController;
 
     @FXML private Label lblNamaUser;
     @FXML private Label lblInisial;
@@ -70,7 +65,6 @@ public class DashboardKaryawanController {
         setActive(btnDashboard);
 
         pesananController.setOnDataChanged(this::refreshTampilan);
-        transaksiController.setOnDataChanged(this::refreshTampilan);
 
         setupTabelDashboard();
         tabelPesanan.setItems(Data.getDaftarPesanan());
@@ -199,17 +193,7 @@ public class DashboardKaryawanController {
         pesanan.setManaged(true);
     }
 
-    @FXML
-    private void showTransaksi() {
-        setActive(btnTransaksi);
-        scrollDashboard.setVisible(false);
-        scrollDashboard.setManaged(false);
-        pesanan.setVisible(false);
-        pesanan.setManaged(false);
-        transaksi.setVisible(true);
-        transaksi.setManaged(true);
-    }
-    
+    @FXML private void showTransaksi() { setActive(btnTransaksi); }
     @FXML private void showKomplain() { setActive(btnKomplain); }
 
     private void setActive(Button aktif) {

@@ -175,7 +175,6 @@
             </ScrollPane>
 
             <fx:include fx:id="pesanan" source="Pesanan.fxml" visible="false" managed="false"/>
-            <fx:include source="Transaksi.fxml" fx:id="transaksi" />
 
         </StackPane>
     </center>
