@@ -25,4 +25,57 @@ public class Data {
     public static void hapusPesanan(int id) {
         daftarPesanan.removeIf(item -> item.getId() == id);
     }
+
+    private static final ObservableList<TransaksiItem> daftarTransaksi =
+                FXCollections.observableArrayList(
+
+                new TransaksiItem(
+                        "TRX001",
+                        "PSN001",
+                        "Budi Santoso",
+                        "Rp35.000",
+                        "Sudah Bayar",
+                        "Cash",
+                        "12/05/2025"),
+
+                new TransaksiItem(
+                        "TRX002",
+                        "PSN002",
+                        "Siti Aminah",
+                        "Rp50.000",
+                        "Belum Bayar",
+                        "-",
+                        "-"),
+
+                new TransaksiItem(
+                        "TRX003",
+                        "PSN003",
+                        "Andi Wijaya",
+                        "Rp42.000",
+                        "Sudah Bayar",
+                        "Transfer",
+                        "13/05/2025"),
+
+                new TransaksiItem(
+                        "TRX004",
+                        "PSN004",
+                        "Rina Kartika",
+                        "Rp45.000",
+                        "Sudah Bayar",
+                        "QRIS",
+                        "14/05/2025")
+        );
+
+    public static ObservableList<TransaksiItem> getDaftarTransaksi() {
+        return daftarTransaksi;
+    }
+
+    public static void tambahTransaksi(TransaksiItem transaksi) {
+        daftarTransaksi.add(transaksi);
+    }
+
+    public static void hapusTransaksi(String idTransaksi) {
+        daftarTransaksi.removeIf(
+                item -> item.getIdTransaksi().equals(idTransaksi));
+    }
 }
