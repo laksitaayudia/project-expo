@@ -12,10 +12,16 @@ import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TableCell;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+
+import Karyawan.Transaksi.TransaksiController;
 
 public class DashboardKaryawanController {
 
@@ -30,6 +36,9 @@ public class DashboardKaryawanController {
     @FXML private Parent pesanan;
     @FXML private PesananController pesananController;
 
+    @FXML private Parent transaksi;
+    @FXML private TransaksiController transaksiController;
+
     @FXML private Label lblNamaUser;
     @FXML private Label lblInisial;
 
@@ -39,6 +48,14 @@ public class DashboardKaryawanController {
     @FXML private Label lblTotalSaya;
 
     @FXML private BarChart<String, Number> chartPesanan;
+
+    @FXML private TableView<PesananItem> tabelPesanan;
+    @FXML private TableColumn<PesananItem, Integer> colId;
+    @FXML private TableColumn<PesananItem, String> colPelanggan;
+    @FXML private TableColumn<PesananItem, String> colLayanan;
+    @FXML private TableColumn<PesananItem, Double> colBerat;
+    @FXML private TableColumn<PesananItem, Integer> colBiaya;
+    @FXML private TableColumn<PesananItem, String> colStatus;
 
     private static final String STYLE_AKTIF =
             "-fx-background-color:#6495ed; -fx-text-fill:white; -fx-font-size:13; " +
@@ -53,8 +70,50 @@ public class DashboardKaryawanController {
         setActive(btnDashboard);
 
         pesananController.setOnDataChanged(this::refreshTampilan);
+        transaksiController.setOnDataChanged(this::refreshTampilan);
+
+        setupTabelDashboard();
+        tabelPesanan.setItems(Data.getDaftarPesanan());
 
         refreshTampilan();
+    }
+
+    private void setupTabelDashboard() {
+        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        colPelanggan.setCellValueFactory(new PropertyValueFactory<>("pelanggan"));
+        colLayanan.setCellValueFactory(new PropertyValueFactory<>("layanan"));
+        colBerat.setCellValueFactory(new PropertyValueFactory<>("berat"));
+        colBiaya.setCellValueFactory(new PropertyValueFactory<>("biaya"));
+        colStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
+
+        colId.setCellFactory(col -> new TableCell<PesananItem, Integer>() {
+            @Override protected void updateItem(Integer value, boolean empty) {
+                super.updateItem(value, empty);
+                setText(empty || value == null ? null : "#" + value);
+            }
+        });
+
+        colBerat.setCellFactory(col -> new TableCell<PesananItem, Double>() {
+            @Override protected void updateItem(Double value, boolean empty) {
+                super.updateItem(value, empty);
+                setText(empty || value == null ? null : String.format("%.1f kg", value));
+            }
+        });
+
+        colBiaya.setCellFactory(col -> new TableCell<PesananItem, Integer>() {
+            @Override protected void updateItem(Integer value, boolean empty) {
+                super.updateItem(value, empty);
+                setText(empty || value == null ? null : String.format("Rp %,d", value).replace(",", "."));
+            }
+        });
+
+        colStatus.setCellFactory(col -> new TableCell<PesananItem, String>() {
+            @Override protected void updateItem(String value, boolean empty) {
+                super.updateItem(value, empty);
+                setText(value);
+                setStyle("-fx-text-fill:black; -fx-font-size:12; -fx-font-weight:bold;");
+            }
+        });
     }
 
     private void refreshTampilan() {
@@ -68,6 +127,8 @@ public class DashboardKaryawanController {
         lblDicuci.setText(String.valueOf(jumlahDicuci));
         lblSelesai.setText(String.valueOf(jumlahSelesai));
         lblTotalSaya.setText(String.valueOf(data.size()));
+
+        tabelPesanan.refresh();
 
         XYChart.Series<String, Number> series = new XYChart.Series<>();
         series.setName("Pesanan");
@@ -138,7 +199,17 @@ public class DashboardKaryawanController {
         pesanan.setManaged(true);
     }
 
-    @FXML private void showTransaksi() { setActive(btnTransaksi); }
+    @FXML
+    private void showTransaksi() {
+        setActive(btnTransaksi);
+        scrollDashboard.setVisible(false);
+        scrollDashboard.setManaged(false);
+        pesanan.setVisible(false);
+        pesanan.setManaged(false);
+        transaksi.setVisible(true);
+        transaksi.setManaged(true);
+    }
+    
     @FXML private void showKomplain() { setActive(btnKomplain); }
 
     private void setActive(Button aktif) {
