@@ -58,7 +58,7 @@ public class RegistrasiController {
 
     private void kembaliKeLogin(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Registrasi.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Login/Login.fxml"));
             Scene scene = new Scene(loader.load());
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
