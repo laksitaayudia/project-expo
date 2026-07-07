@@ -3,78 +3,58 @@
 <?import java.lang.String?>
 <?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<StackPane prefHeight="500.0"
-           prefWidth="800.0"
-           style="-fx-background-color:#E3F2FD;"
-           xmlns="http://javafx.com/javafx/9"
-           xmlns:fx="http://javafx.com/fxml"
-           fx:controller="Login.LoginController">
+<StackPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #6495ed;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.LoginController">
 
     <children>
 
-        <VBox fx:id="cardLogin"
-              alignment="CENTER"
-              spacing="15"
-              maxWidth="360"
-              maxHeight="430"
-              style="-fx-background-color:white;
-                     -fx-background-radius:15;
-                     -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.2),15,0,0,5);">
+        <VBox fx:id="cardLogin" alignment="CENTER" maxHeight="430" maxWidth="360" spacing="15" style="-fx-background-color:white;                      -fx-background-radius:15;                      -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.2),15,0,0,5);">
 
             <padding>
-                <Insets top="25"
-                        right="30"
-                        bottom="25"
-                        left="30"/>
+                <Insets bottom="25" left="30" right="30" top="25" />
             </padding>
 
-            <Label text="Login Akun">
+            <Label text="SILAU">
                 <font>
-                    <Font size="24"/>
+                    <Font name="System Bold" size="24.0" />
                 </font>
             </Label>
 
-            <Label text="Silakan Login"/>
+            <Label text="Silakan Login" />
 
-            <Separator/>
+            <Separator />
 
-            <Label text="Login Sebagai"/>
+            <Label text="Login Sebagai" />
 
-            <ComboBox fx:id="cbRole"
-                      prefWidth="280">
+            <ComboBox fx:id="cbRole" prefHeight="25.0" prefWidth="302.0">
 
                 <items>
                     <FXCollections fx:factory="observableArrayList">
-                        <String fx:value="Pelanggan"/>
-                        <String fx:value="Karyawan"/>
-                        <String fx:value="Owner"/>
+                        <String fx:value="Pelanggan" />
+                        <String fx:value="Karyawan" />
+                        <String fx:value="Owner" />
                     </FXCollections>
                 </items>
 
             </ComboBox>
 
-            <TextField fx:id="txtUsername"
-                       promptText="Username"
-                       prefWidth="285"/>
+            <TextField fx:id="txtUsername" prefWidth="285" promptText="Username" />
 
-            <PasswordField fx:id="txtPassword"
-                           promptText="Password"
-                           prefWidth="280"/>
+            <PasswordField fx:id="txtPassword" prefWidth="280" promptText="Password" />
 
-            <Button text="LOGIN"
-                    prefWidth="280"
-                    prefHeight="40"
-                    style="-fx-background-color:#2196F3;
-                           -fx-text-fill:white;
-                           -fx-font-size:15;"
-                    onAction="#login"/>
+            <Button onAction="#login" prefHeight="40" prefWidth="280" style="-fx-background-color:#2196F3;                            -fx-text-fill:white;                            -fx-font-size:15;" text="LOGIN" />
 
-            <Hyperlink text="Tidak punya akun? Daftar disini"
-                       onAction="#register"/>
+            <Hyperlink onAction="#register" text="Tidak punya akun? Daftar disini" />
 
         </VBox>
 

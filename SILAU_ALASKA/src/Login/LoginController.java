@@ -105,7 +105,7 @@ public class LoginController {
     private void register(ActionEvent event) {
 
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Registrasi.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Registrasi/Registrasi.fxml"));
             Parent root = loader.load();
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

@@ -1,4 +1,4 @@
-package controller;
+package Registrasi;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
