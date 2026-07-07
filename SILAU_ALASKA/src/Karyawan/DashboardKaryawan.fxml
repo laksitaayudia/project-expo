@@ -1,215 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="900.0"
-            prefWidth="1362.0"
-            xmlns="http://javafx.com/javafx/9"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="karyawan.DashboardKaryawanController">
+<BorderPane prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Karyawan.DashboardKaryawanController">
 
     <left>
-        <VBox prefWidth="260"
-              style="-fx-background-color:#0f172a;"
-              BorderPane.alignment="CENTER">
+        <VBox prefWidth="240" style="-fx-background-color:#6495ed;" BorderPane.alignment="CENTER">
 
             <children>
 
-                <!-- Logo / Brand -->
-                <HBox alignment="CENTER_LEFT" spacing="12">
-                    <padding><Insets top="24" right="20" bottom="20" left="20"/></padding>
+                <Label style="-fx-text-fill:white;" text="SILAU">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="4" left="20" right="20" top="25" />
+                    </padding>
+                </Label>
 
-                    <StackPane style="-fx-background-color:#2563eb; -fx-background-radius:12;"
-                               prefWidth="46" prefHeight="46">
-                        <Label text="👕" style="-fx-font-size:20;"/>
-                    </StackPane>
+                <Label style="-fx-text-fill:#dbe6fb; -fx-font-size:11;" text="Laundry System">
+                    <padding>
+                        <Insets bottom="16" left="20" />
+                    </padding>
+                </Label>
 
-                    <VBox spacing="1">
-                        <Label text="SILAU" style="-fx-text-fill:white; -fx-font-size:16; -fx-font-weight:bold;"/>
-                        <Label text="Laundry System" style="-fx-text-fill:#94a3b8; -fx-font-size:11;"/>
-                    </VBox>
-                </HBox>
+                <Separator style="-fx-background-color:#89a9ef;" />
 
-                <Separator style="-fx-background-color:#1e293b;"/>
-
-                <!-- Menu -->
                 <VBox spacing="4">
-                    <padding><Insets top="20" right="14" bottom="10" left="14"/></padding>
+                    <padding>
+                        <Insets bottom="10" left="12" right="12" top="18" />
+                    </padding>
 
-                    <Label text="MENU" style="-fx-text-fill:#64748b; -fx-font-size:11; -fx-font-weight:bold;">
-                        <padding><Insets left="10" bottom="8"/></padding>
+                    <Label style="-fx-text-fill:#dbe6fb; -fx-font-size:11; -fx-font-weight:bold;" text="MENU">
+                        <padding><Insets bottom="8" left="8" /></padding>
                     </Label>
 
-                    <Button fx:id="btnDashboard" text="🏠   Dashboard" onAction="#showDashboard"
-                            maxWidth="Infinity" alignment="CENTER_LEFT"
-                            style="-fx-background-color:#2563eb; -fx-text-fill:white; -fx-font-size:13;
-                                   -fx-font-weight:bold; -fx-padding:10 12; -fx-background-radius:8; -fx-cursor:hand;"/>
+                    <Button fx:id="btnDashboard" alignment="CENTER_LEFT" maxWidth="Infinity" onAction="#showDashboard" style="-fx-background-color:white; -fx-text-fill:#2196F3; -fx-font-size:13;                                    -fx-font-weight:bold; -fx-padding:10 12; -fx-background-radius:8; -fx-cursor:hand;" text="Dashboard" />
 
-                    <Button fx:id="btnPesanan" text="📋   Manajemen Pesanan" onAction="#showPesanan"
-                            maxWidth="Infinity" alignment="CENTER_LEFT"
-                            style="-fx-background-color:transparent; -fx-text-fill:#cbd5e1; -fx-font-size:13;
-                                   -fx-padding:10 12; -fx-background-radius:8; -fx-cursor:hand;"/>
+                    <Button fx:id="btnPesanan" alignment="CENTER_LEFT" maxWidth="Infinity" onAction="#showPesanan" style="-fx-background-color:transparent; -fx-text-fill:white; -fx-font-size:13;                                    -fx-padding:10 12; -fx-background-radius:8; -fx-cursor:hand;" text="Manajemen Pesanan" />
 
-                    <Button fx:id="btnTransaksi" text="💳   Data Transaksi" onAction="#showTransaksi"
-                            maxWidth="Infinity" alignment="CENTER_LEFT"
-                            style="-fx-background-color:transparent; -fx-text-fill:#cbd5e1; -fx-font-size:13;
-                                   -fx-padding:10 12; -fx-background-radius:8; -fx-cursor:hand;"/>
+                    <Button fx:id="btnTransaksi" alignment="CENTER_LEFT" maxWidth="Infinity" onAction="#showTransaksi" style="-fx-background-color:transparent; -fx-text-fill:white; -fx-font-size:13;                                    -fx-padding:10 12; -fx-background-radius:8; -fx-cursor:hand;" text="Data Transaksi" />
 
-                    <Button fx:id="btnKomplain" text="⚠   Penanganan Komplain" onAction="#showKomplain"
-                            maxWidth="Infinity" alignment="CENTER_LEFT"
-                            style="-fx-background-color:transparent; -fx-text-fill:#cbd5e1; -fx-font-size:13;
-                                   -fx-padding:10 12; -fx-background-radius:8; -fx-cursor:hand;"/>
+                    <Button fx:id="btnKomplain" alignment="CENTER_LEFT" maxWidth="Infinity" onAction="#showKomplain" style="-fx-background-color:transparent; -fx-text-fill:white; -fx-font-size:13;                                    -fx-padding:10 12; -fx-background-radius:8; -fx-cursor:hand;" text="Penanganan Komplain" />
 
                 </VBox>
 
-                <Region VBox.vgrow="ALWAYS"/>
+                <Region VBox.vgrow="ALWAYS" />
 
-                <Separator style="-fx-background-color:#1e293b;"/>
+                <Separator style="-fx-background-color:#89a9ef;" />
 
-                <!-- User Profile -->
-                <HBox alignment="CENTER_LEFT" spacing="10">
-                    <padding><Insets top="16" right="16" bottom="10" left="16"/></padding>
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                    <padding><Insets bottom="10" left="16" right="16" top="16" /></padding>
 
                     <StackPane>
-                        <Circle radius="18" fill="#2563eb"/>
-                        <Label fx:id="lblInisial" text="A" style="-fx-text-fill:white; -fx-font-weight:bold;"/>
+                        <Circle fill="white" radius="16" />
+                        <Label fx:id="lblInisial" style="-fx-text-fill:#2196F3; -fx-font-weight:bold;" text="A" />
                     </StackPane>
 
                     <VBox spacing="1">
-                        <Label fx:id="lblNamaUser" text="Andi Pratama"
-                               style="-fx-text-fill:white; -fx-font-size:12; -fx-font-weight:bold;"/>
-                        <Label fx:id="lblRoleUser" text="Karyawan"
-                               style="-fx-text-fill:#64748b; -fx-font-size:11;"/>
+                        <Label fx:id="lblNamaUser" style="-fx-text-fill:white; -fx-font-size:12; -fx-font-weight:bold;" text="(Nama Karyawan)" />
+                        <Label fx:id="lblRoleUser" style="-fx-text-fill:#dbe6fb; -fx-font-size:11;" text="Karyawan" />
                     </VBox>
                 </HBox>
 
-                <Button fx:id="btnKeluar" text="⎋   Keluar" onAction="#keluar"
-                        maxWidth="Infinity" alignment="CENTER_LEFT"
-                        style="-fx-background-color:transparent; -fx-text-fill:#94a3b8; -fx-font-size:13;
-                               -fx-padding:10 16 20 16; -fx-cursor:hand;"/>
+                <Button fx:id="btnKeluar" alignment="CENTER_LEFT" maxWidth="Infinity" mnemonicParsing="false" onAction="#keluar" style="-fx-background-color:#dc2626; -fx-text-fill:white; -fx-font-size:13;                                -fx-font-weight:bold; -fx-background-radius:8; -fx-cursor:hand;" text="Keluar" textFill="WHITE">
+                    <padding><Insets bottom="10" left="16" right="16" top="10" /></padding>
+                    <VBox.margin><Insets bottom="16" left="16" right="16" /></VBox.margin>
+                </Button>
 
             </children>
         </VBox>
     </left>
 
     <center>
-        <ScrollPane fitToWidth="true"
-                    style="-fx-background:#f1f5f9; -fx-background-color:#f1f5f9;">
+        <ScrollPane fitToWidth="true" style="-fx-background:#f1f5f9; -fx-background-color:#f1f5f9;">
             <content>
-                <VBox spacing="24" style="-fx-background-color:#f1f5f9;">
-                    <padding><Insets top="30" right="35" bottom="30" left="35"/></padding>
+                <VBox spacing="20" style="-fx-background-color:#f1f5f9;">
+                    <padding><Insets bottom="28" left="30" right="30" top="28" /></padding>
 
-                    <!-- Header -->
                     <VBox spacing="4">
-                        <Label fx:id="lblSelamatDatang" text="Selamat Datang, Andi Pratama"
-                               style="-fx-font-size:26; -fx-font-weight:bold; -fx-text-fill:#0f172a;"/>
-                        <Label text="Kelola pesanan dan transaksi pelanggan"
-                               style="-fx-font-size:13; -fx-text-fill:#64748b;"/>
+                        <Label fx:id="lblSelamatDatang" text="Selamat Datang, Andi Pratama">
+                            <font><Font name="System Bold" size="22.0" /></font>
+                        </Label>
+                        <Label style="-fx-font-size:12; -fx-text-fill:#64748b;" text="Kelola pesanan dan transaksi pelanggan" />
                     </VBox>
 
-                    <!-- Stat Cards Row 1 -->
-                    <HBox spacing="20">
+                    <HBox spacing="16">
 
-                        <VBox spacing="12" prefWidth="420"
-                              style="-fx-background-color:white; -fx-background-radius:15;
-                                     -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.08),20,0,0,6);">
-                            <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+                        <VBox prefWidth="360" spacing="10" style="-fx-background-color:white; -fx-background-radius:15;                                      -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.2),15,0,0,5);">
+                            <padding><Insets bottom="18" left="18" right="18" top="18" /></padding>
 
-                            <HBox spacing="12" alignment="CENTER_LEFT">
-                                <StackPane prefWidth="40" prefHeight="40"
-                                           style="-fx-background-color:#f59e0b; -fx-background-radius:10;">
-                                    <Label text="⏰" style="-fx-font-size:16;"/>
-                                </StackPane>
-                                <Label text="MENUNGGU" style="-fx-font-size:11; -fx-text-fill:#64748b; -fx-font-weight:bold;"/>
-                            </HBox>
-
-                            <Label fx:id="lblMenunggu" text="2" style="-fx-font-size:32; -fx-font-weight:bold; -fx-text-fill:#0f172a;"/>
-                            <Label text="Perlu dikonfirmasi" style="-fx-font-size:12; -fx-text-fill:#94a3b8;"/>
+                            <Label style="-fx-font-size:11; -fx-text-fill:#64748b; -fx-font-weight:bold;" text="MENUNGGU" />
+                            <Label fx:id="lblMenunggu" style="-fx-font-size:28; -fx-font-weight:bold;" text="2" />
+                            <Label style="-fx-font-size:11; -fx-text-fill:#94a3b8;" text="Perlu dikonfirmasi" />
                         </VBox>
 
-                        <VBox spacing="12" prefWidth="420"
-                              style="-fx-background-color:white; -fx-background-radius:15;
-                                     -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.08),20,0,0,6);">
-                            <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+                        <VBox prefWidth="360" spacing="10" style="-fx-background-color:white; -fx-background-radius:15;                                      -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.2),15,0,0,5);">
+                            <padding><Insets bottom="18" left="18" right="18" top="18" /></padding>
 
-                            <HBox spacing="12" alignment="CENTER_LEFT">
-                                <StackPane prefWidth="40" prefHeight="40"
-                                           style="-fx-background-color:#2563eb; -fx-background-radius:10;">
-                                    <Label text="👕" style="-fx-font-size:16;"/>
-                                </StackPane>
-                                <Label text="SEDANG DICUCI" style="-fx-font-size:11; -fx-text-fill:#64748b; -fx-font-weight:bold;"/>
-                            </HBox>
-
-                            <Label fx:id="lblDicuci" text="1" style="-fx-font-size:32; -fx-font-weight:bold; -fx-text-fill:#0f172a;"/>
-                            <Label text="Dalam proses" style="-fx-font-size:12; -fx-text-fill:#94a3b8;"/>
+                            <Label style="-fx-font-size:11; -fx-text-fill:#64748b; -fx-font-weight:bold;" text="SEDANG DICUCI" />
+                            <Label fx:id="lblDicuci" style="-fx-font-size:28; -fx-font-weight:bold;" text="1" />
+                            <Label style="-fx-font-size:11; -fx-text-fill:#94a3b8;" text="Dalam proses" />
                         </VBox>
 
                     </HBox>
 
-                    <!-- Stat Cards Row 2 -->
-                    <HBox spacing="20">
+                    <HBox spacing="16">
 
-                        <VBox spacing="12" prefWidth="420"
-                              style="-fx-background-color:white; -fx-background-radius:15;
-                                     -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.08),20,0,0,6);">
-                            <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+                        <VBox prefWidth="360" spacing="10" style="-fx-background-color:white; -fx-background-radius:15;                                      -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.2),15,0,0,5);">
+                            <padding><Insets bottom="18" left="18" right="18" top="18" /></padding>
 
-                            <HBox spacing="12" alignment="CENTER_LEFT">
-                                <StackPane prefWidth="40" prefHeight="40"
-                                           style="-fx-background-color:#10b981; -fx-background-radius:10;">
-                                    <Label text="✓" style="-fx-font-size:16; -fx-text-fill:white;"/>
-                                </StackPane>
-                                <Label text="SELESAI" style="-fx-font-size:11; -fx-text-fill:#64748b; -fx-font-weight:bold;"/>
-                            </HBox>
-
-                            <Label fx:id="lblSelesai" text="1" style="-fx-font-size:32; -fx-font-weight:bold; -fx-text-fill:#0f172a;"/>
-                            <Label text="Siap diambil" style="-fx-font-size:12; -fx-text-fill:#94a3b8;"/>
+                            <Label style="-fx-font-size:11; -fx-text-fill:#64748b; -fx-font-weight:bold;" text="SELESAI" />
+                            <Label fx:id="lblSelesai" style="-fx-font-size:28; -fx-font-weight:bold;" text="1" />
+                            <Label style="-fx-font-size:11; -fx-text-fill:#94a3b8;" text="Siap diambil" />
                         </VBox>
 
-                        <VBox spacing="12" prefWidth="420"
-                              style="-fx-background-color:white; -fx-background-radius:15;
-                                     -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.08),20,0,0,6);">
-                            <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+                        <VBox prefWidth="360" spacing="10" style="-fx-background-color:white; -fx-background-radius:15;                                      -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.2),15,0,0,5);">
+                            <padding><Insets bottom="18" left="18" right="18" top="18" /></padding>
 
-                            <HBox spacing="12" alignment="CENTER_LEFT">
-                                <StackPane prefWidth="40" prefHeight="40"
-                                           style="-fx-background-color:#8b5cf6; -fx-background-radius:10;">
-                                    <Label text="📋" style="-fx-font-size:16;"/>
-                                </StackPane>
-                                <Label text="PESANAN SAYA" style="-fx-font-size:11; -fx-text-fill:#64748b; -fx-font-weight:bold;"/>
-                            </HBox>
-
-                            <Label fx:id="lblTotalSaya" text="3" style="-fx-font-size:32; -fx-font-weight:bold; -fx-text-fill:#0f172a;"/>
-                            <Label text="Total ditangani" style="-fx-font-size:12; -fx-text-fill:#94a3b8;"/>
+                            <Label style="-fx-font-size:11; -fx-text-fill:#64748b; -fx-font-weight:bold;" text="PESANAN SAYA" />
+                            <Label fx:id="lblTotalSaya" style="-fx-font-size:28; -fx-font-weight:bold;" text="3" />
+                            <Label style="-fx-font-size:11; -fx-text-fill:#94a3b8;" text="Total ditangani" />
                         </VBox>
 
                     </HBox>
 
-                    <!-- Tabel Pesanan Aktif -->
-                    <VBox spacing="0"
-                          style="-fx-background-color:white; -fx-background-radius:15;
-                                 -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.08),20,0,0,6);">
+                    <VBox spacing="0" style="-fx-background-color:white; -fx-background-radius:15;                                  -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.2),15,0,0,5);">
 
-                        <Label text="Pesanan Aktif Hari Ini" style="-fx-font-size:16; -fx-font-weight:bold; -fx-text-fill:#0f172a;">
-                            <padding><Insets top="20" right="24" bottom="16" left="24"/></padding>
+                        <Label style="-fx-font-size:15; -fx-font-weight:bold;" text="Pesanan Aktif Hari Ini">
+                            <padding><Insets bottom="14" left="20" right="20" top="18" /></padding>
                         </Label>
 
-                        <Separator/>
+                        <Separator />
 
-                        <TableView fx:id="tabelPesanan" prefHeight="280" style="-fx-background-color:transparent;">
+                        <TableView fx:id="tabelPesanan" prefHeight="260" style="-fx-background-color:transparent;">
                             <columns>
-                                <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
-                                <TableColumn fx:id="colPelanggan" text="PELANGGAN" prefWidth="220"/>
-                                <TableColumn fx:id="colLayanan" text="LAYANAN" prefWidth="220"/>
-                                <TableColumn fx:id="colBerat" text="BERAT" prefWidth="120"/>
-                                <TableColumn fx:id="colBiaya" text="BIAYA" prefWidth="150"/>
-                                <TableColumn fx:id="colStatus" text="STATUS" prefWidth="180"/>
+                                <TableColumn fx:id="colId" prefWidth="60" text="ID" />
+                                <TableColumn fx:id="colPelanggan" prefWidth="200" text="PELANGGAN" />
+                                <TableColumn fx:id="colLayanan" prefWidth="200" text="LAYANAN" />
+                                <TableColumn fx:id="colBerat" prefWidth="100" text="BERAT" />
+                                <TableColumn fx:id="colBiaya" prefWidth="140" text="BIAYA" />
+                                <TableColumn fx:id="colStatus" prefWidth="160" text="STATUS" />
                             </columns>
                             <columnResizePolicy>
-                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                             </columnResizePolicy>
                         </TableView>
 

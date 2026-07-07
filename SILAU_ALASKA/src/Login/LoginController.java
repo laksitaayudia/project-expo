@@ -4,12 +4,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.scene.Parent;
 
 import java.io.IOException;
 
@@ -24,7 +24,6 @@ public class LoginController {
     @FXML
     private PasswordField txtPassword;
 
-    // Data login sementara 
     private static final String USER_PELANGGAN = "pelanggan";
     private static final String PASS_PELANGGAN = "pelanggan123";
 
@@ -55,17 +54,14 @@ public class LoginController {
         String passAsli = "";
 
         switch (role) {
-
             case "Pelanggan":
                 userAsli = USER_PELANGGAN;
                 passAsli = PASS_PELANGGAN;
                 break;
-
             case "Karyawan":
                 userAsli = USER_KARYAWAN;
                 passAsli = PASS_KARYAWAN;
                 break;
-
             case "Owner":
                 userAsli = USER_OWNER;
                 passAsli = PASS_OWNER;
@@ -76,9 +72,7 @@ public class LoginController {
         boolean passwordBenar = password.equals(passAsli);
 
         if (usernameBenar && passwordBenar) {
-            showSukses("Login sebagai " + role + " berhasil!");
-            System.out.println("Login " + role + " berhasil");
-            // pindah ke scene/halaman dashboard sesuai role di sini
+            pindahKeDashboard(role, username);
 
         } else if (!usernameBenar && !passwordBenar) {
             showAlert("Username dan Password salah.");
@@ -91,19 +85,44 @@ public class LoginController {
         }
     }
 
-    private void showSukses(String pesan) {
+    private void pindahKeDashboard(String role, String username) {
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Berhasil");
-        alert.setHeaderText(null);
-        alert.setContentText(pesan);
-        alert.showAndWait();
+        String fxmlPath = "";
 
+        switch (role) {
+            case "Pelanggan":
+                fxmlPath = "/Pelanggan/DashboardPelanggan.fxml";
+                break;
+            case "Karyawan":
+                fxmlPath = "/Karyawan/DashboardKaryawan.fxml";
+                break;
+            case "Owner":
+                fxmlPath = "/Owner/DashboardOwner.fxml";
+                break;
+        }
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+            Parent root = loader.load();
+
+            // Kalau role-nya Karyawan, kirim data nama+role ke controllernya
+            if (role.equals("Karyawan")) {
+                Karyawan.DashboardKaryawanController controller = loader.getController();
+                controller.setUserData(username, role);
+            }
+
+            Stage stage = (Stage) cbRole.getScene().getWindow();
+            stage.getScene().setRoot(root);
+            stage.setTitle("SILAU - Dashboard " + role);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert("Gagal memuat halaman dashboard.");
+        }
     }
 
     @FXML
     private void register(ActionEvent event) {
-
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Registrasi/Registrasi.fxml"));
             Parent root = loader.load();
@@ -119,13 +138,10 @@ public class LoginController {
     }
 
     private void showAlert(String pesan) {
-
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Peringatan");
         alert.setHeaderText(null);
         alert.setContentText(pesan);
         alert.showAndWait();
-
     }
-
 }
