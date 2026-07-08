@@ -27,7 +27,7 @@
         <TextField fx:id="txtPelanggan" promptText="Masukkan nama Anda"
                    style="-fx-background-radius:8; -fx-border-radius:8; -fx-border-color:#e2e8f0; -fx-padding:8;"/>
     </VBox>
-
+    
     <VBox spacing="4" alignment="CENTER_LEFT">
         <Label text="Tanggal" style="-fx-font-size:12; -fx-text-fill:#374151; -fx-font-weight:bold;"/>
         <DatePicker fx:id="dpTanggal" prefWidth="330"
