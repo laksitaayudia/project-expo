@@ -2,10 +2,14 @@ package Karyawan;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -53,10 +57,25 @@ public class TransaksiController implements Initializable {
 
     @FXML
     private void bukaTambahTransaksi() {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Transaksi");
-        alert.setHeaderText(null);
-        alert.setContentText("Halaman Tambah Transaksi akan dibuat pada langkah berikutnya.");
-        alert.showAndWait();
+       try {
+
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("TambahTransaksi.fxml"));
+
+        Parent root = loader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Tambah Transaksi");
+        stage.setScene(new Scene(root));
+        stage.setResizable(false);
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.showAndWait();
+        tabelTransaksi.refresh();
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+        }
+
     }
 }
