@@ -166,7 +166,7 @@
                             <TableView fx:id="tabelPesanan" prefHeight="260" style="-fx-background-color:transparent;">
                                 <columns>
                                     <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
-                                    <TableColumn fx:id="colPelanggan" text="PELANGGAN" prefWidth="220"/>
+                                    <TableColumn fx:id="colTanggal" text="TANGGAL" prefWidth="220"/>
                                     <TableColumn fx:id="colLayanan" text="LAYANAN" prefWidth="220"/>
                                     <TableColumn fx:id="colBerat" text="BERAT" prefWidth="120"/>
                                     <TableColumn fx:id="colBiaya" text="BIAYA" prefWidth="150"/>

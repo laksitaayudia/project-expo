@@ -40,7 +40,7 @@
                 <TableView fx:id="tabelPesananSaya" prefHeight="500" style="-fx-background-color:transparent;">
                     <columns>
                         <TableColumn fx:id="colIdF" text="ID" prefWidth="60"/>
-                        <TableColumn fx:id="colPelangganF" text="PELANGGAN" prefWidth="200"/>
+                        <TableColumn fx:id="colTanggalF" text="TANGGAL" prefWidth="200"/>
                         <TableColumn fx:id="colLayananF" text="LAYANAN" prefWidth="200"/>
                         <TableColumn fx:id="colBeratF" text="BERAT" prefWidth="100"/>
                         <TableColumn fx:id="colBiayaF" text="BIAYA" prefWidth="130"/>

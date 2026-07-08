@@ -27,49 +27,74 @@ import java.io.IOException;
 
 public class DashboardPelangganController {
 
-    @FXML private Button btnDashboard;
-    @FXML private Button btnPesananSaya;
-    @FXML private Button btnPembayaran;
-    @FXML private Button btnKomplain;
-    @FXML private Button btnKeluar;
+    @FXML
+    private Button btnDashboard;
+    @FXML
+    private Button btnPesananSaya;
+    @FXML
+    private Button btnPembayaran;
+    @FXML
+    private Button btnKomplain;
+    @FXML
+    private Button btnKeluar;
 
-    @FXML private ScrollPane scrollDashboard;
+    @FXML
+    private ScrollPane scrollDashboard;
 
-    @FXML private Parent pesananSaya;
-    @FXML private PesananSayaController pesananSayaController;
+    @FXML
+    private Parent pesananSaya;
+    @FXML
+    private PesananSayaController pesananSayaController;
 
-    @FXML private Parent pembayaran;
-    @FXML private PembayaranPelangganController pembayaranController;
+    @FXML
+    private Parent pembayaran;
+    @FXML
+    private PembayaranPelangganController pembayaranController;
 
-    @FXML private Parent komplain;
-    @FXML private KomplainPelangganController komplainController;
+    @FXML
+    private Parent komplain;
+    @FXML
+    private KomplainPelangganController komplainController;
 
-    @FXML private Label lblNamaUser;
-    @FXML private Label lblInisial;
+    @FXML
+    private Label lblNamaUser;
+    @FXML
+    private Label lblInisial;
 
-    @FXML private Label lblTotalSaya;
-    @FXML private Label lblMenunggu;
-    @FXML private Label lblDicuci;
-    @FXML private Label lblSelesai;
+    @FXML
+    private Label lblTotalSaya;
+    @FXML
+    private Label lblMenunggu;
+    @FXML
+    private Label lblDicuci;
+    @FXML
+    private Label lblSelesai;
 
-    @FXML private TableView<PesananItem> tabelPesanan;
-    @FXML private TableColumn<PesananItem, Integer> colId;
-    @FXML private TableColumn<PesananItem, String> colPelanggan;
-    @FXML private TableColumn<PesananItem, String> colLayanan;
-    @FXML private TableColumn<PesananItem, Double> colBerat;
-    @FXML private TableColumn<PesananItem, Integer> colBiaya;
-    @FXML private TableColumn<PesananItem, String> colStatus;
+    @FXML
+    private TableView<PesananItem> tabelPesanan;
+    @FXML
+    private TableColumn<PesananItem, Integer> colId;
+    @FXML
+    private TableColumn<PesananItem, String> colTanggal;
+    @FXML
+    private TableColumn<PesananItem, String> colLayanan;
+    @FXML
+    private TableColumn<PesananItem, Double> colBerat;
+    @FXML
+    private TableColumn<PesananItem, Integer> colBiaya;
+    @FXML
+    private TableColumn<PesananItem, String> colStatus;
 
-    @FXML private BarChart<String, Number> chartPesanan;
+    @FXML
+    private BarChart<String, Number> chartPesanan;
 
     private String namaPelanggan = "Budi Santoso";
 
-    private static final String STYLE_AKTIF =
-            "-fx-background-color:#6495ed; -fx-text-fill:white; -fx-font-size:13; " +
+    private static final String STYLE_AKTIF = "-fx-background-color:#6495ed; -fx-text-fill:white; -fx-font-size:13; " +
             "-fx-font-weight:bold; -fx-background-radius:20; -fx-padding:8 16; -fx-cursor:hand;";
 
-    private static final String STYLE_NONAKTIF =
-            "-fx-background-color:transparent; -fx-text-fill:#6b7280; -fx-font-size:13; " +
+    private static final String STYLE_NONAKTIF = "-fx-background-color:transparent; -fx-text-fill:#6b7280; -fx-font-size:13; "
+            +
             "-fx-background-radius:20; -fx-padding:8 16; -fx-cursor:hand;";
 
     @FXML
@@ -95,35 +120,45 @@ public class DashboardPelangganController {
 
     private void setupTabelDashboard() {
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
-        colPelanggan.setCellValueFactory(new PropertyValueFactory<>("pelanggan"));
+        colTanggal.setCellValueFactory(cellData -> {
+            PesananItem item = cellData.getValue();
+            if (item != null) {
+                return new javafx.beans.property.SimpleStringProperty(DataTanggal.getTanggal(item.getId()));
+            }
+            return new javafx.beans.property.SimpleStringProperty("");
+        });
         colLayanan.setCellValueFactory(new PropertyValueFactory<>("layanan"));
         colBerat.setCellValueFactory(new PropertyValueFactory<>("berat"));
         colBiaya.setCellValueFactory(new PropertyValueFactory<>("biaya"));
         colStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
 
         colId.setCellFactory(col -> new TableCell<PesananItem, Integer>() {
-            @Override protected void updateItem(Integer value, boolean empty) {
+            @Override
+            protected void updateItem(Integer value, boolean empty) {
                 super.updateItem(value, empty);
                 setText(empty || value == null ? null : "#" + value);
             }
         });
 
         colBerat.setCellFactory(col -> new TableCell<PesananItem, Double>() {
-            @Override protected void updateItem(Double value, boolean empty) {
+            @Override
+            protected void updateItem(Double value, boolean empty) {
                 super.updateItem(value, empty);
                 setText(empty || value == null ? null : String.format("%.1f kg", value));
             }
         });
 
         colBiaya.setCellFactory(col -> new TableCell<PesananItem, Integer>() {
-            @Override protected void updateItem(Integer value, boolean empty) {
+            @Override
+            protected void updateItem(Integer value, boolean empty) {
                 super.updateItem(value, empty);
                 setText(empty || value == null ? null : String.format("Rp %,d", value).replace(",", "."));
             }
         });
 
         colStatus.setCellFactory(col -> new TableCell<PesananItem, String>() {
-            @Override protected void updateItem(String value, boolean empty) {
+            @Override
+            protected void updateItem(String value, boolean empty) {
                 super.updateItem(value, empty);
                 setText(value);
                 if (value != null) {
@@ -148,17 +183,23 @@ public class DashboardPelangganController {
     }
 
     private void refreshTampilan() {
-        ObservableList<PesananItem> data = Data.getDaftarPesanan();
+        ObservableList<PesananItem> filtered = javafx.collections.FXCollections.observableArrayList();
+        for (PesananItem p : Data.getDaftarPesanan()) {
+            if (p.getPelanggan().equalsIgnoreCase(namaPelanggan)) {
+                filtered.add(p);
+            }
+        }
 
-        long jumlahMenunggu = data.stream().filter(p -> p.getStatus().equals("MENUNGGU")).count();
-        long jumlahDicuci = data.stream().filter(p -> p.getStatus().equals("DICUCI")).count();
-        long jumlahSelesai = data.stream().filter(p -> p.getStatus().equals("SELESAI")).count();
+        long jumlahMenunggu = filtered.stream().filter(p -> p.getStatus().equals("MENUNGGU")).count();
+        long jumlahDicuci = filtered.stream().filter(p -> p.getStatus().equals("DICUCI")).count();
+        long jumlahSelesai = filtered.stream().filter(p -> p.getStatus().equals("SELESAI")).count();
 
-        lblTotalSaya.setText(String.valueOf(data.size()));
+        lblTotalSaya.setText(String.valueOf(filtered.size()));
         lblMenunggu.setText(String.valueOf(jumlahMenunggu));
         lblDicuci.setText(String.valueOf(jumlahDicuci));
         lblSelesai.setText(String.valueOf(jumlahSelesai));
 
+        tabelPesanan.setItems(filtered);
         tabelPesanan.refresh();
 
         // Populate BarChart (Sama dengan Karyawan)

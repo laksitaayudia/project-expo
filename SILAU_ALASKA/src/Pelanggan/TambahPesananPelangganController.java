@@ -17,6 +17,7 @@ public class TambahPesananPelangganController {
     @FXML private ComboBox<String> cbLayanan;
     @FXML private TextField txtBerat;
     @FXML private TextField txtBiaya;
+    @FXML private javafx.scene.control.DatePicker dpTanggal;
 
     private Runnable onSimpanBerhasil;
     private String namaPelanggan = "Pelanggan";
@@ -35,6 +36,7 @@ public class TambahPesananPelangganController {
     @FXML
     public void initialize() {
         txtPelanggan.setText(namaPelanggan);
+        dpTanggal.setValue(java.time.LocalDate.now());
 
         // Auto-update price when weight or service changes
         txtBerat.textProperty().addListener((observable, oldValue, newValue) -> hitungBiayaOtomatis());
@@ -95,8 +97,17 @@ public class TambahPesananPelangganController {
             return;
         }
 
+        java.time.LocalDate dateVal = dpTanggal.getValue();
+        String tanggalText = "";
+        if (dateVal != null) {
+            tanggalText = dateVal.format(java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        } else {
+            tanggalText = java.time.LocalDate.now().format(java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        }
+
         int idBaru = Data.idBerikutnya();
         PesananItem pesananBaru = new PesananItem(idBaru, pelanggan, layanan, berat, biaya, "MENUNGGU");
+        DataTanggal.setTanggal(idBaru, tanggalText);
         Data.tambahPesanan(pesananBaru);
 
         if (onSimpanBerhasil != null) {
