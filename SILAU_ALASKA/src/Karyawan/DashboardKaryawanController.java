@@ -45,6 +45,9 @@ public class DashboardKaryawanController {
     @FXML private Label lblSelesai;
     @FXML private Label lblTotalSaya;
 
+    @FXML private Label lblSudahBayar;
+    @FXML private Label lblBelumBayar;
+
     @FXML private BarChart<String, Number> chartPesanan;
 
     @FXML private TableView<PesananItem> tabelPesanan;
@@ -68,6 +71,7 @@ public class DashboardKaryawanController {
         setActive(btnDashboard);
 
         pesananController.setOnDataChanged(this::refreshTampilan);
+        transaksiController.setOnDataChanged(this::refreshTampilan);
 
         setupTabelDashboard();
         tabelPesanan.setItems(Data.getDaftarPesanan());
@@ -124,6 +128,14 @@ public class DashboardKaryawanController {
         lblDicuci.setText(String.valueOf(jumlahDicuci));
         lblSelesai.setText(String.valueOf(jumlahSelesai));
         lblTotalSaya.setText(String.valueOf(data.size()));
+
+        long jumlahSudahBayar = Data.getDaftarTransaksi().stream()
+                .filter(t -> t.getStatusBayar().equalsIgnoreCase("Sudah Bayar")).count();
+        long jumlahBelumBayar = Data.getDaftarTransaksi().stream()
+                .filter(t -> t.getStatusBayar().equalsIgnoreCase("Belum Bayar")).count();
+
+        lblSudahBayar.setText(String.valueOf(jumlahSudahBayar));
+        lblBelumBayar.setText(String.valueOf(jumlahBelumBayar));
 
         tabelPesanan.refresh();
 

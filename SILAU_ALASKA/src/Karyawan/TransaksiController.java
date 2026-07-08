@@ -13,7 +13,6 @@ import javafx.stage.Stage;
 import javafx.geometry.Pos;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
 import javafx.scene.layout.HBox;
 import javafx.scene.control.TableCell;
 
@@ -49,6 +48,12 @@ public class TransaksiController implements Initializable {
     @FXML
     private TableColumn<TransaksiItem, Void> colAksi;
 
+    private Runnable onDataChanged;
+
+    public void setOnDataChanged(Runnable callback) {
+        this.onDataChanged = callback;
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         colId.setCellValueFactory(new PropertyValueFactory<>("idTransaksi"));
@@ -65,32 +70,8 @@ public class TransaksiController implements Initializable {
             @Override
             protected void updateItem(String item, boolean empty) {
                 super.updateItem(item, empty);
-
-                if (empty || item == null) {
-                    setText(null);
-                    setStyle("");
-                    return;
-                }
-
-                if (item.equalsIgnoreCase("Sudah Bayar")) {
-                    setText("● Sudah Bayar");
-                    setStyle(
-                            "-fx-background-color:#DCFCE7;" +
-                            "-fx-text-fill:#15803D;" +
-                            "-fx-font-weight:bold;" +
-                            "-fx-alignment:CENTER;" +
-                            "-fx-background-radius:20;"
-                    );
-                } else {
-                    setText("● Belum Bayar");
-                    setStyle(
-                            "-fx-background-color:#FEE2E2;" +
-                            "-fx-text-fill:#DC2626;" +
-                            "-fx-font-weight:bold;" +
-                            "-fx-alignment:CENTER;" +
-                            "-fx-background-radius:20;"
-                    );
-                }
+                setText(item);
+                setStyle("-fx-text-fill:black; -fx-font-size:12; -fx-font-weight:bold;");
             }
         });
     }
@@ -100,24 +81,20 @@ public class TransaksiController implements Initializable {
 
         colAksi.setCellFactory(col -> new TableCell<TransaksiItem, Void>() {
 
-            private final Button btnStatus = new Button("Status");
+            private final Button btnDetail = new Button("Detail");
             private final Button btnEdit = new Button("Edit");
-            private final Button btnHapus = new Button("Hapus");
-            private final HBox container = new HBox(6, btnStatus, btnEdit, btnHapus);
+            private final HBox container = new HBox(6, btnDetail, btnEdit);
 
             {
                 container.setAlignment(Pos.CENTER);
 
-                btnStatus.setStyle("-fx-background-color:#fef3c7; -fx-text-fill:#92400e; -fx-font-size:11; " +
+                btnDetail.setStyle("-fx-background-color:#fef3c7; -fx-text-fill:#92400e; -fx-font-size:11; " +
                         "-fx-background-radius:6; -fx-cursor:hand; -fx-padding:4 10;");
 
                 btnEdit.setStyle("-fx-background-color:#6495ed; -fx-text-fill:white; -fx-font-size:11; " +
                         "-fx-background-radius:6; -fx-cursor:hand; -fx-padding:4 10;");
 
-                btnHapus.setStyle("-fx-background-color:#fee2e2; -fx-text-fill:#dc2626; -fx-font-size:11; " +
-                        "-fx-background-radius:6; -fx-cursor:hand; -fx-padding:4 10;");
-
-                btnStatus.setOnAction(event -> {
+                btnDetail.setOnAction(event -> {
                     TransaksiItem item = getTableView().getItems().get(getIndex());
                     detail(item);
                 });
@@ -125,11 +102,6 @@ public class TransaksiController implements Initializable {
                 btnEdit.setOnAction(event -> {
                     TransaksiItem item = getTableView().getItems().get(getIndex());
                     edit(item);
-                });
-
-                btnHapus.setOnAction(event -> {
-                    TransaksiItem item = getTableView().getItems().get(getIndex());
-                    hapus(item);
                 });
             }
 
@@ -168,20 +140,6 @@ public class TransaksiController implements Initializable {
 
             }
 
-            private void hapus(TransaksiItem item){
-
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setHeaderText("Hapus Transaksi");
-            alert.setContentText("Yakin ingin menghapus transaksi ini?");
-            alert.showAndWait().ifPresent(btn -> {
-
-                if(btn == ButtonType.OK){
-            Data.getDaftarTransaksi().remove(item);
-
-            }
-    });
-}
-
     @FXML
     private void bukaTambahTransaksi() {
        try {
@@ -190,13 +148,16 @@ public class TransaksiController implements Initializable {
                 getClass().getResource("TambahTransaksi.fxml"));
 
         Parent root = loader.load();
+
+        TambahTransaksiController controller = loader.getController();
+        controller.setOnSimpanBerhasil(this::notifyDataChanged);
+
         Stage stage = new Stage();
         stage.setTitle("Tambah Transaksi");
         stage.setScene(new Scene(root));
         stage.setResizable(false);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.showAndWait();
-        tabelTransaksi.refresh();
 
         } catch (Exception e) {
 
@@ -204,5 +165,12 @@ public class TransaksiController implements Initializable {
 
         }
 
+    }
+
+    private void notifyDataChanged() {
+        tabelTransaksi.refresh();
+        if (onDataChanged != null) {
+            onDataChanged.run();
+        }
     }
 }
