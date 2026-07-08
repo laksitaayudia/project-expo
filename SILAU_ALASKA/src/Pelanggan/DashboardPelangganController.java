@@ -120,13 +120,7 @@ public class DashboardPelangganController {
 
     private void setupTabelDashboard() {
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
-        colTanggal.setCellValueFactory(cellData -> {
-            PesananItem item = cellData.getValue();
-            if (item != null) {
-                return new javafx.beans.property.SimpleStringProperty(DataTanggal.getTanggal(item.getId()));
-            }
-            return new javafx.beans.property.SimpleStringProperty("");
-        });
+        colTanggal.setCellValueFactory(new PropertyValueFactory<>("tanggal"));
         colLayanan.setCellValueFactory(new PropertyValueFactory<>("layanan"));
         colBerat.setCellValueFactory(new PropertyValueFactory<>("berat"));
         colBiaya.setCellValueFactory(new PropertyValueFactory<>("biaya"));

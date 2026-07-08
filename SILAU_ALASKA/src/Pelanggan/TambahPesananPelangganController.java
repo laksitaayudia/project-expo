@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -15,9 +16,9 @@ public class TambahPesananPelangganController {
 
     @FXML private TextField txtPelanggan;
     @FXML private ComboBox<String> cbLayanan;
+    @FXML private DatePicker dpTanggal;
     @FXML private TextField txtBerat;
     @FXML private TextField txtBiaya;
-    @FXML private javafx.scene.control.DatePicker dpTanggal;
 
     private Runnable onSimpanBerhasil;
     private String namaPelanggan = "Pelanggan";
@@ -36,7 +37,6 @@ public class TambahPesananPelangganController {
     @FXML
     public void initialize() {
         txtPelanggan.setText(namaPelanggan);
-        dpTanggal.setValue(java.time.LocalDate.now());
 
         // Auto-update price when weight or service changes
         txtBerat.textProperty().addListener((observable, oldValue, newValue) -> hitungBiayaOtomatis());
@@ -96,7 +96,7 @@ public class TambahPesananPelangganController {
             showAlert("Berat dan Biaya harus berupa angka.");
             return;
         }
-
+        
         java.time.LocalDate dateVal = dpTanggal.getValue();
         String tanggalText = "";
         if (dateVal != null) {
