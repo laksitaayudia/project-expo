@@ -1,4 +1,7 @@
-package Karyawan;
+package Pelanggan;
+
+import Karyawan.Data;
+import Karyawan.PesananItem;
 
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -7,8 +10,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.chart.BarChart;
-import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -19,33 +20,37 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.XYChart;
+
 import java.io.IOException;
 
-public class DashboardKaryawanController {
+public class DashboardPelangganController {
 
     @FXML private Button btnDashboard;
-    @FXML private Button btnPesanan;
-    @FXML private Button btnTransaksi;
+    @FXML private Button btnPesananSaya;
+    @FXML private Button btnPembayaran;
     @FXML private Button btnKomplain;
     @FXML private Button btnKeluar;
 
     @FXML private ScrollPane scrollDashboard;
 
-    @FXML private Parent pesanan;
-    @FXML private PesananController pesananController;
+    @FXML private Parent pesananSaya;
+    @FXML private PesananSayaController pesananSayaController;
 
-    @FXML private Parent transaksi;
-    @FXML private TransaksiController transaksiController;
+    @FXML private Parent pembayaran;
+    @FXML private PembayaranPelangganController pembayaranController;
+
+    @FXML private Parent komplain;
+    @FXML private KomplainPelangganController komplainController;
 
     @FXML private Label lblNamaUser;
     @FXML private Label lblInisial;
 
+    @FXML private Label lblTotalSaya;
     @FXML private Label lblMenunggu;
     @FXML private Label lblDicuci;
     @FXML private Label lblSelesai;
-    @FXML private Label lblTotalSaya;
-
-    @FXML private BarChart<String, Number> chartPesanan;
 
     @FXML private TableView<PesananItem> tabelPesanan;
     @FXML private TableColumn<PesananItem, Integer> colId;
@@ -54,6 +59,10 @@ public class DashboardKaryawanController {
     @FXML private TableColumn<PesananItem, Double> colBerat;
     @FXML private TableColumn<PesananItem, Integer> colBiaya;
     @FXML private TableColumn<PesananItem, String> colStatus;
+
+    @FXML private BarChart<String, Number> chartPesanan;
+
+    private String namaPelanggan = "Budi Santoso";
 
     private static final String STYLE_AKTIF =
             "-fx-background-color:#6495ed; -fx-text-fill:white; -fx-font-size:13; " +
@@ -67,7 +76,16 @@ public class DashboardKaryawanController {
     public void initialize() {
         setActive(btnDashboard);
 
-        pesananController.setOnDataChanged(this::refreshTampilan);
+        // Setup callbacks from nested pages
+        if (pesananSayaController != null) {
+            pesananSayaController.setOnDataChanged(this::refreshTampilan);
+        }
+        if (pembayaranController != null) {
+            pembayaranController.setOnDataChanged(this::refreshTampilan);
+        }
+        if (komplainController != null) {
+            komplainController.setOnDataChanged(this::refreshTampilan);
+        }
 
         setupTabelDashboard();
         tabelPesanan.setItems(Data.getDaftarPesanan());
@@ -108,7 +126,23 @@ public class DashboardKaryawanController {
             @Override protected void updateItem(String value, boolean empty) {
                 super.updateItem(value, empty);
                 setText(value);
-                setStyle("-fx-text-fill:black; -fx-font-size:12; -fx-font-weight:bold;");
+                if (value != null) {
+                    switch (value) {
+                        case "MENUNGGU":
+                            setStyle("-fx-text-fill:#f59e0b; -fx-font-size:12; -fx-font-weight:bold;");
+                            break;
+                        case "DICUCI":
+                            setStyle("-fx-text-fill:#3b82f6; -fx-font-size:12; -fx-font-weight:bold;");
+                            break;
+                        case "SELESAI":
+                            setStyle("-fx-text-fill:#22c55e; -fx-font-size:12; -fx-font-weight:bold;");
+                            break;
+                        default:
+                            setStyle("-fx-text-fill:black; -fx-font-size:12; -fx-font-weight:bold;");
+                    }
+                } else {
+                    setStyle("-fx-text-fill:black; -fx-font-size:12; -fx-font-weight:bold;");
+                }
             }
         });
     }
@@ -120,13 +154,14 @@ public class DashboardKaryawanController {
         long jumlahDicuci = data.stream().filter(p -> p.getStatus().equals("DICUCI")).count();
         long jumlahSelesai = data.stream().filter(p -> p.getStatus().equals("SELESAI")).count();
 
+        lblTotalSaya.setText(String.valueOf(data.size()));
         lblMenunggu.setText(String.valueOf(jumlahMenunggu));
         lblDicuci.setText(String.valueOf(jumlahDicuci));
         lblSelesai.setText(String.valueOf(jumlahSelesai));
-        lblTotalSaya.setText(String.valueOf(data.size()));
 
         tabelPesanan.refresh();
 
+        // Populate BarChart (Sama dengan Karyawan)
         XYChart.Series<String, Number> series = new XYChart.Series<>();
         series.setName("Pesanan");
         series.getData().add(new XYChart.Data<>("Sen", 4));
@@ -147,27 +182,48 @@ public class DashboardKaryawanController {
                 }
             }
         });
+
+        if (pesananSayaController != null) {
+            pesananSayaController.refreshTampilan();
+        }
+        if (pembayaranController != null) {
+            pembayaranController.refreshData();
+        }
+        if (komplainController != null) {
+            komplainController.refreshData();
+        }
     }
 
     public void setUserData(String nama, String role) {
+        this.namaPelanggan = nama;
         lblNamaUser.setText(nama);
         lblInisial.setText(nama.substring(0, 1).toUpperCase());
+
+        if (pesananSayaController != null) {
+            pesananSayaController.setNamaPelanggan(nama);
+        }
+        if (pembayaranController != null) {
+            pembayaranController.setNamaPelanggan(nama);
+        }
+        if (komplainController != null) {
+            komplainController.setNamaPelanggan(nama);
+        }
+
+        refreshTampilan();
     }
 
     @FXML
     private void bukaTambahPesanan() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Karyawan/TambahPesanan.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Pelanggan/TambahPesananPelanggan.fxml"));
             Parent root = loader.load();
 
-            TambahPesananController controller = loader.getController();
-            controller.setOnSimpanBerhasil(() -> {
-                refreshTampilan();
-                pesananController.refreshTampilan();
-            });
+            TambahPesananPelangganController controller = loader.getController();
+            controller.setNamaPelanggan(namaPelanggan);
+            controller.setOnSimpanBerhasil(this::refreshTampilan);
 
             Stage dialog = new Stage();
-            dialog.setTitle("Tambah Pesanan");
+            dialog.setTitle("Buat Pesanan Baru");
             dialog.initModality(Modality.APPLICATION_MODAL);
             dialog.setScene(new Scene(root));
             dialog.setResizable(false);
@@ -183,40 +239,63 @@ public class DashboardKaryawanController {
         setActive(btnDashboard);
         scrollDashboard.setVisible(true);
         scrollDashboard.setManaged(true);
-        pesanan.setVisible(false);
-        pesanan.setManaged(false);
-        transaksi.setVisible(false);
-        transaksi.setManaged(false);
+        pesananSaya.setVisible(false);
+        pesananSaya.setManaged(false);
+        pembayaran.setVisible(false);
+        pembayaran.setManaged(false);
+        komplain.setVisible(false);
+        komplain.setManaged(false);
+
+        refreshTampilan();
     }
 
     @FXML
-    private void showPesanan() {
-        setActive(btnPesanan);
+    private void showPesananSaya() {
+        setActive(btnPesananSaya);
         scrollDashboard.setVisible(false);
         scrollDashboard.setManaged(false);
-        pesanan.setVisible(true);
-        pesanan.setManaged(true);
-        transaksi.setVisible(false);
-        transaksi.setManaged(false);
+        pesananSaya.setVisible(true);
+        pesananSaya.setManaged(true);
+        pembayaran.setVisible(false);
+        pembayaran.setManaged(false);
+        komplain.setVisible(false);
+        komplain.setManaged(false);
     }
 
     @FXML
-    private void showTransaksi() {
-        setActive(btnTransaksi);
+    private void showPembayaran() {
+        setActive(btnPembayaran);
         scrollDashboard.setVisible(false);
         scrollDashboard.setManaged(false);
-        pesanan.setVisible(false);
-        pesanan.setManaged(false);
-        transaksi.setVisible(true);
-        transaksi.setManaged(true);
+        pesananSaya.setVisible(false);
+        pesananSaya.setManaged(false);
+        pembayaran.setVisible(true);
+        pembayaran.setManaged(true);
+        komplain.setVisible(false);
+        komplain.setManaged(false);
+
+        if (pembayaranController != null) {
+            pembayaranController.refreshData();
+        }
     }
 
-    @FXML private void showKomplain() { setActive(btnKomplain); }
+    @FXML
+    private void showKomplain() {
+        setActive(btnKomplain);
+        scrollDashboard.setVisible(false);
+        scrollDashboard.setManaged(false);
+        pesananSaya.setVisible(false);
+        pesananSaya.setManaged(false);
+        pembayaran.setVisible(false);
+        pembayaran.setManaged(false);
+        komplain.setVisible(true);
+        komplain.setManaged(true);
+    }
 
     private void setActive(Button aktif) {
         btnDashboard.setStyle(STYLE_NONAKTIF);
-        btnPesanan.setStyle(STYLE_NONAKTIF);
-        btnTransaksi.setStyle(STYLE_NONAKTIF);
+        btnPesananSaya.setStyle(STYLE_NONAKTIF);
+        btnPembayaran.setStyle(STYLE_NONAKTIF);
         btnKomplain.setStyle(STYLE_NONAKTIF);
         aktif.setStyle(STYLE_AKTIF);
     }

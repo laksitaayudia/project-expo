@@ -3,7 +3,6 @@ package Karyawan;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
 
 import java.time.LocalDate;
 
@@ -26,12 +25,6 @@ public class TambahTransaksiController {
 
     @FXML
     private DatePicker dpTanggal;
-
-    private Runnable onSimpanBerhasil;
-
-    public void setOnSimpanBerhasil(Runnable callback) {
-        this.onSimpanBerhasil = callback;
-    }
 
     @FXML
     public void initialize(){
@@ -85,15 +78,6 @@ public class TambahTransaksiController {
 
     @FXML
     private void simpan(){
-
-        if (cbPesanan.getValue() == null || cbStatus.getValue() == null) {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setHeaderText(null);
-            alert.setContentText("Pesanan dan Status Pembayaran wajib diisi.");
-            alert.showAndWait();
-            return;
-        }
-
         String id="TRX00"+(Data.getDaftarTransaksi().size()+1);
         Data.tambahTransaksi(
                 new TransaksiItem(
@@ -112,21 +96,15 @@ public class TambahTransaksiController {
         alert.setHeaderText(null);
         alert.setContentText("Transaksi berhasil ditambahkan.");
         alert.showAndWait();
-
-        if (onSimpanBerhasil != null) {
-            onSimpanBerhasil.run();
-        }
-
-        tutup();
     }
 
     @FXML
     private void batal(){
-        tutup();
-    }
-
-    private void tutup() {
-        Stage stage = (Stage) cbPesanan.getScene().getWindow();
-        stage.close();
+        cbPesanan.getSelectionModel().clearSelection();
+        txtPelanggan.clear();
+        txtTotal.clear();
+        cbStatus.getSelectionModel().clearSelection();
+        cbMetode.getSelectionModel().clearSelection();
+        dpTanggal.setValue(null);
     }
 }

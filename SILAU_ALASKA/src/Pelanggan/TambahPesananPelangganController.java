@@ -1,4 +1,7 @@
-package Karyawan;
+package Pelanggan;
+
+import Karyawan.Data;
+import Karyawan.PesananItem;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,7 +11,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class TambahPesananController {
+public class TambahPesananPelangganController {
 
     @FXML private TextField txtPelanggan;
     @FXML private ComboBox<String> cbLayanan;
@@ -16,14 +19,24 @@ public class TambahPesananController {
     @FXML private TextField txtBiaya;
 
     private Runnable onSimpanBerhasil;
-    private PesananItem itemEdit;
+    private String namaPelanggan = "Pelanggan";
 
     public void setOnSimpanBerhasil(Runnable callback) {
         this.onSimpanBerhasil = callback;
     }
 
+    public void setNamaPelanggan(String nama) {
+        this.namaPelanggan = nama;
+        if (txtPelanggan != null) {
+            txtPelanggan.setText(nama);
+        }
+    }
+
     @FXML
     public void initialize() {
+        txtPelanggan.setText(namaPelanggan);
+
+        // Auto-update price when weight or service changes
         txtBerat.textProperty().addListener((observable, oldValue, newValue) -> hitungBiayaOtomatis());
         cbLayanan.valueProperty().addListener((observable, oldValue, newValue) -> hitungBiayaOtomatis());
     }
@@ -44,7 +57,7 @@ public class TambahPesananController {
                 return;
             }
 
-            int tarif = 10000;
+            int tarif = 10000; // Default Reguler
             if (layananText.startsWith("Ekspres")) {
                 tarif = 15000;
             }
@@ -54,14 +67,6 @@ public class TambahPesananController {
         } catch (NumberFormatException e) {
             txtBiaya.setText("0");
         }
-    }
-
-    public void isiUntukEdit(PesananItem item) {
-        this.itemEdit = item;
-        txtPelanggan.setText(item.getPelanggan());
-        cbLayanan.setValue(item.getLayanan());
-        txtBerat.setText(String.valueOf(item.getBerat()));
-        txtBiaya.setText(String.valueOf(item.getBiaya()));
     }
 
     @FXML
@@ -90,19 +95,19 @@ public class TambahPesananController {
             return;
         }
 
-        if (itemEdit != null) {
-            Data.hapusPesanan(itemEdit.getId());
-            PesananItem hasilEdit = new PesananItem(itemEdit.getId(), pelanggan, layanan, berat, biaya, itemEdit.getStatus());
-            Data.tambahPesanan(hasilEdit);
-        } else {
-            int idBaru = Data.idBerikutnya();
-            PesananItem pesananBaru = new PesananItem(idBaru, pelanggan, layanan, berat, biaya, "MENUNGGU");
-            Data.tambahPesanan(pesananBaru);
-        }
+        int idBaru = Data.idBerikutnya();
+        PesananItem pesananBaru = new PesananItem(idBaru, pelanggan, layanan, berat, biaya, "MENUNGGU");
+        Data.tambahPesanan(pesananBaru);
 
         if (onSimpanBerhasil != null) {
             onSimpanBerhasil.run();
         }
+
+        Alert sukses = new Alert(Alert.AlertType.INFORMATION);
+        sukses.setTitle("Berhasil");
+        sukses.setHeaderText(null);
+        sukses.setContentText("Pesanan berhasil dibuat! Pesanan Anda sedang diproses.");
+        sukses.showAndWait();
 
         tutup(event);
     }

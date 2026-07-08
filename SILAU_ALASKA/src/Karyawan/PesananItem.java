@@ -1,69 +1,45 @@
 package Karyawan;
 
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+
 public class PesananItem {
 
-    private int id;
-    private String pelanggan;
-    private String layanan;
-    private double berat;
-    private int biaya;
-    private String status;
+    private final SimpleIntegerProperty id;
+    private final SimpleStringProperty pelanggan;
+    private final SimpleStringProperty layanan;
+    private final SimpleDoubleProperty berat;
+    private final SimpleIntegerProperty biaya;
+    private final SimpleStringProperty status;
 
     public PesananItem(int id, String pelanggan, String layanan, double berat, int biaya, String status) {
-        this.id = id;
-        this.pelanggan = pelanggan;
-        this.layanan = layanan;
-        this.berat = berat;
-        this.biaya = biaya;
-        this.status = status;
+        this.id = new SimpleIntegerProperty(id);
+        this.pelanggan = new SimpleStringProperty(pelanggan);
+        this.layanan = new SimpleStringProperty(layanan);
+        this.berat = new SimpleDoubleProperty(berat);
+        this.biaya = new SimpleIntegerProperty(biaya);
+        this.status = new SimpleStringProperty(status);
     }
 
-    public int getId() {
-        return id;
-    }
+    public int getId() { return id.get(); }
+    public String getPelanggan() { return pelanggan.get(); }
+    public String getLayanan() { return layanan.get(); }
+    public double getBerat() { return berat.get(); }
+    public int getBiaya() { return biaya.get(); }
+    public String getStatus() { return status.get(); }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public void setId(int id) { this.id.set(id); }
+    public void setPelanggan(String pelanggan) { this.pelanggan.set(pelanggan); }
+    public void setLayanan(String layanan) { this.layanan.set(layanan); }
+    public void setBerat(double berat) { this.berat.set(berat); }
+    public void setBiaya(int biaya) { this.biaya.set(biaya); }
+    public void setStatus(String status) { this.status.set(status); }
 
-    public String getPelanggan() {
-        return pelanggan;
-    }
-
-    public void setPelanggan(String pelanggan) {
-        this.pelanggan = pelanggan;
-    }
-
-    public String getLayanan() {
-        return layanan;
-    }
-
-    public void setLayanan(String layanan) {
-        this.layanan = layanan;
-    }
-
-    public double getBerat() {
-        return berat;
-    }
-
-    public void setBerat(double berat) {
-        this.berat = berat;
-    }
-
-    public int getBiaya() {
-        return biaya;
-    }
-
-    public void setBiaya(int biaya) {
-        this.biaya = biaya;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
+    public SimpleIntegerProperty idProperty() { return id; }
+    public SimpleStringProperty pelangganProperty() { return pelanggan; }
+    public SimpleStringProperty layananProperty() { return layanan; }
+    public SimpleDoubleProperty beratProperty() { return berat; }
+    public SimpleIntegerProperty biayaProperty() { return biaya; }
+    public SimpleStringProperty statusProperty() { return status; }
 }

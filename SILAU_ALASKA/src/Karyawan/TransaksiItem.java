@@ -10,7 +10,14 @@ public class TransaksiItem {
     private String metodeBayar;
     private String tanggalBayar;
 
-    public TransaksiItem(String idTransaksi, String idPesanan, String pelanggan, String total, String statusBayar, String metodeBayar, String tanggalBayar) {
+    public TransaksiItem(String idTransaksi,
+                         String idPesanan,
+                         String pelanggan,
+                         String total,
+                         String statusBayar,
+                         String metodeBayar,
+                         String tanggalBayar) {
+
         this.idTransaksi = idTransaksi;
         this.idPesanan = idPesanan;
         this.pelanggan = pelanggan;

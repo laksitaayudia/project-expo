@@ -78,4 +78,32 @@ public class Data {
         daftarTransaksi.removeIf(
                 item -> item.getIdTransaksi().equals(idTransaksi));
     }
+
+    // ── Komplain ──
+
+    private static final ObservableList<KomplainItem> daftarKomplain =
+            FXCollections.observableArrayList(
+
+            new KomplainItem(
+                    1,
+                    "PSN001",
+                    "Baju tertukar",
+                    "Kemeja biru tidak ada di dalam paket",
+                    "Selesai",
+                    "Kemeja ditemukan dan dikembalikan")
+    );
+
+    public static ObservableList<KomplainItem> getDaftarKomplain() {
+        return daftarKomplain;
+    }
+
+    public static void tambahKomplain(KomplainItem item) {
+        daftarKomplain.add(item);
+    }
+
+    public static int idKomplainBerikutnya() {
+        return daftarKomplain.stream()
+                .mapToInt(KomplainItem::getId)
+                .max().orElse(0) + 1;
+    }
 }

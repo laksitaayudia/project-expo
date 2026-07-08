@@ -20,8 +20,9 @@
 
 <BorderPane prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color:#f4f6f5;"
     xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1"
-    fx:controller="Karyawan.DashboardKaryawanController">
+    fx:controller="Pelanggan.DashboardPelangganController">
 
+    <!-- ═══ TOP NAVBAR (Sama dengan Karyawan) ═══ -->
     <top>
         <HBox alignment="CENTER_LEFT" spacing="30"
             style="-fx-background-color:white; -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),10,0,0,2);">
@@ -42,12 +43,12 @@
                 <Button fx:id="btnDashboard" onAction="#showDashboard"
                     style="-fx-background-color: #6495ed; -fx-text-fill: white; -fx-font-size: 13; -fx-font-weight: bold; -fx-background-radius: 20; -fx-padding: 8 16; -fx-cursor: hand;"
                     text="Dashboard" />
-                <Button fx:id="btnPesanan" onAction="#showPesanan"
+                <Button fx:id="btnPesananSaya" onAction="#showPesananSaya"
                     style="-fx-background-color:transparent; -fx-text-fill:#6b7280; -fx-font-size:13;                                -fx-background-radius:20; -fx-padding:8 16; -fx-cursor:hand;"
-                    text="Pesanan" />
-                <Button fx:id="btnTransaksi" onAction="#showTransaksi"
+                    text="Pesanan Saya" />
+                <Button fx:id="btnPembayaran" onAction="#showPembayaran"
                     style="-fx-background-color:transparent; -fx-text-fill:#6b7280; -fx-font-size:13;                                -fx-background-radius:20; -fx-padding:8 16; -fx-cursor:hand;"
-                    text="Transaksi" />
+                    text="Pembayaran" />
                 <Button fx:id="btnKomplain" onAction="#showKomplain"
                     style="-fx-background-color:transparent; -fx-text-fill:#6b7280; -fx-font-size:13;                                -fx-background-radius:20; -fx-padding:8 16; -fx-cursor:hand;"
                     text="Komplain" />
@@ -68,9 +69,11 @@
         </HBox>
     </top>
 
+    <!-- ═══ CONTENT AREA ═══ -->
     <center>
         <StackPane style="-fx-background-color:#f4f6f5;">
 
+            <!-- Dashboard View -->
             <ScrollPane fx:id="scrollDashboard" fitToWidth="true" visible="true" managed="true"
                         style="-fx-background:#f4f6f5; -fx-background-color:#f4f6f5;">
                 <content>
@@ -81,19 +84,20 @@
                             <VBox spacing="2">
                                 <HBox spacing="6" alignment="BASELINE_LEFT">
                                     <Label text="Selamat Datang," style="-fx-font-size:24; -fx-font-weight:bold; -fx-text-fill:#111827;"/>
-                                    <Label fx:id="lblNamaUser" text="Nama Karyawan" style="-fx-font-size:24; -fx-text-fill:#9ca3af;"/>
+                                    <Label fx:id="lblNamaUser" text="Nama Pelanggan" style="-fx-font-size:24; -fx-text-fill:#9ca3af;"/>
                                 </HBox>
                             </VBox>
 
                             <Region HBox.hgrow="ALWAYS"/>
 
-                            <Button fx:id="btnTambahPesanan" text="+ Tambah Pesanan" onAction="#bukaTambahPesanan"
+                            <Button text="+ Tambah Pesanan" onAction="#bukaTambahPesanan"
                                     style="-fx-background-color:#6495ed; -fx-text-fill:white; -fx-font-size:13;
                                            -fx-font-weight:bold; -fx-background-radius:8; -fx-padding:10 18; -fx-cursor:hand;"/>
                         </HBox>
 
                         <HBox spacing="20">
 
+                            <!-- Card 1: Status Pesanan -->
                             <VBox spacing="14" prefWidth="280"
                                   style="-fx-background-color:white; -fx-background-radius:15;
                                          -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),12,0,0,3);">
@@ -111,6 +115,7 @@
                                 <Label fx:id="lblDicuci" text="—" style="-fx-font-size:20; -fx-font-weight:bold; -fx-text-fill:#111827;"/>
                             </VBox>
 
+                            <!-- Card 2: Grafik Pesanan (Sama dengan Karyawan) -->
                             <VBox spacing="10" HBox.hgrow="ALWAYS"
                                   style="-fx-background-color:white; -fx-background-radius:15;
                                          -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),12,0,0,3);">
@@ -130,6 +135,7 @@
                                 </BarChart>
                             </VBox>
 
+                            <!-- Card 3: Statistik Total -->
                             <VBox spacing="14" prefWidth="260"
                                   style="-fx-background-color:white; -fx-background-radius:15;
                                          -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),12,0,0,3);">
@@ -146,6 +152,7 @@
 
                         </HBox>
 
+                        <!-- Tabel Pesanan Aktif -->
                         <VBox spacing="0"
                               style="-fx-background-color:white; -fx-background-radius:15;
                                      -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),12,0,0,3);">
@@ -174,8 +181,10 @@
                 </content>
             </ScrollPane>
 
-            <fx:include fx:id="pesanan" source="Pesanan.fxml" visible="false" managed="false"/>
-            <fx:include fx:id="transaksi" source="Transaksi.fxml" visible="false" managed="false"/>
+            <!-- Sub pages (Pesanan Saya & Komplain) -->
+            <fx:include fx:id="pesananSaya" source="PesananSaya.fxml" visible="false" managed="false"/>
+            <fx:include fx:id="pembayaran" source="PembayaranPelanggan.fxml" visible="false" managed="false"/>
+            <fx:include fx:id="komplain" source="KomplainPelanggan.fxml" visible="false" managed="false"/>
 
         </StackPane>
     </center>

@@ -109,6 +109,10 @@ public class LoginController {
             if (role.equals("Karyawan")) {
                 Karyawan.DashboardKaryawanController controller = loader.getController();
                 controller.setUserData(username, role);
+            } else if (role.equals("Pelanggan")) {
+                Pelanggan.DashboardPelangganController controller = loader.getController();
+                controller.setUserData(username, role);
+   
             }
 
             Stage stage = (Stage) cbRole.getScene().getWindow();
