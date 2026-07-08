@@ -948,3 +948,75 @@ WARNING: Unmatched cancel notification for request id 10
 2026.07.05 21:57:30 INFO  Memory monitor stopped
 2026.07.05 21:57:30 INFO  shutting down Metals
 2026.07.05 21:57:32 INFO  Exiting server
+2026.07.07 00:49:05 INFO  Started: Metals version 1.6.7+117-0e01c3f6-SNAPSHOT in folders 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo' for client Visual Studio Code 1.127.0.
+2026.07.07 00:49:05 INFO  Memory monitor started
+2026.07.07 00:49:06 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.07 00:49:06 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:49:07 WARN  no build tool detected in workspace 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2026.07.07 00:49:07 WARN  Build server is not auto-connectable.
+2026.07.07 00:49:07 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java
+2026.07.07 00:49:07 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:49:07 WARN  Running javac-semanticdb failed for file:///C:/Users/User/OneDrive/Dokumen/GitHub/project-expo/PROJECT%20EXPO/src/PELANGGAN/Pelanggan.java. Output:
+
+2026.07.07 00:49:08 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:49:08 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:49:09 INFO  restarted 1 presentation compiler
+2026.07.07 00:49:16 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:49:16 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java
+2026.07.07 00:49:16 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:49:16 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:49:16 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:49:35 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\Dasboard.java
+2026.07.07 00:49:35 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\Dasboard.java. Using fallback presentation compiler.
+2026.07.07 00:49:35 WARN  Running javac-semanticdb failed for file:///C:/Users/User/OneDrive/Dokumen/GitHub/project-expo/PROJECT%20EXPO/src/Dasboard.java. Output:
+
+2026.07.07 00:49:36 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\Dasboard.java. Using fallback presentation compiler.
+2026.07.07 00:49:40 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\Dasboard.java. Using fallback presentation compiler.
+2026.07.07 00:49:40 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\OWNER\App.java. Using fallback presentation compiler.
+2026.07.07 00:49:40 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\OWNER\App.java
+2026.07.07 00:49:41 WARN  Running javac-semanticdb failed for file:///C:/Users/User/OneDrive/Dokumen/GitHub/project-expo/PROJECT%20EXPO/src/OWNER/App.java. Output:
+
+2026.07.07 00:49:41 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\OWNER\App.java. Using fallback presentation compiler.
+Jul 07, 2026 12:49:41 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 29
+2026.07.07 00:49:40 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\OWNER\App.java. Using fallback presentation compiler.
+2026.07.07 00:49:41 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\OWNER\App.java. Using fallback presentation compiler.
+2026.07.07 00:49:43 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\OWNER\App.java. Using fallback presentation compiler.
+2026.07.07 00:49:43 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\KARYAWAN\App.java
+2026.07.07 00:49:43 WARN  Running javac-semanticdb failed for file:///C:/Users/User/OneDrive/Dokumen/GitHub/project-expo/PROJECT%20EXPO/src/KARYAWAN/App.java. Output:
+
+2026.07.07 00:49:43 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\KARYAWAN\App.java. Using fallback presentation compiler.
+2026.07.07 00:49:43 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\KARYAWAN\App.java. Using fallback presentation compiler.
+2026.07.07 00:49:50 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\KARYAWAN\App.java. Using fallback presentation compiler.
+2026.07.07 00:49:54 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:49:54 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java
+2026.07.07 00:49:54 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:49:54 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:49:54 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:49:58 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:49:58 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java
+2026.07.07 00:49:58 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:49:58 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:49:58 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:49:58 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\Dasboard.java
+2026.07.07 00:49:58 WARN  Running javac-semanticdb failed for file:///C:/Users/User/OneDrive/Dokumen/GitHub/project-expo/PROJECT%20EXPO/src/Dasboard.java. Output:
+
+2026.07.07 00:49:58 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\Dasboard.java. Using fallback presentation compiler.
+2026.07.07 00:49:58 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\Dasboard.java. Using fallback presentation compiler.
+2026.07.07 00:49:59 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:49:59 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java
+2026.07.07 00:49:59 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:49:59 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:49:59 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:50:19 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\PELANGGAN\Pelanggan.java. Using fallback presentation compiler.
+2026.07.07 00:50:26 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\PROJECT EXPO\src\Dasboard.java. Using fallback presentation compiler.
+2026.07.07 00:50:26 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\App.java. Using fallback presentation compiler.
+2026.07.07 00:50:26 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\App.java
+2026.07.07 00:50:26 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\App.java. Using fallback presentation compiler.
+2026.07.07 00:50:26 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\App.java. Using fallback presentation compiler.
+2026.07.07 00:50:27 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\App.java. Using fallback presentation compiler.
+2026.07.07 00:50:26 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\App.java. Using fallback presentation compiler.
+2026.07.07 01:02:36 INFO  Shutting down server
+2026.07.07 01:02:36 INFO  Memory monitor stopped
+2026.07.07 01:02:36 INFO  shutting down Metals
+2026.07.07 01:02:36 INFO  Exiting server
