@@ -18,20 +18,13 @@ import java.io.IOException;
 
 public class PesananSayaController {
 
-    @FXML
-    private TableView<PesananItem> tabelPesananSaya;
-    @FXML
-    private TableColumn<PesananItem, Integer> colIdF;
-    @FXML
-    private TableColumn<PesananItem, String> colTanggalF;
-    @FXML
-    private TableColumn<PesananItem, String> colLayananF;
-    @FXML
-    private TableColumn<PesananItem, Double> colBeratF;
-    @FXML
-    private TableColumn<PesananItem, Integer> colBiayaF;
-    @FXML
-    private TableColumn<PesananItem, String> colStatusF;
+    @FXML private TableView<PesananItem> tabelPesananSaya;
+    @FXML private TableColumn<PesananItem, Integer> colIdF;
+    @FXML private TableColumn<PesananItem, String> colTanggalF;
+    @FXML private TableColumn<PesananItem, String> colLayananF;
+    @FXML private TableColumn<PesananItem, Double> colBeratF;
+    @FXML private TableColumn<PesananItem, Integer> colBiayaF;
+    @FXML private TableColumn<PesananItem, String> colStatusF;
 
     private Runnable onDataChanged;
     private String namaPelanggan = "Pelanggan";
@@ -52,9 +45,9 @@ public class PesananSayaController {
 
     public void refreshTampilan() {
         javafx.collections.ObservableList<PesananItem> filtered = javafx.collections.FXCollections.observableArrayList();
-        for (PesananItem p : Data.getDaftarPesanan()) {
-            if (p.getPelanggan().equalsIgnoreCase(namaPelanggan)) {
-                filtered.add(p);
+        for (PesananItem item : Data.getDaftarPesanan()) {
+            if (item.getPelanggan().equals(namaPelanggan)) {
+                filtered.add(item);
             }
         }
         tabelPesananSaya.setItems(filtered);
@@ -63,45 +56,35 @@ public class PesananSayaController {
 
     private void setupKolom() {
         colIdF.setCellValueFactory(new PropertyValueFactory<>("id"));
-        colTanggalF.setCellValueFactory(cellData -> {
-            PesananItem item = cellData.getValue();
-            if (item != null) {
-                return new javafx.beans.property.SimpleStringProperty(DataTanggal.getTanggal(item.getId()));
-            }
-            return new javafx.beans.property.SimpleStringProperty("");
-        });
+        colTanggalF.setCellValueFactory(new PropertyValueFactory<>("tanggal"));
         colLayananF.setCellValueFactory(new PropertyValueFactory<>("layanan"));
         colBeratF.setCellValueFactory(new PropertyValueFactory<>("berat"));
         colBiayaF.setCellValueFactory(new PropertyValueFactory<>("biaya"));
         colStatusF.setCellValueFactory(new PropertyValueFactory<>("status"));
 
         colIdF.setCellFactory(col -> new TableCell<PesananItem, Integer>() {
-            @Override
-            protected void updateItem(Integer value, boolean empty) {
+            @Override protected void updateItem(Integer value, boolean empty) {
                 super.updateItem(value, empty);
                 setText(empty || value == null ? null : "#" + value);
             }
         });
 
         colBeratF.setCellFactory(col -> new TableCell<PesananItem, Double>() {
-            @Override
-            protected void updateItem(Double value, boolean empty) {
+            @Override protected void updateItem(Double value, boolean empty) {
                 super.updateItem(value, empty);
                 setText(empty || value == null ? null : String.format("%.1f kg", value));
             }
         });
 
         colBiayaF.setCellFactory(col -> new TableCell<PesananItem, Integer>() {
-            @Override
-            protected void updateItem(Integer value, boolean empty) {
+            @Override protected void updateItem(Integer value, boolean empty) {
                 super.updateItem(value, empty);
                 setText(empty || value == null ? null : String.format("Rp %,d", value).replace(",", "."));
             }
         });
 
         colStatusF.setCellFactory(col -> new TableCell<PesananItem, String>() {
-            @Override
-            protected void updateItem(String value, boolean empty) {
+            @Override protected void updateItem(String value, boolean empty) {
                 super.updateItem(value, empty);
                 setText(value);
                 if (value != null) {

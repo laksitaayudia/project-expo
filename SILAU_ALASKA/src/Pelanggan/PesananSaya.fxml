@@ -22,7 +22,7 @@
             <HBox alignment="CENTER_LEFT">
                 <Label text="Pesanan Saya" style="-fx-font-size:24; -fx-font-weight:bold; -fx-text-fill:#111827;"/>
                 <Region HBox.hgrow="ALWAYS"/>
-                <Button text="+ Buat Pesanan Baru" onAction="#bukaTambahPesanan"
+                <Button text="+ Tambah Pesanan" onAction="#bukaTambahPesanan"
                         style="-fx-background-color:#6495ed; -fx-text-fill:white; -fx-font-size:13;
                                -fx-font-weight:bold; -fx-background-radius:8; -fx-padding:10 18; -fx-cursor:hand;"/>
             </HBox>
