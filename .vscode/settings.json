@@ -1,12 +1,7 @@
 {
-    "java.project.sourcePaths": [
-        "SILAU_ALASKA/src/Login"
-    ],
+    "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "C:/Java/javafx-sdk-26.0.1/lib/*.jar"
-    ],
-    "files.watcherExclude": {
-        "**/target/**": true
-    }
+        "lib/**/*.jar"
+    ]
 }
