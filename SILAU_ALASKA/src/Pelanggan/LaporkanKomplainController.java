@@ -32,7 +32,6 @@ public class LaporkanKomplainController {
                 "Baju rusak",
                 "Baju hilang",
                 "Cucian kurang bersih",
-                "Keterlambatan pengiriman",
                 "Lainnya"
         ));
 
