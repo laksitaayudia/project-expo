@@ -3116,3 +3116,189 @@ INFO: Unsupported notification method: $/setTrace
 2026.07.09 18:11:29 INFO  Exiting server
 =======
 >>>>>>> 446ffb6de1f204fda3c3c4be2eed2135aa9c9e10
+2026.07.09 18:12:19 INFO  Started: Metals version 1.6.7+119-3cd80c90-SNAPSHOT in folders 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo' for client Visual Studio Code 1.128.0.
+2026.07.09 18:12:19 INFO  Memory monitor started
+2026.07.09 18:12:19 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.09 18:12:21 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:12:21 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:12:21 WARN  no build tool detected in workspace 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2026.07.09 18:12:21 WARN  Build server is not auto-connectable.
+2026.07.09 18:12:21 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java
+2026.07.09 18:12:21 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:12:22 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:12:23 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:12:24 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:12:24 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:12:25 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:12:25 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:12:30 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.09 18:12:30 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java
+2026.07.09 18:12:30 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+Jul 09, 2026 6:12:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 20
+2026.07.09 18:12:30 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+Jul 09, 2026 6:12:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 24
+2026.07.09 18:12:30 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.09 18:12:31 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.09 18:12:30 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:12:31 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java
+2026.07.09 18:12:31 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:12:30 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:12:31 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:12:31 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:12:36 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:12:36 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java
+2026.07.09 18:12:36 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:12:36 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+Jul 09, 2026 6:12:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "class:/c%3A/Users/User/OneDrive/Dokumen/GitHub/project-expo/bin/LoginController.class"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "class" not installed
+	at java.base/java.nio.file.Path.of(Path.java:210)
+	at java.base/java.nio.file.Paths.get(Paths.java:95)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:149)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:221)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:787)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:784)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:808)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:225)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:192)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:189)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:97)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:330)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1516)
+
+2026.07.09 18:12:47 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DashboardOwnerController.java
+2026.07.09 18:12:47 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DashboardOwnerController.java. Using fallback presentation compiler.
+Jul 09, 2026 6:12:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 42
+2026.07.09 18:12:47 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DashboardOwnerController.java. Using fallback presentation compiler.
+2026.07.09 18:12:47 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DashboardOwnerController.java. Using fallback presentation compiler.
+2026.07.09 18:12:48 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DashboardOwnerController.java. Using fallback presentation compiler.
+2026.07.09 18:12:47 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DashboardOwnerController.java. Using fallback presentation compiler.
+2026.07.09 18:12:51 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.09 18:12:52 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java
+2026.07.09 18:12:51 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.09 18:12:52 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.09 18:12:51 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.09 18:12:51 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.09 18:12:53 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.09 18:12:55 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DashboardOwnerController.java. Using fallback presentation compiler.
+2026.07.09 18:12:55 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DataPelangganController.java
+2026.07.09 18:12:55 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DataPelangganController.java. Using fallback presentation compiler.
+2026.07.09 18:12:55 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DataPelangganController.java. Using fallback presentation compiler.
+2026.07.09 18:12:55 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DataPelangganController.java. Using fallback presentation compiler.
+2026.07.09 18:12:55 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DataPelangganController.java. Using fallback presentation compiler.
+2026.07.09 18:12:55 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DataPelangganController.java. Using fallback presentation compiler.
+2026.07.09 18:12:59 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.09 18:12:59 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java
+2026.07.09 18:12:59 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.09 18:13:00 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.09 18:12:59 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.09 18:12:59 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.09 18:13:02 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:13:02 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java
+2026.07.09 18:13:03 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:13:02 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:13:02 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:13:02 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:13:13 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DataPelangganController.java. Using fallback presentation compiler.
+Jul 09, 2026 6:14:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "class:/c%3A/Users/User/OneDrive/Dokumen/GitHub/project-expo/bin/Login.class"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "class" not installed
+	at java.base/java.nio.file.Path.of(Path.java:210)
+	at java.base/java.nio.file.Paths.get(Paths.java:95)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:149)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:221)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:787)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:784)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:808)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:225)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:192)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:189)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:97)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:330)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1516)
+
+2026.07.09 18:14:06 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:14:06 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java
+2026.07.09 18:14:06 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:14:07 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:14:06 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:14:06 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.09 18:14:08 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DashboardOwnerController.java. Using fallback presentation compiler.
+2026.07.09 18:14:08 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DashboardOwnerController.java
+2026.07.09 18:14:08 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DashboardOwnerController.java. Using fallback presentation compiler.
+2026.07.09 18:14:08 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DashboardOwnerController.java. Using fallback presentation compiler.
+2026.07.09 18:14:09 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DashboardOwnerController.java. Using fallback presentation compiler.
+2026.07.09 18:14:08 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DashboardOwnerController.java. Using fallback presentation compiler.
+2026.07.09 18:14:11 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.09 18:14:11 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java
+2026.07.09 18:14:11 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.09 18:14:11 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.09 18:14:11 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.09 18:14:14 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Owner\DashboardOwnerController.java. Using fallback presentation compiler.
+2026.07.09 18:14:18 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.09 18:14:18 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java
+Jul 09, 2026 6:14:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "class:/c%3A/Users/User/OneDrive/Dokumen/GitHub/project-expo/bin/LoginController.class"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "class" not installed
+	at java.base/java.nio.file.Path.of(Path.java:210)
+	at java.base/java.nio.file.Paths.get(Paths.java:95)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:149)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:221)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:787)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:784)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:808)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:225)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:192)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:189)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:97)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:330)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1516)
+
