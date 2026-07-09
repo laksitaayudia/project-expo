@@ -1,30 +1,11 @@
 {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    "java.project.sourcePaths": ["src"],
-    "java.project.outputPath": "bin",
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar"
-    ],
-=======
-<<<<<<< HEAD
->>>>>>> ac046778646e55d36b39182e7d77598c3c248f84
     "java.project.sourcePaths": [
         "SILAU_ALASKA/src"
     ],
     "java.project.outputPath": "SILAU_ALASKA/bin",
     "java.project.referencedLibraries": [
-<<<<<<< HEAD
         "SILAU_ALASKA/lib/**/*.jar"
     ],
-=======
-        "lib/**/*.jar"
-    ]
-}
-=======
->>>>>>> 446ffb6de1f204fda3c3c4be2eed2135aa9c9e10
->>>>>>> ac046778646e55d36b39182e7d77598c3c248f84
     "files.watcherExclude": {
         "**/target/**": true
     },
