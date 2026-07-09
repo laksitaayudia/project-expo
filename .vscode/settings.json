@@ -1,6 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "src"
+        "SILAU_ALASKA/src/Login"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
