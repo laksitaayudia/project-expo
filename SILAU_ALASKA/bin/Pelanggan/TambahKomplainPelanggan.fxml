@@ -40,7 +40,6 @@
                     <String fx:value="Baju rusak"/>
                     <String fx:value="Baju hilang"/>
                     <String fx:value="Cucian kurang bersih"/>
-                    <String fx:value="Keterlambatan pengiriman"/>
                     <String fx:value="Lainnya"/>
                 </FXCollections>
             </items>
