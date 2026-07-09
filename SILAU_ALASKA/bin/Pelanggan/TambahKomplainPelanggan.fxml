@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="12" prefWidth="380"
+      style="-fx-background-color:white;"
+      xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="Pelanggan.TambahKomplainPelangganController">
+
+    <padding><Insets top="25" right="25" bottom="25" left="25"/></padding>
+
+    <Label text="Laporkan Komplain Baru">
+        <font><Font name="System Bold" size="18.0"/></font>
+    </Label>
+
+    <Label text="Sampaikan keluhan Anda mengenai pesanan Anda" style="-fx-text-fill:#6b7280; -fx-font-size:11;"/>
+
+    <Separator/>
+
+    <!-- Pilih Pesanan -->
+    <VBox spacing="4" alignment="CENTER_LEFT">
+        <Label text="Pesanan Terkait" style="-fx-font-size:12; -fx-text-fill:#374151; -fx-font-weight:bold;"/>
+        <ComboBox fx:id="cbPesanan" prefWidth="330" promptText="-- Pilih Pesanan --"
+                  style="-fx-background-color:white; -fx-border-color:#e2e8f0; -fx-border-radius:8; -fx-background-radius:8; -fx-padding:4;"/>
+    </VBox>
+
+    <!-- Jenis Komplain -->
+    <VBox spacing="4" alignment="CENTER_LEFT">
+        <Label text="Jenis Komplain" style="-fx-font-size:12; -fx-text-fill:#374151; -fx-font-weight:bold;"/>
+        <ComboBox fx:id="cbJenisKomplain" prefWidth="330" promptText="-- Pilih Jenis Komplain --"
+                  style="-fx-background-color:white; -fx-border-color:#e2e8f0; -fx-border-radius:8; -fx-background-radius:8; -fx-padding:4;">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Baju tertukar"/>
+                    <String fx:value="Baju rusak"/>
+                    <String fx:value="Baju hilang"/>
+                    <String fx:value="Cucian kurang bersih"/>
+                    <String fx:value="Keterlambatan pengiriman"/>
+                    <String fx:value="Lainnya"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+    </VBox>
+
+    <!-- Deskripsi Masalah -->
+    <VBox spacing="4" alignment="CENTER_LEFT">
+        <Label text="Deskripsi Masalah" style="-fx-font-size:12; -fx-text-fill:#374151; -fx-font-weight:bold;"/>
+        <TextArea fx:id="txtDeskripsi" prefHeight="100" promptText="Jelaskan masalah Anda secara detail..."
+                  style="-fx-background-color:white; -fx-border-color:#e2e8f0; -fx-border-radius:8; -fx-background-radius:8; -fx-padding:6;"/>
+    </VBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Batal" onAction="#batal" prefWidth="160" prefHeight="38"
+                style="-fx-background-color:#f1f5f9; -fx-text-fill:#374151; -fx-font-size:13;
+                       -fx-background-radius:8; -fx-cursor:hand;"/>
+        <Button text="Kirim Laporan" onAction="#simpan" prefWidth="160" prefHeight="38"
+                style="-fx-background-color:#6495ed; -fx-text-fill:white; -fx-font-size:13;
+                       -fx-font-weight:bold; -fx-background-radius:8; -fx-cursor:hand;"/>
+    </HBox>
+
+</VBox>
