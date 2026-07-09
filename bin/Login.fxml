@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #6495ed;"
+    xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="Login.LoginController">
+
+    <children>
+
+        <VBox fx:id="cardLogin" alignment="CENTER" maxHeight="350.0" maxWidth="320" spacing="8"
+            style="-fx-background-color:white;                      -fx-background-radius:15;                        -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.2),15,0,0,5);">
+
+            <padding>
+                <Insets bottom="25" left="30" right="30" top="25" />
+            </padding>
+
+            <Label text="SILAU">
+                <font>
+                    <Font name="System Bold" size="24.0" />
+                </font>
+            </Label>
+
+            <Label text="Silakan Login" />
+
+            <Separator />
+
+            <Label text="Login Sebagai" />
+
+            <ComboBox fx:id="cbRole" prefHeight="25.0" prefWidth="302.0">
+
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Pelanggan" />
+                        <String fx:value="Karyawan" />
+                        <String fx:value="Owner" />
+                    </FXCollections>
+                </items>
+
+            </ComboBox>
+
+            <TextField fx:id="txtUsername" prefWidth="285" promptText="Username" />
+
+            <PasswordField fx:id="txtPassword" prefWidth="280" promptText="Password" />
+
+            <Button onAction="#login" prefHeight="40" prefWidth="280"
+                style="-fx-background-color:#2196F3;                            -fx-text-fill:white;                            -fx-font-size:15;"
+                text="LOGIN" />
+
+            <Hyperlink onAction="#register" text="Tidak punya akun? Daftar disini" />
+
+        </VBox>
+
+    </children>
+
+</StackPane>
