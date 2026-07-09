@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import Owner.DashboardOwnerController;
 
 public class LoginController {
 
@@ -102,26 +103,49 @@ public class LoginController {
         }
 
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+            java.net.URL fxmlUrl = getClass().getResource(fxmlPath);
+            if (fxmlUrl == null) {
+                throw new java.io.FileNotFoundException("File FXML tidak ditemukan di classpath: " + fxmlPath);
+            }
+            FXMLLoader loader = new FXMLLoader(fxmlUrl);
             Parent root = loader.load();
 
             // Kalau role-nya Karyawan, kirim data nama+role ke controllernya
             if (role.equals("Karyawan")) {
                 Karyawan.DashboardKaryawanController controller = loader.getController();
-                controller.setUserData(username, role);
+                if (controller != null) {
+                    controller.setUserData(username, role);
+                }
             } else if (role.equals("Pelanggan")) {
                 Pelanggan.DashboardPelangganController controller = loader.getController();
-                controller.setUserData(username, role);
-   
+                if (controller != null) {
+                    controller.setUserData(username, role);
+                }
+            } else if (role.equals("Owner")) {
+                DashboardOwnerController controller = loader.getController();
+                if (controller != null) {
+                    controller.setUserData(username, role);
+                }
             }
 
             Stage stage = (Stage) cbRole.getScene().getWindow();
             stage.getScene().setRoot(root);
             stage.setTitle("SILAU - Dashboard " + role);
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-            showAlert("Gagal memuat halaman dashboard.");
+            
+            // Cari root cause terdalam
+            Throwable rootCause = e;
+            while (rootCause.getCause() != null) {
+                rootCause = rootCause.getCause();
+            }
+            
+            String errorMsg = "Gagal memuat halaman dashboard.\n\n"
+                    + "Detail Error: " + e.toString() + "\n\n"
+                    + "Penyebab Utama (Root Cause): " + rootCause.toString();
+                    
+            showAlert(errorMsg);
         }
     }
 

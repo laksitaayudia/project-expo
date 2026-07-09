@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 
 import java.io.IOException;
+import Karyawan.Data;
 
 public class RegistrasiController {
 
@@ -57,7 +58,8 @@ public class RegistrasiController {
             return;
         }
 
-        // simpan data (nama, telepon, email, alamat, username, password) di sini.
+        PelangganRegister baru = new PelangganRegister(nama, telepon, email, alamat, username, password);
+        Data.tambahPelanggan(baru);
 
         showAlert(Alert.AlertType.INFORMATION, "Berhasil", "Pendaftaran berhasil! Silakan login.");
 

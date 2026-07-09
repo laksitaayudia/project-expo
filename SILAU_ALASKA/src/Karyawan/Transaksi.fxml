@@ -31,27 +31,10 @@
 
             <!-- Header -->
 
-            <HBox alignment="CENTER_LEFT">
-
-                <Label text="Manajemen Transaksi"
-                       style="-fx-font-size:24;
-                              -fx-font-weight:bold;
-                              -fx-text-fill:#111827;"/>
-
-                <Region HBox.hgrow="ALWAYS"/>
-
-                <Button text="+ Tambah Transaksi"
-                        fx:id="btnTambah"
-                        onAction="#bukaTambahTransaksi"
-                        style="-fx-background-color:#6495ed;
-                               -fx-text-fill:white;
-                               -fx-font-size:13;
-                               -fx-font-weight:bold;
-                               -fx-background-radius:8;
-                               -fx-padding:10 18;
-                               -fx-cursor:hand;"/>
-
-            </HBox>
+            <Label text="Manajemen Transaksi"
+                   style="-fx-font-size:24;
+                          -fx-font-weight:bold;
+                          -fx-text-fill:#111827;"/>
 
             <!-- Card -->
 

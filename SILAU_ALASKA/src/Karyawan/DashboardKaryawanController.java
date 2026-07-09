@@ -68,6 +68,7 @@ public class DashboardKaryawanController {
         setActive(btnDashboard);
 
         pesananController.setOnDataChanged(this::refreshTampilan);
+        transaksiController.setOnDataChanged(this::refreshTampilan);
 
         setupTabelDashboard();
         tabelPesanan.setItems(Data.getDaftarPesanan());

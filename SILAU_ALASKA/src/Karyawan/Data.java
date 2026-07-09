@@ -2,6 +2,9 @@ package Karyawan;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import Registrasi.PelangganRegister;
+import Owner.PromoItem;
+import Owner.PengeluaranItem;
 
 public class Data {
     private static final ObservableList<PesananItem> daftarPesanan = FXCollections.observableArrayList(
@@ -105,5 +108,75 @@ public class Data {
         return daftarKomplain.stream()
                 .mapToInt(KomplainItem::getId)
                 .max().orElse(0) + 1;
+    }
+
+    // ── Owner: Data Pelanggan Terdaftar ──
+    private static final ObservableList<PelangganRegister> daftarPelanggan =
+        FXCollections.observableArrayList(
+            new PelangganRegister("Budi Santoso", "081234567890", "budi@gmail.com", "Jl. Mawar No. 12", "budi", "budi123"),
+            new PelangganRegister("Siti Aminah", "085678901234", "siti@yahoo.com", "Jl. Melati No. 5", "siti", "siti123")
+        );
+
+    public static ObservableList<PelangganRegister> getDaftarPelanggan() {
+        return daftarPelanggan;
+    }
+
+    public static void tambahPelanggan(PelangganRegister pelanggan) {
+        daftarPelanggan.add(pelanggan);
+    }
+
+    // ── Owner: Kelola Promo ──
+    private static final ObservableList<PromoItem> daftarPromo =
+        FXCollections.observableArrayList(
+            new PromoItem("SILAUCEPAT", 10, "Persentase", 30000, "Aktif"),
+            new PromoItem("HEMATLAUNDRY", 5000, "Nominal", 25000, "Aktif")
+        );
+
+    public static ObservableList<PromoItem> getDaftarPromo() {
+        return daftarPromo;
+    }
+
+    public static void tambahPromo(PromoItem promo) {
+        daftarPromo.add(promo);
+    }
+
+    public static void hapusPromo(String kode) {
+        daftarPromo.removeIf(p -> p.getKode().equalsIgnoreCase(kode));
+    }
+
+    public static void editPromo(String kodeAsli, PromoItem updated) {
+        for (PromoItem p : daftarPromo) {
+            if (p.getKode().equalsIgnoreCase(kodeAsli)) {
+                p.setKode(updated.getKode());
+                p.setDiskon(updated.getDiskon());
+                p.setTipe(updated.getTipe());
+                p.setMinBelanja(updated.getMinBelanja());
+                p.setStatus(updated.getStatus());
+                break;
+            }
+        }
+    }
+
+    // ── Owner: Pengeluaran ──
+    private static final ObservableList<PengeluaranItem> daftarPengeluaran =
+        FXCollections.observableArrayList(
+            new PengeluaranItem(1, "2025-05-12", "Bahan Baku", 150000, "Pembelian deterjen"),
+            new PengeluaranItem(2, "2025-05-14", "Operasional", 75000, "Perbaikan pipa air")
+        );
+
+    public static ObservableList<PengeluaranItem> getDaftarPengeluaran() {
+        return daftarPengeluaran;
+    }
+
+    public static void tambahPengeluaran(PengeluaranItem pengeluaran) {
+        daftarPengeluaran.add(pengeluaran);
+    }
+
+    public static void hapusPengeluaran(int id) {
+        daftarPengeluaran.removeIf(p -> p.getId() == id);
+    }
+
+    public static int idPengeluaranBerikutnya() {
+        return daftarPengeluaran.stream().mapToInt(PengeluaranItem::getId).max().orElse(0) + 1;
     }
 }

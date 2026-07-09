@@ -34,6 +34,8 @@ public class DashboardPelangganController {
     @FXML
     private Button btnPembayaran;
     @FXML
+    private Button btnPromo;
+    @FXML
     private Button btnKomplain;
     @FXML
     private Button btnKeluar;
@@ -50,6 +52,11 @@ public class DashboardPelangganController {
     private Parent pembayaran;
     @FXML
     private PembayaranPelangganController pembayaranController;
+
+    @FXML
+    private Parent promosPelanggan;
+    @FXML
+    private PromosPelangganController promosPelangganController;
 
     @FXML
     private Parent komplain;
@@ -278,6 +285,7 @@ public class DashboardPelangganController {
         pesananSaya.setManaged(false);
         pembayaran.setVisible(false);
         pembayaran.setManaged(false);
+        if (promosPelanggan != null) { promosPelanggan.setVisible(false); promosPelanggan.setManaged(false); }
         komplain.setVisible(false);
         komplain.setManaged(false);
 
@@ -293,6 +301,7 @@ public class DashboardPelangganController {
         pesananSaya.setManaged(true);
         pembayaran.setVisible(false);
         pembayaran.setManaged(false);
+        if (promosPelanggan != null) { promosPelanggan.setVisible(false); promosPelanggan.setManaged(false); }
         komplain.setVisible(false);
         komplain.setManaged(false);
     }
@@ -306,11 +315,33 @@ public class DashboardPelangganController {
         pesananSaya.setManaged(false);
         pembayaran.setVisible(true);
         pembayaran.setManaged(true);
+        if (promosPelanggan != null) { promosPelanggan.setVisible(false); promosPelanggan.setManaged(false); }
         komplain.setVisible(false);
         komplain.setManaged(false);
 
         if (pembayaranController != null) {
             pembayaranController.refreshData();
+        }
+    }
+
+    @FXML
+    private void showPromo() {
+        setActive(btnPromo);
+        scrollDashboard.setVisible(false);
+        scrollDashboard.setManaged(false);
+        pesananSaya.setVisible(false);
+        pesananSaya.setManaged(false);
+        pembayaran.setVisible(false);
+        pembayaran.setManaged(false);
+        if (promosPelanggan != null) {
+            promosPelanggan.setVisible(true);
+            promosPelanggan.setManaged(true);
+        }
+        komplain.setVisible(false);
+        komplain.setManaged(false);
+
+        if (promosPelangganController != null) {
+            promosPelangganController.refreshPromo();
         }
     }
 
@@ -323,6 +354,7 @@ public class DashboardPelangganController {
         pesananSaya.setManaged(false);
         pembayaran.setVisible(false);
         pembayaran.setManaged(false);
+        if (promosPelanggan != null) { promosPelanggan.setVisible(false); promosPelanggan.setManaged(false); }
         komplain.setVisible(true);
         komplain.setManaged(true);
     }
@@ -331,6 +363,7 @@ public class DashboardPelangganController {
         btnDashboard.setStyle(STYLE_NONAKTIF);
         btnPesananSaya.setStyle(STYLE_NONAKTIF);
         btnPembayaran.setStyle(STYLE_NONAKTIF);
+        if (btnPromo != null) btnPromo.setStyle(STYLE_NONAKTIF);
         btnKomplain.setStyle(STYLE_NONAKTIF);
         aktif.setStyle(STYLE_AKTIF);
     }

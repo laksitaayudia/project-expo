@@ -49,6 +49,9 @@
                 <Button fx:id="btnPembayaran" onAction="#showPembayaran"
                     style="-fx-background-color:transparent; -fx-text-fill:#6b7280; -fx-font-size:13;                                -fx-background-radius:20; -fx-padding:8 16; -fx-cursor:hand;"
                     text="Pembayaran" />
+                <Button fx:id="btnPromo" onAction="#showPromo"
+                    style="-fx-background-color:transparent; -fx-text-fill:#6b7280; -fx-font-size:13;                                -fx-background-radius:20; -fx-padding:8 16; -fx-cursor:hand;"
+                    text="Promo" />
                 <Button fx:id="btnKomplain" onAction="#showKomplain"
                     style="-fx-background-color:transparent; -fx-text-fill:#6b7280; -fx-font-size:13;                                -fx-background-radius:20; -fx-padding:8 16; -fx-cursor:hand;"
                     text="Komplain" />
@@ -181,9 +184,10 @@
                 </content>
             </ScrollPane>
 
-            <!-- Sub pages (Pesanan Saya & Komplain) -->
+            <!-- Sub pages -->
             <fx:include fx:id="pesananSaya" source="PesananSaya.fxml" visible="false" managed="false"/>
             <fx:include fx:id="pembayaran" source="PembayaranPelanggan.fxml" visible="false" managed="false"/>
+            <fx:include fx:id="promosPelanggan" source="PromosPelanggan.fxml" visible="false" managed="false"/>
             <fx:include fx:id="komplain" source="KomplainPelanggan.fxml" visible="false" managed="false"/>
 
         </StackPane>

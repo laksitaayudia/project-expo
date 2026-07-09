@@ -3,6 +3,7 @@ package Pelanggan;
 import Karyawan.Data;
 import Karyawan.PesananItem;
 import Karyawan.TransaksiItem;
+import Owner.PromoItem;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -19,21 +20,34 @@ import java.time.format.DateTimeFormatter;
 
 public class PembayaranPelangganController {
 
-    @FXML private ComboBox<String> cbPesanan;
-    @FXML private ComboBox<String> cbPromo;
-    @FXML private ComboBox<String> cbMetode;
+    @FXML
+    private ComboBox<String> cbPesanan;
+    @FXML
+    private ComboBox<String> cbPromo;
+    @FXML
+    private ComboBox<String> cbMetode;
 
-    @FXML private Label lblTotalAwal;
-    @FXML private Label lblDiskon;
-    @FXML private Label lblTotalBayar;
+    @FXML
+    private Label lblTotalAwal;
+    @FXML
+    private Label lblDiskon;
+    @FXML
+    private Label lblTotalBayar;
 
-    @FXML private TableView<TransaksiItem> tabelTransaksi;
-    @FXML private TableColumn<TransaksiItem, String> colId;
-    @FXML private TableColumn<TransaksiItem, String> colPesanan;
-    @FXML private TableColumn<TransaksiItem, String> colTotal;
-    @FXML private TableColumn<TransaksiItem, String> colStatus;
-    @FXML private TableColumn<TransaksiItem, String> colMetode;
-    @FXML private TableColumn<TransaksiItem, String> colTanggal;
+    @FXML
+    private TableView<TransaksiItem> tabelTransaksi;
+    @FXML
+    private TableColumn<TransaksiItem, String> colId;
+    @FXML
+    private TableColumn<TransaksiItem, String> colPesanan;
+    @FXML
+    private TableColumn<TransaksiItem, String> colTotal;
+    @FXML
+    private TableColumn<TransaksiItem, String> colStatus;
+    @FXML
+    private TableColumn<TransaksiItem, String> colMetode;
+    @FXML
+    private TableColumn<TransaksiItem, String> colTanggal;
 
     private String namaPelanggan = "Budi Santoso";
     private int totalAwal = 0;
@@ -53,22 +67,12 @@ public class PembayaranPelangganController {
 
     @FXML
     public void initialize() {
-        // Setup dropdown promo
-        cbPromo.setItems(FXCollections.observableArrayList(
-                "Tidak Ada Promo",
-                "PROMOSILAU (Diskon 10%)",
-                "EXPO20 (Diskon 20%)",
-                "LUCKY30 (Diskon 30%)"
-        ));
-        cbPromo.setValue("Tidak Ada Promo");
-
         // Setup dropdown metode pembayaran
         cbMetode.setItems(FXCollections.observableArrayList(
                 "Cash",
                 "Transfer",
                 "QRIS",
-                "E-Wallet"
-        ));
+                "E-Wallet"));
 
         // Listeners for auto-calculate payment details
         cbPesanan.setOnAction(e -> hitungPembayaran());
@@ -78,26 +82,54 @@ public class PembayaranPelangganController {
         refreshData();
     }
 
+    // Hanya promo dengan status "Aktif" yang ditampilkan
+    private void refreshCbPromo() {
+        String sebelumnya = cbPromo.getValue();
+
+        ObservableList<String> listPromo = FXCollections.observableArrayList();
+        listPromo.add("Tidak Ada Promo");
+
+        for (PromoItem promo : Data.getDaftarPromo()) {
+            if ("Aktif".equalsIgnoreCase(promo.getStatus())) {
+                listPromo.add(promo.getKode());
+            }
+        }
+
+        cbPromo.setItems(listPromo);
+
+        // Pertahankan pilihan sebelumnya jika masih ada, atau reset ke "Tidak Ada
+        // Promo"
+        if (sebelumnya != null && listPromo.contains(sebelumnya)) {
+            cbPromo.setValue(sebelumnya);
+        } else {
+            cbPromo.setValue("Tidak Ada Promo");
+        }
+    }
+
     public void refreshData() {
-        // 1. Populate ComboBox Pesanan yang belum lunas (status transaksi "Belum Bayar" atau belum ada transaksi)
+        // 1. Refresh ComboBox Promo dari data Owner
+        refreshCbPromo();
+
+        // 2. Populate ComboBox Pesanan yang belum lunas
         cbPesanan.getItems().clear();
         for (PesananItem p : Data.getDaftarPesanan()) {
             if (p.getPelanggan().equalsIgnoreCase(namaPelanggan)) {
-                // Check if this order is not paid yet
                 boolean sudahBayar = false;
                 for (TransaksiItem t : Data.getDaftarTransaksi()) {
-                    if (t.getIdPesanan().equals("PSN00" + p.getId()) && "Sudah Bayar".equalsIgnoreCase(t.getStatusBayar())) {
+                    if (t.getIdPesanan().equals("PSN00" + p.getId())
+                            && "Sudah Bayar".equalsIgnoreCase(t.getStatusBayar())) {
                         sudahBayar = true;
                         break;
                     }
                 }
                 if (!sudahBayar) {
-                    cbPesanan.getItems().add("PSN00" + p.getId() + " - " + p.getLayanan() + " (" + p.getBerat() + " kg)");
+                    cbPesanan.getItems()
+                            .add("PSN00" + p.getId() + " - " + p.getLayanan() + " (" + p.getBerat() + " kg)");
                 }
             }
         }
 
-        // 2. Populate Tabel Transaksi khusus milik pelanggan ini
+        // 3. Populate Tabel Transaksi khusus milik pelanggan ini
         ObservableList<TransaksiItem> filteredTx = FXCollections.observableArrayList();
         for (TransaksiItem t : Data.getDaftarTransaksi()) {
             if (t.getPelanggan().equalsIgnoreCase(namaPelanggan)) {
@@ -119,7 +151,8 @@ public class PembayaranPelangganController {
         colTanggal.setCellValueFactory(new PropertyValueFactory<>("tanggalBayar"));
 
         colStatus.setCellFactory(col -> new TableCell<TransaksiItem, String>() {
-            @Override protected void updateItem(String value, boolean empty) {
+            @Override
+            protected void updateItem(String value, boolean empty) {
                 super.updateItem(value, empty);
                 setText(value);
                 if (value != null) {
@@ -143,7 +176,7 @@ public class PembayaranPelangganController {
             return;
         }
 
-        // Extract ID Pesanan from e.g. "PSN002 - Reguler..."
+        // Extract biaya dari PesananItem
         String idStr = pesananVal.split(" - ")[0].replace("PSN", "").replace("0", "");
         try {
             int idVal = Integer.parseInt(idStr);
@@ -157,22 +190,32 @@ public class PembayaranPelangganController {
             totalAwal = 0;
         }
 
-        // Calculate discount based on selected promo code
-        double diskonPersen = 0.0;
-        String promoVal = cbPromo.getValue();
-        if (promoVal != null) {
-            if (promoVal.contains("10%")) {
-                diskonPersen = 0.10;
-            } else if (promoVal.contains("20%")) {
-                diskonPersen = 0.20;
-            } else if (promoVal.contains("30%")) {
-                diskonPersen = 0.30;
+        // Hitung diskon dari PromoItem yang dipilih (bukan hardcoded)
+        diskon = 0;
+        String promoLabel = cbPromo.getValue();
+        if (promoLabel != null && !promoLabel.equals("Tidak Ada Promo")) {
+            // Ambil kode promo dari label (kata pertama sebelum spasi)
+            String kodePromo = promoLabel.split(" ")[0];
+            for (PromoItem promo : Data.getDaftarPromo()) {
+                if (promo.getKode().equalsIgnoreCase(kodePromo)
+                        && "Aktif".equalsIgnoreCase(promo.getStatus())) {
+                    // Validasi minimal belanja
+                    if (totalAwal >= promo.getMinBelanja()) {
+                        if ("Persentase".equalsIgnoreCase(promo.getTipe())) {
+                            diskon = (int) (totalAwal * promo.getDiskon() / 100.0);
+                        } else {
+                            // Nominal: potongan tetap, tidak boleh melebihi totalAwal
+                            diskon = Math.min(promo.getDiskon(), totalAwal);
+                        }
+                    } else {
+                        diskon = 0; // Belanja belum memenuhi syarat minimum
+                    }
+                    break;
+                }
             }
         }
 
-        diskon = (int) (totalAwal * diskonPersen);
         totalBayar = totalAwal - diskon;
-
         updateSummaryLabels();
     }
 
@@ -202,13 +245,27 @@ public class PembayaranPelangganController {
             return;
         }
 
-        String idPesanan = pesananVal.split(" - ")[0];
+        // Validasi ulang minimal belanja jika ada promo dipilih
+        String promoLabel = cbPromo.getValue();
+        if (promoLabel != null && !promoLabel.equals("Tidak Ada Promo")) {
+            String kodePromo = promoLabel.split(" ")[0];
+            for (PromoItem promo : Data.getDaftarPromo()) {
+                if (promo.getKode().equalsIgnoreCase(kodePromo)) {
+                    if (totalAwal < promo.getMinBelanja()) {
+                        showAlert("Promo \"" + kodePromo + "\" membutuhkan minimal belanja Rp"
+                                + String.format("%,d", promo.getMinBelanja()).replace(",", ".")
+                                + ". Diskon tidak diterapkan.");
+                    }
+                    break;
+                }
+            }
+        }
 
-        // Format Date to DD/MM/YYYY
+        String idPesanan = pesananVal.split(" - ")[0];
         String formattedDate = LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         String formattedTotal = "Rp" + String.format("%,d", totalBayar).replace(",", ".");
 
-        // Check if transaction already exists in list (update status) or create new
+        // Update atau buat transaksi baru
         boolean foundTx = false;
         for (TransaksiItem t : Data.getDaftarTransaksi()) {
             if (t.getIdPesanan().equals(idPesanan)) {
@@ -230,12 +287,10 @@ public class PembayaranPelangganController {
                     formattedTotal,
                     "Sudah Bayar",
                     metodeVal,
-                    formattedDate
-            );
+                    formattedDate);
             Data.tambahTransaksi(newTx);
         }
 
-        // Show Success Alert
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Sukses");
         alert.setHeaderText(null);

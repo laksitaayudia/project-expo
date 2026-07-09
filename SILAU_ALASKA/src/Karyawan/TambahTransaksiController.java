@@ -55,12 +55,16 @@ public class TambahTransaksiController {
     }
 
     private void isiData(){
-        int index = cbPesanan.getSelectionModel().getSelectedIndex();
-        if(index >= 0){
+        String selectedId = cbPesanan.getValue();
+        if (selectedId == null) return;
 
-            PesananItem p = Data.getDaftarPesanan().get(index);
-            txtPelanggan.setText(p.getPelanggan());
-            txtTotal.setText("Rp" + (int)p.getBiaya());
+        // Cari PesananItem berdasarkan ID pesanan yang dipilih
+        for (PesananItem p : Data.getDaftarPesanan()) {
+            if (("PSN00" + p.getId()).equals(selectedId)) {
+                txtPelanggan.setText(p.getPelanggan());
+                txtTotal.setText("Rp" + (int) p.getBiaya());
+                break;
+            }
         }
     }
 

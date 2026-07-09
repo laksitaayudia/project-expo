@@ -2,6 +2,7 @@ package Pelanggan;
 
 import Karyawan.Data;
 import Karyawan.PesananItem;
+import Karyawan.TransaksiItem;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -109,6 +110,20 @@ public class TambahPesananPelangganController {
         PesananItem pesananBaru = new PesananItem(idBaru, pelanggan, layanan, berat, biaya, "MENUNGGU");
         DataTanggal.setTanggal(idBaru, tanggalText);
         Data.tambahPesanan(pesananBaru);
+
+        // Otomatis buat TransaksiItem berstatus "Belum Bayar" agar muncul di menu Transaksi karyawan
+        String idTransaksiBaru = "TRX00" + (Data.getDaftarTransaksi().size() + 1);
+        String idPesananBaru   = "PSN00" + idBaru;
+        String totalFormatted  = "Rp" + String.format("%,d", biaya).replace(",", ".");
+        Data.tambahTransaksi(new TransaksiItem(
+                idTransaksiBaru,
+                idPesananBaru,
+                pelanggan,
+                totalFormatted,
+                "Belum Bayar",
+                "-",
+                "-"
+        ));
 
         if (onSimpanBerhasil != null) {
             onSimpanBerhasil.run();
