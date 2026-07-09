@@ -1020,3 +1020,154 @@ WARNING: Unmatched cancel notification for request id 29
 2026.07.07 01:02:36 INFO  Memory monitor stopped
 2026.07.07 01:02:36 INFO  shutting down Metals
 2026.07.07 01:02:36 INFO  Exiting server
+2026.07.08 20:14:18 INFO  Started: Metals version 1.6.7+119-3cd80c90-SNAPSHOT in folders 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo' for client Visual Studio Code 1.127.0.
+2026.07.08 20:14:18 INFO  Memory monitor started
+2026.07.08 20:14:19 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.08 20:14:19 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Pelanggan\BuatPesananController.java. Using fallback presentation compiler.
+2026.07.08 20:14:20 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Pelanggan\BuatPesananController.java. Using fallback presentation compiler.
+2026.07.08 20:14:20 WARN  no build tool detected in workspace 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2026.07.08 20:14:20 WARN  Build server is not auto-connectable.
+2026.07.08 20:14:20 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Pelanggan\BuatPesananController.java
+2026.07.08 20:14:20 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Pelanggan\BuatPesananController.java. Using fallback presentation compiler.
+2026.07.08 20:14:19 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Pelanggan\BuatPesananController.java. Using fallback presentation compiler.
+2026.07.08 20:14:21 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Pelanggan\LaporkanKomplainController.java. Using fallback presentation compiler.
+2026.07.08 20:14:21 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Pelanggan\LaporkanKomplainController.java
+2026.07.08 20:14:21 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Pelanggan\LaporkanKomplainController.java. Using fallback presentation compiler.
+Jul 08, 2026 8:14:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9
+2026.07.08 20:14:21 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Pelanggan\LaporkanKomplainController.java. Using fallback presentation compiler.
+Jul 08, 2026 8:14:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 13
+Jul 08, 2026 8:14:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 12
+Jul 08, 2026 8:14:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10
+Jul 08, 2026 8:14:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 11
+2026.07.08 20:14:21 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Pelanggan\LaporkanKomplainController.java. Using fallback presentation compiler.
+2026.07.08 20:14:21 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Pelanggan\KomplainPelangganController.java
+2026.07.08 20:14:21 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Pelanggan\KomplainPelangganController.java. Using fallback presentation compiler.
+Jul 08, 2026 8:14:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 17
+2026.07.08 20:14:21 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Pelanggan\KomplainPelangganController.java. Using fallback presentation compiler.
+2026.07.08 20:14:21 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Pelanggan\KomplainPelangganController.java. Using fallback presentation compiler.
+2026.07.08 20:14:21 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Pelanggan\KomplainPelangganController.java. Using fallback presentation compiler.
+Jul 08, 2026 8:14:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 21
+2026.07.08 20:14:22 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Pelanggan\KomplainPelangganController.java. Using fallback presentation compiler.
+2026.07.08 20:14:22 INFO  restarted 1 presentation compiler
+2026.07.08 20:14:29 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java
+2026.07.08 20:14:29 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.08 20:14:29 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.08 20:14:29 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+Jul 08, 2026 8:14:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 26
+2026.07.08 20:14:29 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.08 20:14:29 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.08 20:14:31 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.08 20:14:31 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java
+2026.07.08 20:14:31 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.08 20:14:31 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.08 20:14:31 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.08 20:14:31 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.08 20:14:31 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.08 20:14:31 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.08 20:14:32 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TransaksiItem.java
+2026.07.08 20:14:31 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TransaksiItem.java. Using fallback presentation compiler.
+2026.07.08 20:14:32 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TransaksiItem.java. Using fallback presentation compiler.
+2026.07.08 20:14:31 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TransaksiItem.java. Using fallback presentation compiler.
+2026.07.08 20:14:32 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TransaksiItem.java. Using fallback presentation compiler.
+2026.07.08 20:14:35 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TransaksiItem.java. Using fallback presentation compiler.
+2026.07.08 20:14:35 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TransaksiController.java
+2026.07.08 20:14:35 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TransaksiController.java. Using fallback presentation compiler.
+2026.07.08 20:14:35 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TransaksiController.java. Using fallback presentation compiler.
+Jul 08, 2026 8:14:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 56
+2026.07.08 20:14:35 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TransaksiController.java. Using fallback presentation compiler.
+2026.07.08 20:14:36 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TransaksiController.java. Using fallback presentation compiler.
+2026.07.08 20:14:35 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TransaksiController.java. Using fallback presentation compiler.
+2026.07.08 20:14:35 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TransaksiController.java. Using fallback presentation compiler.
+2026.07.08 20:14:36 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TransaksiItem.java
+2026.07.08 20:14:35 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TransaksiItem.java. Using fallback presentation compiler.
+2026.07.08 20:14:35 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TransaksiItem.java. Using fallback presentation compiler.
+2026.07.08 20:14:35 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TransaksiItem.java. Using fallback presentation compiler.
+2026.07.08 20:14:36 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TransaksiItem.java. Using fallback presentation compiler.
+2026.07.08 20:14:39 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TransaksiItem.java. Using fallback presentation compiler.
+2026.07.08 20:14:39 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TambahTransaksiController.java
+2026.07.08 20:14:39 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TambahTransaksiController.java. Using fallback presentation compiler.
+2026.07.08 20:14:39 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TambahTransaksiController.java. Using fallback presentation compiler.
+2026.07.08 20:14:39 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TambahTransaksiController.java. Using fallback presentation compiler.
+2026.07.08 20:14:39 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TambahTransaksiController.java. Using fallback presentation compiler.
+2026.07.08 20:14:39 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TambahTransaksiController.java. Using fallback presentation compiler.
+2026.07.08 20:14:39 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TambahPesananController.java
+2026.07.08 20:14:39 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TambahPesananController.java. Using fallback presentation compiler.
+2026.07.08 20:14:40 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TambahPesananController.java. Using fallback presentation compiler.
+2026.07.08 20:14:39 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TambahPesananController.java. Using fallback presentation compiler.
+2026.07.08 20:14:40 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TambahPesananController.java. Using fallback presentation compiler.
+2026.07.08 20:14:40 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TambahPesananController.java. Using fallback presentation compiler.
+2026.07.08 20:14:40 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\TambahPesananController.java. Using fallback presentation compiler.
+2026.07.08 20:14:40 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\PesananItem.java. Using fallback presentation compiler.
+2026.07.08 20:14:41 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\PesananItem.java
+2026.07.08 20:14:40 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\PesananItem.java. Using fallback presentation compiler.
+2026.07.08 20:14:40 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\PesananItem.java. Using fallback presentation compiler.
+2026.07.08 20:14:40 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\PesananItem.java. Using fallback presentation compiler.
+2026.07.08 20:14:41 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\PesananController.java
+2026.07.08 20:14:40 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\PesananController.java. Using fallback presentation compiler.
+Jul 08, 2026 8:14:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 102
+2026.07.08 20:14:41 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\PesananController.java. Using fallback presentation compiler.
+2026.07.08 20:14:40 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\PesananController.java. Using fallback presentation compiler.
+2026.07.08 20:14:41 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\PesananController.java. Using fallback presentation compiler.
+2026.07.08 20:14:42 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\PesananController.java. Using fallback presentation compiler.
+2026.07.08 20:14:41 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java
+2026.07.08 20:14:42 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.08 20:14:41 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.08 20:14:42 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.08 20:14:42 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.08 20:14:42 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.08 20:14:43 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.08 20:14:43 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java
+2026.07.08 20:14:43 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.08 20:14:43 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.08 20:14:43 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.08 20:14:43 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.08 20:14:43 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.08 20:17:10 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.08 20:17:10 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.08 20:17:10 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java
+2026.07.08 20:17:11 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.08 20:17:10 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.08 20:17:11 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.08 20:17:11 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.08 20:17:13 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.08 20:17:13 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java
+2026.07.08 20:17:13 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.08 20:17:13 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+Jul 08, 2026 8:17:13 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 142
+2026.07.08 20:17:13 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.08 20:17:13 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.08 20:17:13 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\LoginController.java. Using fallback presentation compiler.
+2026.07.08 22:35:36 INFO  Shutting down server
+2026.07.08 22:35:36 INFO  Memory monitor stopped
+2026.07.08 22:35:36 INFO  shutting down Metals
+2026.07.08 22:35:36 INFO  Exiting server
+2026.07.09 13:09:20 INFO  Started: Metals version 1.6.7+119-3cd80c90-SNAPSHOT in folders 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo' for client Visual Studio Code 1.128.0.
+2026.07.09 13:09:20 INFO  Memory monitor started
+2026.07.09 13:09:21 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.09 13:09:21 WARN  no build tool detected in workspace 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2026.07.09 13:09:22 WARN  Build server is not auto-connectable.
+2026.07.09 13:09:51 INFO  Shutting down server
+2026.07.09 13:09:51 INFO  Memory monitor stopped
+2026.07.09 13:09:51 INFO  shutting down Metals
+2026.07.09 13:09:51 INFO  Exiting server
+2026.07.09 13:10:37 INFO  Started: Metals version 1.6.7+119-3cd80c90-SNAPSHOT in folders 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo' for client Visual Studio Code 1.128.0.
+2026.07.09 13:10:37 INFO  Memory monitor started
+2026.07.09 13:10:38 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.09 13:10:38 WARN  no build tool detected in workspace 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2026.07.09 13:10:39 WARN  Build server is not auto-connectable.
+2026.07.09 13:10:40 INFO  restarted 0 presentation compilers
+2026.07.09 13:11:17 INFO  Shutting down server
+2026.07.09 13:11:17 INFO  Memory monitor stopped
+2026.07.09 13:11:17 INFO  shutting down Metals
+2026.07.09 13:11:17 INFO  Exiting server
