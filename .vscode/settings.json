@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "java.project.sourcePaths": [
         "SILAU_ALASKA/src/Login"
     ],
@@ -7,3 +8,10 @@
         "lib/**/*.jar"
     ]
 }
+=======
+    "files.watcherExclude": {
+        "**/target/**": true
+    },
+    "xml.downloadExternalResources.enabled": true
+}
+>>>>>>> 0d468971e1378f752b930b0fc0a5ec48932efec4
