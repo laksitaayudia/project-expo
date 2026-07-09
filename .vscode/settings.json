@@ -1,10 +1,25 @@
 {
+<<<<<<< HEAD
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
     ],
+=======
+<<<<<<< HEAD
+    "java.project.sourcePaths": [
+        "SILAU_ALASKA/src/Login"
+    ],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ]
+}
+=======
+>>>>>>> 446ffb6de1f204fda3c3c4be2eed2135aa9c9e10
     "files.watcherExclude": {
         "**/target/**": true
-    }
+    },
+    "xml.downloadExternalResources.enabled": true
 }
+>>>>>>> 0d468971e1378f752b930b0fc0a5ec48932efec4

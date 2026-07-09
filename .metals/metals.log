@@ -1020,6 +1020,7 @@ WARNING: Unmatched cancel notification for request id 29
 2026.07.07 01:02:36 INFO  Memory monitor stopped
 2026.07.07 01:02:36 INFO  shutting down Metals
 2026.07.07 01:02:36 INFO  Exiting server
+<<<<<<< HEAD
 2026.07.08 20:14:18 INFO  Started: Metals version 1.6.7+119-3cd80c90-SNAPSHOT in folders 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo' for client Visual Studio Code 1.127.0.
 2026.07.08 20:14:18 INFO  Memory monitor started
 2026.07.08 20:14:19 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
@@ -3113,3 +3114,5 @@ INFO: Unsupported notification method: $/setTrace
 2026.07.09 18:11:29 INFO  Memory monitor stopped
 2026.07.09 18:11:29 INFO  shutting down Metals
 2026.07.09 18:11:29 INFO  Exiting server
+=======
+>>>>>>> 446ffb6de1f204fda3c3c4be2eed2135aa9c9e10
