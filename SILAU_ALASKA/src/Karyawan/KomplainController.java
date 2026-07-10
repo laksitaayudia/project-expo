@@ -83,7 +83,7 @@ public class KomplainController {
                 return dasar + "-fx-background-color:#dcfce7; -fx-text-fill:#16a34a;";
             case "Ditolak":
                 return dasar + "-fx-background-color:#fee2e2; -fx-text-fill:#dc2626;";
-            default: // "Diproses" atau status lain
+            default:
                 return dasar + "-fx-background-color:#fef3c7; -fx-text-fill:#92400e;";
         }
     }

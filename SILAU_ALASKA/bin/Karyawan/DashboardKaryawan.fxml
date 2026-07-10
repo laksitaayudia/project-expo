@@ -176,6 +176,7 @@
 
             <fx:include fx:id="pesanan" source="Pesanan.fxml" visible="false" managed="false"/>
             <fx:include fx:id="transaksi" source="Transaksi.fxml" visible="false" managed="false"/>
+            <fx:include fx:id="komplain" source="Komplain.fxml" visible="false" managed="false"/>
 
         </StackPane>
     </center>

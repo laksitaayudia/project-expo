@@ -37,6 +37,9 @@ public class DashboardKaryawanController {
     @FXML private Parent transaksi;
     @FXML private TransaksiController transaksiController;
 
+    @FXML private Parent komplain;
+    @FXML private KomplainController komplainController;
+
     @FXML private Label lblNamaUser;
     @FXML private Label lblInisial;
 
@@ -69,6 +72,7 @@ public class DashboardKaryawanController {
 
         pesananController.setOnDataChanged(this::refreshTampilan);
         transaksiController.setOnDataChanged(this::refreshTampilan);
+        komplainController.setOnDataChanged(this::refreshTampilan);
 
         setupTabelDashboard();
         tabelPesanan.setItems(Data.getDaftarPesanan());
@@ -188,6 +192,8 @@ public class DashboardKaryawanController {
         pesanan.setManaged(false);
         transaksi.setVisible(false);
         transaksi.setManaged(false);
+        komplain.setVisible(false);
+        komplain.setManaged(false);
     }
 
     @FXML
@@ -199,6 +205,8 @@ public class DashboardKaryawanController {
         pesanan.setManaged(true);
         transaksi.setVisible(false);
         transaksi.setManaged(false);
+        komplain.setVisible(false);
+        komplain.setManaged(false);
     }
 
     @FXML
@@ -210,9 +218,22 @@ public class DashboardKaryawanController {
         pesanan.setManaged(false);
         transaksi.setVisible(true);
         transaksi.setManaged(true);
+        komplain.setVisible(false);
+        komplain.setManaged(false);
     }
 
-    @FXML private void showKomplain() { setActive(btnKomplain); }
+    @FXML
+    private void showKomplain() {
+        setActive(btnKomplain);
+        scrollDashboard.setVisible(false);
+        scrollDashboard.setManaged(false);
+        pesanan.setVisible(false);
+        pesanan.setManaged(false);
+        transaksi.setVisible(false);
+        transaksi.setManaged(false);
+        komplain.setVisible(true);
+        komplain.setManaged(true);
+    }
 
     private void setActive(Button aktif) {
         btnDashboard.setStyle(STYLE_NONAKTIF);
