@@ -4,6 +4,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import Registrasi.PelangganRegister;
 import Owner.PromoItem;
+
+import java.util.ArrayList;
+
 import Owner.PengeluaranItem;
 
 public class Data {
@@ -108,6 +111,21 @@ public class Data {
         return daftarKomplain.stream()
                 .mapToInt(KomplainItem::getId)
                 .max().orElse(0) + 1;
+    }
+
+       private static void simpanKomplain() {
+        XmlStore.simpan("komplain", new ArrayList<>(daftarKomplain));
+    }
+    
+        public static void perbaruiKomplain(int id, String statusBaru, String solusiBaru) {
+        for (KomplainItem k : daftarKomplain) {
+            if (k.getId() == id) {
+                k.setStatus(statusBaru);
+                k.setSolusi(solusiBaru);
+                break;
+            }
+        }
+        simpanKomplain();
     }
 
     // ── Owner: Data Pelanggan Terdaftar ──
