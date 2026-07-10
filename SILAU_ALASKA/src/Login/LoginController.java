@@ -25,14 +25,14 @@ public class LoginController {
     @FXML
     private PasswordField txtPassword;
 
-    private static final String USER_PELANGGAN = "pelanggan";
-    private static final String PASS_PELANGGAN = "pelanggan123";
+    private static final String USER_PELANGGAN = "p";
+    private static final String PASS_PELANGGAN = "p123";
 
-    private static final String USER_KARYAWAN = "karyawan";
-    private static final String PASS_KARYAWAN = "karyawan123";
+    private static final String USER_KARYAWAN = "k";
+    private static final String PASS_KARYAWAN = "k123";
 
-    private static final String USER_OWNER = "owner";
-    private static final String PASS_OWNER = "owner123";
+    private static final String USER_OWNER = "o";
+    private static final String PASS_OWNER = "o123";
 
     @FXML
     private void login() {
