@@ -85,11 +85,6 @@
                                 </HBox>
                             </VBox>
 
-                            <Region HBox.hgrow="ALWAYS"/>
-
-                            <Button fx:id="btnTambahPesanan" text="+ Tambah Pesanan" onAction="#bukaTambahPesanan"
-                                    style="-fx-background-color:#6495ed; -fx-text-fill:white; -fx-font-size:13;
-                                           -fx-font-weight:bold; -fx-background-radius:8; -fx-padding:10 18; -fx-cursor:hand;"/>
                         </HBox>
 
                         <HBox spacing="20">

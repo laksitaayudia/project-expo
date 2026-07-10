@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Karyawan.KomplainController"
+            fitToWidth="true"
+            style="-fx-background:#f4f6f5; -fx-background-color:#f4f6f5;">
+    <content>
+        <VBox spacing="20" style="-fx-background-color:#f4f6f5;">
+            <padding><Insets top="28" right="35" bottom="28" left="35"/></padding>
+
+            <HBox alignment="CENTER_LEFT">
+                <Label text="Manajemen Komplain" style="-fx-font-size:24; -fx-font-weight:bold; -fx-text-fill:#111827;"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button text="+ Catat Komplain" onAction="#bukaTambahKomplain"
+                        style="-fx-background-color:#6495ed; -fx-text-fill:white; -fx-font-size:13;
+                               -fx-font-weight:bold; -fx-background-radius:8; -fx-padding:10 18; -fx-cursor:hand;"/>
+            </HBox>
+
+            <VBox spacing="0"
+                  style="-fx-background-color:white; -fx-background-radius:15;
+                         -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),12,0,0,3);">
+
+                <Label text="Semua Komplain" style="-fx-font-size:15; -fx-font-weight:bold; -fx-text-fill:#111827;">
+                    <padding><Insets top="18" right="20" bottom="14" left="20"/></padding>
+                </Label>
+
+                <Separator/>
+
+                <TableView fx:id="tabelKomplain" prefHeight="500" style="-fx-background-color:transparent;">
+                    <columns>
+                        <TableColumn fx:id="colIdK" text="ID" prefWidth="55"/>
+                        <TableColumn fx:id="colIdPesananK" text="ID PESANAN" prefWidth="110"/>
+                        <TableColumn fx:id="colJenisK" text="JENIS KOMPLAIN" prefWidth="160"/>
+                        <TableColumn fx:id="colDeskripsiK" text="DESKRIPSI" prefWidth="230"/>
+                        <TableColumn fx:id="colStatusK" text="STATUS" prefWidth="110"/>
+                        <TableColumn fx:id="colAksiK" text="AKSI" prefWidth="140"/>
+                    </columns>
+                    <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
+                </TableView>
+
+            </VBox>
+
+        </VBox>
+    </content>
+</ScrollPane>
