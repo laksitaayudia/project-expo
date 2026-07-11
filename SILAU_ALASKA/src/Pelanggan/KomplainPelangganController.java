@@ -27,6 +27,7 @@ public class KomplainPelangganController {
     @FXML private TableColumn<KomplainItem, String> colDeskripsi;
     @FXML private TableColumn<KomplainItem, String> colStatus;
     @FXML private TableColumn<KomplainItem, String> colSolusi;
+    @FXML private TableColumn<KomplainItem, Void> colAksi;
 
     private Runnable onDataChanged;
     private String namaPelanggan = "Budi Santoso";
@@ -43,6 +44,7 @@ public class KomplainPelangganController {
     @FXML
     public void initialize() {
         setupKolom();
+        setupKolomAksi();
         refreshData();
     }
 
@@ -93,6 +95,51 @@ public class KomplainPelangganController {
                 }
             }
         });
+    }
+
+    private void setupKolomAksi() {
+        colAksi.setStyle("-fx-alignment: CENTER;");
+
+        colAksi.setCellFactory(col -> new TableCell<KomplainItem, Void>() {
+
+            private final javafx.scene.control.Button btnDetail = new javafx.scene.control.Button("Detail");
+
+            {
+                btnDetail.setStyle("-fx-background-color:#6495ed; -fx-text-fill:white; -fx-font-size:11; " +
+                        "-fx-background-radius:6; -fx-cursor:hand; -fx-padding:4 12;");
+
+                btnDetail.setOnAction(event -> {
+                    KomplainItem item = getTableView().getItems().get(getIndex());
+                    bukaDetailKomplain(item);
+                });
+            }
+
+            @Override
+            protected void updateItem(Void value, boolean empty) {
+                super.updateItem(value, empty);
+                setGraphic(empty ? null : btnDetail);
+            }
+        });
+    }
+
+    private void bukaDetailKomplain(KomplainItem item) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Pelanggan/DetailKomplainPelanggan.fxml"));
+            Parent root = loader.load();
+
+            DetailKomplainPelangganController controller = loader.getController();
+            controller.isiData(item);
+
+            Stage dialog = new Stage();
+            dialog.setTitle("Detail Komplain #" + item.getId());
+            dialog.initModality(Modality.APPLICATION_MODAL);
+            dialog.setScene(new Scene(root));
+            dialog.setResizable(false);
+            dialog.showAndWait();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

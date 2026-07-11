@@ -16,9 +16,11 @@ public class TanggapiKomplainController {
     @FXML private Label lblDeskripsi;
     @FXML private ComboBox<String> cbStatus;
     @FXML private TextArea txtSolusi;
+    @FXML private Button btnSimpan;
 
     private Runnable onSimpanBerhasil;
     private KomplainItem itemKomplain;
+    private boolean modeHanyaLihat = false;
 
     public void setOnSimpanBerhasil(Runnable callback) {
         this.onSimpanBerhasil = callback;
@@ -33,10 +35,28 @@ public class TanggapiKomplainController {
 
         cbStatus.setValue(item.getStatus());
         txtSolusi.setText(item.getSolusi());
+
+        modeHanyaLihat = "Selesai".equalsIgnoreCase(item.getStatus())
+                || "Ditolak".equalsIgnoreCase(item.getStatus());
+
+        if (modeHanyaLihat) {
+            cbStatus.setDisable(true);
+            txtSolusi.setEditable(false);
+            txtSolusi.setDisable(true);
+
+            btnSimpan.setText("Sudah Ditanggapi");
+            btnSimpan.setDisable(true);
+            btnSimpan.setStyle("-fx-background-color:#e5e7eb; -fx-text-fill:#9ca3af; -fx-font-size:13; " +
+                    "-fx-font-weight:bold; -fx-background-radius:8;");
+        }
     }
 
     @FXML
     private void simpan(ActionEvent event) {
+
+        if (modeHanyaLihat) {
+            return;
+        }
 
         String statusBaru = cbStatus.getValue();
         String solusiBaru = txtSolusi.getText();

@@ -55,7 +55,7 @@
         <Button text="Batal" onAction="#batal" prefWidth="170" prefHeight="38"
                 style="-fx-background-color:#f1f5f9; -fx-text-fill:#374151; -fx-font-size:13;
                        -fx-background-radius:8; -fx-cursor:hand;"/>
-        <Button text="Simpan" onAction="#simpan" prefWidth="170" prefHeight="38"
+        <Button fx:id="btnSimpan" text="Simpan" onAction="#simpan" prefWidth="170" prefHeight="38"
                 style="-fx-background-color:#6495ed; -fx-text-fill:white; -fx-font-size:13;
                        -fx-font-weight:bold; -fx-background-radius:8; -fx-cursor:hand;"/>
     </HBox>
