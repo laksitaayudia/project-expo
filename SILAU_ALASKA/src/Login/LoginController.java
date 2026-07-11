@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import Owner.DashboardOwnerController;
 import Registrasi.PelangganRegister;
+import Owner.KaryawanItem;
 import Karyawan.Data;
 
 public class LoginController {
@@ -69,14 +70,29 @@ public class LoginController {
             return;
         }
 
+        if (role.equals("Karyawan")) {
+            for (KaryawanItem k : Data.getDaftarKaryawan()) {
+                if (k.getUsername().equals(username) && k.getPassword().equals(password)) {
+                    if ("Non-Aktif".equalsIgnoreCase(k.getStatus())) {
+                        showAlert("Akun karyawan ini sudah non-aktif. Hubungi owner.");
+                        return;
+                    }
+                    pindahKeDashboard(role, k.getNama());
+                    return;
+                }
+            }
+            if (username.equals(USER_KARYAWAN) && password.equals(PASS_KARYAWAN)) {
+                pindahKeDashboard(role, username);
+                return;
+            }
+            showAlert("Username atau Password salah.");
+            return;
+        }
+
         String userAsli = "";
         String passAsli = "";
 
         switch (role) {
-            case "Karyawan":
-                userAsli = USER_KARYAWAN;
-                passAsli = PASS_KARYAWAN;
-                break;
             case "Owner":
                 userAsli = USER_OWNER;
                 passAsli = PASS_OWNER;

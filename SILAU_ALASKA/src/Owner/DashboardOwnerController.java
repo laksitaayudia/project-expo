@@ -29,6 +29,8 @@ public class DashboardOwnerController {
     @FXML
     private Button btnPelanggan;
     @FXML
+    private Button btnKaryawan;
+    @FXML
     private Button btnKeluar;
 
     @FXML
@@ -54,6 +56,11 @@ public class DashboardOwnerController {
     private Parent dataPelanggan;
     @FXML
     private DataPelangganController dataPelangganController;
+
+    @FXML
+    private Parent daftarKaryawan;
+    @FXML
+    private DaftarKaryawanController daftarKaryawanController;
 
     // Header Info
     @FXML
@@ -213,6 +220,10 @@ public class DashboardOwnerController {
             dataPelanggan.setVisible(false);
             dataPelanggan.setManaged(false);
         }
+        if (daftarKaryawan != null) {
+            daftarKaryawan.setVisible(false);
+            daftarKaryawan.setManaged(false);
+        }
 
         refreshTampilan();
     }
@@ -245,6 +256,10 @@ public class DashboardOwnerController {
             dataPelanggan.setVisible(false);
             dataPelanggan.setManaged(false);
         }
+        if (daftarKaryawan != null) {
+            daftarKaryawan.setVisible(false);
+            daftarKaryawan.setManaged(false);
+        }
     }
 
     @FXML
@@ -272,6 +287,10 @@ public class DashboardOwnerController {
             dataPelanggan.setVisible(false);
             dataPelanggan.setManaged(false);
         }
+        if (daftarKaryawan != null) {
+            daftarKaryawan.setVisible(false);
+            daftarKaryawan.setManaged(false);
+        }
     }
 
     @FXML
@@ -298,6 +317,10 @@ public class DashboardOwnerController {
         if (dataPelanggan != null) {
             dataPelanggan.setVisible(false);
             dataPelanggan.setManaged(false);
+        }
+        if (daftarKaryawan != null) {
+            daftarKaryawan.setVisible(false);
+            daftarKaryawan.setManaged(false);
         }
     }
 
@@ -328,6 +351,43 @@ public class DashboardOwnerController {
         if (dataPelangganController != null) {
             dataPelangganController.refreshTampilan();
         }
+        if (daftarKaryawan != null) {
+            daftarKaryawan.setVisible(false);
+            daftarKaryawan.setManaged(false);
+        }
+    }
+
+    @FXML
+    private void showKaryawan() {
+        setActive(btnKaryawan);
+        if (scrollDashboard != null) {
+            scrollDashboard.setVisible(false);
+            scrollDashboard.setManaged(false);
+        }
+        if (rekapPendapatan != null) {
+            rekapPendapatan.setVisible(false);
+            rekapPendapatan.setManaged(false);
+        }
+        if (kelolaPromo != null) {
+            kelolaPromo.setVisible(false);
+            kelolaPromo.setManaged(false);
+        }
+        if (pengeluaran != null) {
+            pengeluaran.setVisible(false);
+            pengeluaran.setManaged(false);
+        }
+        if (dataPelanggan != null) {
+            dataPelanggan.setVisible(false);
+            dataPelanggan.setManaged(false);
+        }
+
+        if (daftarKaryawan != null) {
+            daftarKaryawan.setVisible(true);
+            daftarKaryawan.setManaged(true);
+        }
+        if (daftarKaryawanController != null) {
+            daftarKaryawanController.refreshTampilan();
+        }
     }
 
     private void setActive(Button aktif) {
@@ -345,6 +405,9 @@ public class DashboardOwnerController {
         }
         if (btnPelanggan != null) {
             btnPelanggan.setStyle(STYLE_NONAKTIF);
+        }
+        if (btnKaryawan != null) {
+            btnKaryawan.setStyle(STYLE_NONAKTIF);
         }
         if (aktif != null) {
             aktif.setStyle(STYLE_AKTIF);

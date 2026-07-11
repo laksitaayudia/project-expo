@@ -54,6 +54,9 @@
                 <Button fx:id="btnPelanggan" onAction="#showPelanggan"
                         style="-fx-background-color:transparent; -fx-text-fill:#6b7280; -fx-font-size:13; -fx-background-radius:20; -fx-padding:8 16; -fx-cursor:hand;"
                         text="Data Pelanggan" />
+                <Button fx:id="btnKaryawan" onAction="#showKaryawan"
+                        style="-fx-background-color:transparent; -fx-text-fill:#6b7280; -fx-font-size:13; -fx-background-radius:20; -fx-padding:8 16; -fx-cursor:hand;"
+                        text="Data Karyawan" />
             </HBox>
 
             <Region HBox.hgrow="ALWAYS" />
@@ -146,6 +149,7 @@
             <fx:include fx:id="kelolaPromo" source="KelolaPromo.fxml" visible="false" managed="false"/>
             <fx:include fx:id="pengeluaran" source="Pengeluaran.fxml" visible="false" managed="false"/>
             <fx:include fx:id="dataPelanggan" source="DataPelanggan.fxml" visible="false" managed="false"/>
+            <fx:include fx:id="daftarKaryawan" source="DaftarKaryawan.fxml" visible="false" managed="false"/>
 
         </StackPane>
     </center>

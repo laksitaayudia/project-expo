@@ -3,6 +3,7 @@ package Karyawan;
 import Registrasi.PelangganRegister;
 import Owner.PromoItem;
 import Owner.PengeluaranItem;
+import Owner.KaryawanItem;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
@@ -24,6 +25,7 @@ public class AppStorage {
     private static final Path FILE_PELANGGAN   = DATA_DIR.resolve("pelanggan.xml");
     private static final Path FILE_PROMO       = DATA_DIR.resolve("promo.xml");
     private static final Path FILE_PENGELUARAN = DATA_DIR.resolve("pengeluaran.xml");
+    private static final Path FILE_KARYAWAN    = DATA_DIR.resolve("karyawan.xml");
 
     private static final XStream xstream;
 
@@ -44,6 +46,7 @@ public class AppStorage {
         simpanPelanggan();
         simpanPromo();
         simpanPengeluaran();
+        simpanKaryawan();
     }
 
     public static void simpanPesanan() {
@@ -100,6 +103,15 @@ public class AppStorage {
         }
     }
 
+    public static void simpanKaryawan() {
+        try (BufferedWriter w = Files.newBufferedWriter(FILE_KARYAWAN, StandardCharsets.UTF_8)) {
+            List<KaryawanItem> list = new ArrayList<>(Data.getDaftarKaryawan());
+            xstream.toXML(list, w);
+        } catch (IOException e) {
+            System.err.println("[AppStorage] Gagal menyimpan karyawan: " + e.getMessage());
+        }
+    }
+
     public static void muatSemua() {
         muatPesanan();
         muatTransaksi();
@@ -107,6 +119,7 @@ public class AppStorage {
         muatPelanggan();
         muatPromo();
         muatPengeluaran();
+        muatKaryawan();
     }
 
     @SuppressWarnings("unchecked")
@@ -178,6 +191,18 @@ public class AppStorage {
             Data.getDaftarPengeluaran().addAll(list);
         } catch (Exception e) {
             System.err.println("[AppStorage] Gagal memuat pengeluaran: " + e.getMessage());
+        }
+    }
+
+    @SuppressWarnings("unchecked")
+    public static void muatKaryawan() {
+        if (!Files.exists(FILE_KARYAWAN)) return;
+        try (BufferedReader r = Files.newBufferedReader(FILE_KARYAWAN, StandardCharsets.UTF_8)) {
+            List<KaryawanItem> list = (List<KaryawanItem>) xstream.fromXML(r);
+            Data.getDaftarKaryawan().clear();
+            Data.getDaftarKaryawan().addAll(list);
+        } catch (Exception e) {
+            System.err.println("[AppStorage] Gagal memuat karyawan: " + e.getMessage());
         }
     }
 }

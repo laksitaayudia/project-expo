@@ -8,6 +8,7 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -23,6 +24,9 @@ public class PengeluaranController implements Initializable {
 
     @FXML
     private ComboBox<String> cbKategori;
+
+    @FXML
+    private DatePicker dpTanggal;
 
     @FXML
     private TextField txtJumlah;
@@ -71,6 +75,9 @@ public class PengeluaranController implements Initializable {
         tabelPengeluaran.setItems(Data.getDaftarPengeluaran());
 
         cbKategori.setValue("Bahan Baku");
+        if (dpTanggal != null) {
+            dpTanggal.setValue(LocalDate.now());
+        }
     }
 
     private void setupFormatKolom() {
@@ -128,11 +135,12 @@ public class PengeluaranController implements Initializable {
     @FXML
     private void tambahPengeluaran(ActionEvent event) {
         String kategori = cbKategori.getValue();
+        LocalDate tanggalPilihan = dpTanggal != null ? dpTanggal.getValue() : null;
         String jumlahStr = txtJumlah.getText().trim();
         String keterangan = txtKeterangan.getText().trim();
 
-        if (kategori == null || jumlahStr.isEmpty() || keterangan.isEmpty()) {
-            showAlert("Semua kolom input wajib diisi!");
+        if (kategori == null || tanggalPilihan == null || jumlahStr.isEmpty() || keterangan.isEmpty()) {
+            showAlert("Semua kolom input wajib diisi, termasuk tanggal!");
             return;
         }
 
@@ -144,7 +152,7 @@ public class PengeluaranController implements Initializable {
             }
 
             int id = Data.idPengeluaranBerikutnya();
-            String tanggal = LocalDate.now().toString();
+            String tanggal = tanggalPilihan.toString();
 
             PengeluaranItem baru = new PengeluaranItem(id, tanggal, kategori, jumlah, keterangan);
             Data.tambahPengeluaran(baru);
@@ -152,6 +160,9 @@ public class PengeluaranController implements Initializable {
             txtJumlah.clear();
             txtKeterangan.clear();
             cbKategori.setValue("Bahan Baku");
+            if (dpTanggal != null) {
+                dpTanggal.setValue(LocalDate.now());
+            }
 
             notifyDataChanged();
 

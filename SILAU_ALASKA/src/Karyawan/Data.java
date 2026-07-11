@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import Registrasi.PelangganRegister;
 import Owner.PromoItem;
+import Owner.KaryawanItem;
 import Owner.PengeluaranItem;
 
 public class Data {
@@ -181,5 +182,36 @@ public class Data {
 
     public static int idPengeluaranBerikutnya() {
         return daftarPengeluaran.stream().mapToInt(PengeluaranItem::getId).max().orElse(0) + 1;
+    }
+
+        private static final ObservableList<KaryawanItem> daftarKaryawan = FXCollections.observableArrayList();
+
+    public static ObservableList<KaryawanItem> getDaftarKaryawan() {
+        return daftarKaryawan;
+    }
+
+    public static void tambahKaryawan(KaryawanItem karyawan) {
+        daftarKaryawan.add(karyawan);
+        AppStorage.simpanKaryawan();
+    }
+
+    public static void hapusKaryawan(String username) {
+        daftarKaryawan.removeIf(k -> k.getUsername().equalsIgnoreCase(username));
+        AppStorage.simpanKaryawan();
+    }
+
+    public static void editKaryawan(String usernameAsli, KaryawanItem updated) {
+        for (KaryawanItem k : daftarKaryawan) {
+            if (k.getUsername().equalsIgnoreCase(usernameAsli)) {
+                k.setNama(updated.getNama());
+                k.setTelepon(updated.getTelepon());
+                k.setJabatan(updated.getJabatan());
+                k.setUsername(updated.getUsername());
+                k.setPassword(updated.getPassword());
+                k.setStatus(updated.getStatus());
+                break;
+            }
+        }
+        AppStorage.simpanKaryawan();
     }
 }
