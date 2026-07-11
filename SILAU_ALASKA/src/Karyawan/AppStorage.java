@@ -16,7 +16,7 @@ import java.util.List;
 
 public class AppStorage {
 
-    private static final Path DATA_DIR = Paths.get(System.getProperty("src.home"), "data");
+    private static final Path DATA_DIR = Paths.get("SILAU_ALASKA", "src", "data");
 
     private static final Path FILE_PESANAN     = DATA_DIR.resolve("pesanan.xml");
     private static final Path FILE_TRANSAKSI   = DATA_DIR.resolve("transaksi.xml");
