@@ -13,6 +13,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import Owner.DashboardOwnerController;
+import Registrasi.PelangganRegister;
+import Karyawan.Data;
 
 public class LoginController {
 
@@ -51,14 +53,26 @@ public class LoginController {
             return;
         }
 
+        
+        if (role.equals("Pelanggan")) {
+            for (PelangganRegister p : Data.getDaftarPelanggan()) {
+                if (p.getUsername().equals(username) && p.getPassword().equals(password)) {
+                    pindahKeDashboard(role, p.getNama());
+                    return;
+                }
+            }
+            if (username.equals(USER_PELANGGAN) && password.equals(PASS_PELANGGAN)) {
+                pindahKeDashboard(role, username);
+                return;
+            }
+            showAlert("Username atau Password salah.");
+            return;
+        }
+
         String userAsli = "";
         String passAsli = "";
 
         switch (role) {
-            case "Pelanggan":
-                userAsli = USER_PELANGGAN;
-                passAsli = PASS_PELANGGAN;
-                break;
             case "Karyawan":
                 userAsli = USER_KARYAWAN;
                 passAsli = PASS_KARYAWAN;
