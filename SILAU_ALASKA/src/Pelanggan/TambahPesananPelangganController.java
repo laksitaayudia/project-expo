@@ -107,7 +107,7 @@ public class TambahPesananPelangganController {
         }
 
         int idBaru = Data.idBerikutnya();
-        PesananItem pesananBaru = new PesananItem(idBaru, pelanggan, layanan, berat, biaya, "MENUNGGU");
+        PesananItem pesananBaru = new PesananItem(idBaru, pelanggan, layanan, tanggalText, berat, biaya, "MENUNGGU");
         DataTanggal.setTanggal(idBaru, tanggalText);
         Data.tambahPesanan(pesananBaru);
 
