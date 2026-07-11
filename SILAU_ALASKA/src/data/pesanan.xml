@@ -8,21 +8,31 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null">
                 <lock/>
                 <queueLength>0</queueLength>
               </queue>
+              <next class="java.lang.ref.WeakReference" reference=".."/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../javafx.beans.WeakInvalidationListener/ref/queue"/>
+              <next class="java.lang.ref.WeakReference" reference=".."/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../javafx.beans.WeakInvalidationListener/ref/queue"/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
         </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
+        <invalidationSize>4</invalidationSize>
         <changeSize>0</changeSize>
         <locked>false</locked>
       </helper>
@@ -36,13 +46,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -61,18 +69,28 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+              <next class="java.lang.ref.WeakReference" reference=".."/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+              <next class="java.lang.ref.WeakReference" reference=".."/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
         </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
+        <invalidationSize>4</invalidationSize>
         <changeSize>0</changeSize>
         <locked>false</locked>
       </helper>
@@ -81,6 +99,26 @@
     <tanggal>
       <value>12/05/2025</value>
       <valid>true</valid>
+      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
+        <observable class="javafx.beans.property.SimpleStringProperty" reference="../.."/>
+        <invalidationListeners>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+              <next class="java.lang.ref.WeakReference" reference=".."/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+              <next class="java.lang.ref.WeakReference" reference=".."/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
+        </invalidationListeners>
+        <invalidationSize>2</invalidationSize>
+        <changeSize>0</changeSize>
+        <locked>false</locked>
+      </helper>
       <name></name>
     </tanggal>
     <berat>
@@ -91,18 +129,28 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+              <next class="java.lang.ref.WeakReference" reference=".."/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+              <next class="java.lang.ref.WeakReference" reference=".."/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
         </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
+        <invalidationSize>4</invalidationSize>
         <changeSize>0</changeSize>
         <locked>false</locked>
       </helper>
@@ -116,18 +164,28 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+              <next class="java.lang.ref.WeakReference" reference=".."/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+              <next class="java.lang.ref.WeakReference" reference=".."/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
         </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
+        <invalidationSize>4</invalidationSize>
         <changeSize>0</changeSize>
         <locked>false</locked>
       </helper>
@@ -141,18 +199,28 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+              <next class="java.lang.ref.WeakReference" reference=".."/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+              <next class="java.lang.ref.WeakReference" reference=".."/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
         </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
+        <invalidationSize>4</invalidationSize>
         <changeSize>0</changeSize>
         <locked>false</locked>
       </helper>
@@ -168,13 +236,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -193,13 +259,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -218,13 +282,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -248,13 +310,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -273,13 +333,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -298,13 +356,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -325,13 +381,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -350,13 +404,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -375,13 +427,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -405,13 +455,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -430,13 +478,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -455,13 +501,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -482,13 +526,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -507,13 +549,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -532,13 +572,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -562,13 +600,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -587,13 +623,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -612,13 +646,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -639,20 +671,31 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
               <referent class="null"/>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null">
+                <lock/>
+                <queueLength>0</queueLength>
+              </queue>
             </ref>
           </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
+              <referent class="null"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../javafx.beans.WeakInvalidationListener[3]/ref/queue"/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
         </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
+        <invalidationSize>4</invalidationSize>
         <changeSize>0</changeSize>
         <locked>false</locked>
       </helper>
@@ -666,13 +709,11 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
@@ -691,20 +732,28 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
               <referent class="null"/>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener[3]/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
+              <referent class="null"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener[3]/ref/queue"/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
         </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
+        <invalidationSize>4</invalidationSize>
         <changeSize>0</changeSize>
         <locked>false</locked>
       </helper>
@@ -718,17 +767,14 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null">
-                <lock/>
-                <queueLength>0</queueLength>
-              </queue>
-              <next class="java.lang.ref.WeakReference" reference=".."/>
+              <referent class="null"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener[3]/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../javafx.beans.WeakInvalidationListener/ref/queue"/>
-              <next class="java.lang.ref.WeakReference" reference=".."/>
+              <referent class="null"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener[3]/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
         </invalidationListeners>
@@ -746,20 +792,28 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
               <referent class="null"/>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener[3]/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
+              <referent class="null"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener[3]/ref/queue"/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
         </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
+        <invalidationSize>4</invalidationSize>
         <changeSize>0</changeSize>
         <locked>false</locked>
       </helper>
@@ -773,20 +827,28 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
               <referent class="null"/>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener[3]/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
+              <referent class="null"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener[3]/ref/queue"/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
         </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
+        <invalidationSize>4</invalidationSize>
         <changeSize>0</changeSize>
         <locked>false</locked>
       </helper>
@@ -800,20 +862,28 @@
         <invalidationListeners>
           <javafx.beans.WeakInvalidationListener>
             <ref>
-              <referent class="null"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
               <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
           <javafx.beans.WeakInvalidationListener>
             <ref>
               <referent class="null"/>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener[3]/ref/queue"/>
             </ref>
           </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
+          <javafx.beans.WeakInvalidationListener>
+            <ref>
+              <referent class="null"/>
+              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener[3]/ref/queue"/>
+            </ref>
+          </javafx.beans.WeakInvalidationListener>
         </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
+        <invalidationSize>4</invalidationSize>
         <changeSize>0</changeSize>
         <locked>false</locked>
       </helper>
