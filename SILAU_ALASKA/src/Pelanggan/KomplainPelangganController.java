@@ -47,10 +47,8 @@ public class KomplainPelangganController {
     }
 
     public void refreshData() {
-        // Filter complaints where the corresponding order belongs to this customer
         ObservableList<KomplainItem> filtered = FXCollections.observableArrayList();
         for (KomplainItem k : Data.getDaftarKomplain()) {
-            // Find order
             String idStr = k.getIdPesanan().replace("PSN", "").replace("0", "");
             try {
                 int idVal = Integer.parseInt(idStr);
@@ -61,7 +59,6 @@ public class KomplainPelangganController {
                     }
                 }
             } catch (NumberFormatException e) {
-                // Fallback: if name lookup matches or for demo, add all
                 filtered.add(k);
             }
         }

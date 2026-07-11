@@ -18,13 +18,11 @@
         <VBox spacing="20" style="-fx-background-color:#f4f6f5;">
             <padding><Insets top="28" right="35" bottom="28" left="35"/></padding>
 
-            <!-- Header -->
             <VBox spacing="4">
                 <Label text="Laporkan Komplain" style="-fx-font-size:24; -fx-font-weight:bold; -fx-text-fill:#111827;"/>
                 <Label text="Sampaikan keluhan Anda kepada kami" style="-fx-font-size:12; -fx-text-fill:#9ca3af;"/>
             </VBox>
 
-            <!-- Form Card -->
             <VBox spacing="16" maxWidth="650"
                   style="-fx-background-color:white; -fx-background-radius:15;
                          -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),12,0,0,3);">
@@ -32,21 +30,18 @@
 
                 <Label text="Form Komplain" style="-fx-font-size:14; -fx-font-weight:bold; -fx-text-fill:#111827;"/>
 
-                <!-- Pilih Pesanan Terkait -->
                 <VBox spacing="6">
                     <Label text="Pilih Pesanan Terkait" style="-fx-font-size:13; -fx-font-weight:bold; -fx-text-fill:#374151;"/>
                     <ComboBox fx:id="cbPesanan" prefWidth="600" promptText="-- Pilih Pesanan --"
                               style="-fx-background-color:white; -fx-border-color:#e2e8f0; -fx-border-radius:8; -fx-background-radius:8; -fx-padding:4;"/>
                 </VBox>
 
-                <!-- Jenis Komplain -->
                 <VBox spacing="6">
                     <Label text="Jenis Komplain" style="-fx-font-size:13; -fx-font-weight:bold; -fx-text-fill:#374151;"/>
                     <ComboBox fx:id="cbJenisKomplain" prefWidth="600" promptText="-- Pilih Jenis Komplain --"
                               style="-fx-background-color:white; -fx-border-color:#e2e8f0; -fx-border-radius:8; -fx-background-radius:8; -fx-padding:4;"/>
                 </VBox>
 
-                <!-- Deskripsi Masalah -->
                 <VBox spacing="6">
                     <Label text="Deskripsi Masalah" style="-fx-font-size:13; -fx-font-weight:bold; -fx-text-fill:#374151;"/>
                     <TextArea fx:id="txtDeskripsi" prefHeight="100" promptText="Jelaskan masalah Anda secara detail..."
@@ -59,13 +54,10 @@
 
             </VBox>
 
-            <!-- Riwayat Komplain Saya Section -->
             <VBox spacing="14" maxWidth="650">
                 <Label text="Riwayat Komplain Saya" style="-fx-font-size:15; -fx-font-weight:bold; -fx-text-fill:#111827;"/>
 
-                <!-- Container of dynamic complaint cards -->
                 <VBox fx:id="vboxRiwayat" spacing="12">
-                    <!-- Cards will be added here dynamically from controller -->
                 </VBox>
             </VBox>
 

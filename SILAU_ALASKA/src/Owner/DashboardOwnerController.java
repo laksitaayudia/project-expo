@@ -86,7 +86,6 @@ public class DashboardOwnerController {
     public void initialize() {
         setActive(btnDashboard);
 
-        // Hook up data change listeners for reactive refreshing
         if (kelolaPromoController != null) {
             kelolaPromoController.setOnDataChanged(this::refreshTampilan);
         }
@@ -98,7 +97,6 @@ public class DashboardOwnerController {
     }
 
     private void refreshTampilan() {
-        // Calculate Pendapatan (Sum of paid transaction totals)
         int totalPendapatan = 0;
         if (Data.getDaftarTransaksi() != null) {
             for (TransaksiItem item : Data.getDaftarTransaksi()) {
@@ -121,7 +119,6 @@ public class DashboardOwnerController {
             lblPendapatan.setText(String.format("Rp %,d", totalPendapatan).replace(",", "."));
         }
 
-        // Calculate Pengeluaran
         int totalPengeluaran = 0;
         if (Data.getDaftarPengeluaran() != null) {
             for (PengeluaranItem item : Data.getDaftarPengeluaran()) {
@@ -134,7 +131,6 @@ public class DashboardOwnerController {
             lblPengeluaran.setText(String.format("Rp %,d", totalPengeluaran).replace(",", "."));
         }
 
-        // Set counts
         if (lblPelangganCount != null && Data.getDaftarPelanggan() != null) {
             lblPelangganCount.setText(String.valueOf(Data.getDaftarPelanggan().size()));
         }
@@ -142,7 +138,6 @@ public class DashboardOwnerController {
             lblPromoCount.setText(String.valueOf(Data.getDaftarPromo().size()));
         }
 
-        // Populate BarChart (Pendapatan vs Pengeluaran comparison)
         if (chartKeuangan != null) {
             XYChart.Series<String, Number> seriesPendapatan = new XYChart.Series<>();
             seriesPendapatan.setName("Pendapatan");
@@ -177,7 +172,6 @@ public class DashboardOwnerController {
             });
         }
 
-        // Refresh subcontrollers
         if (rekapPendapatanController != null) {
             rekapPendapatanController.refreshTampilan();
         }

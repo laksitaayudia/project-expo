@@ -41,14 +41,12 @@
                 </VBox>
             </HBox>
 
-            <!-- Content Area Split Layout (wrapped in horizontal ScrollPane) -->
             <ScrollPane fitToHeight="true"
                         hbarPolicy="AS_NEEDED"
                         vbarPolicy="NEVER"
                         style="-fx-background:transparent; -fx-background-color:transparent; -fx-padding:0;">
                 <content>
             <HBox spacing="24" alignment="TOP_LEFT">
-                <!-- Left Form Card -->
                 <VBox spacing="16" prefWidth="380" minWidth="380"
                       style="-fx-background-color:white; -fx-background-radius:15;
                              -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),12,0,0,3); -fx-padding:20;">
@@ -112,7 +110,6 @@
                                    -fx-font-weight:bold; -fx-background-radius:8; -fx-padding:10; -fx-cursor:hand;"/>
                 </VBox>
 
-                <!-- Right Table Card -->
                 <VBox spacing="0" HBox.hgrow="ALWAYS"
                       style="-fx-background-color:white; -fx-background-radius:15;
                              -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),12,0,0,3);">

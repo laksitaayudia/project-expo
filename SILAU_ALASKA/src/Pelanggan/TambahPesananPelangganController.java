@@ -39,7 +39,6 @@ public class TambahPesananPelangganController {
     public void initialize() {
         txtPelanggan.setText(namaPelanggan);
 
-        // Auto-update price when weight or service changes
         txtBerat.textProperty().addListener((observable, oldValue, newValue) -> hitungBiayaOtomatis());
         cbLayanan.valueProperty().addListener((observable, oldValue, newValue) -> hitungBiayaOtomatis());
     }
@@ -60,7 +59,7 @@ public class TambahPesananPelangganController {
                 return;
             }
 
-            int tarif = 10000; // Default Reguler
+            int tarif = 10000; 
             if (layananText.startsWith("Ekspres")) {
                 tarif = 15000;
             }
@@ -111,7 +110,6 @@ public class TambahPesananPelangganController {
         DataTanggal.setTanggal(idBaru, tanggalText);
         Data.tambahPesanan(pesananBaru);
 
-        // Otomatis buat TransaksiItem berstatus "Belum Bayar" agar muncul di menu Transaksi karyawan
         String idTransaksiBaru = "TRX00" + (Data.getDaftarTransaksi().size() + 1);
         String idPesananBaru   = "PSN00" + idBaru;
         String totalFormatted  = "Rp" + String.format("%,d", biaya).replace(",", ".");

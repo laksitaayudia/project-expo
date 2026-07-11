@@ -124,7 +124,6 @@ public class LoginController {
             FXMLLoader loader = new FXMLLoader(fxmlUrl);
             Parent root = loader.load();
 
-            // Kalau role-nya Karyawan, kirim data nama+role ke controllernya
             if (role.equals("Karyawan")) {
                 Karyawan.DashboardKaryawanController controller = loader.getController();
                 if (controller != null) {
@@ -149,7 +148,6 @@ public class LoginController {
         } catch (Exception e) {
             e.printStackTrace();
             
-            // Cari root cause terdalam
             Throwable rootCause = e;
             while (rootCause.getCause() != null) {
                 rootCause = rootCause.getCause();

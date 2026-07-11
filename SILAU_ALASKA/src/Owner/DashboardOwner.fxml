@@ -89,9 +89,7 @@
                             </VBox>
                         </HBox>
 
-                        <!-- Overview Summary Cards -->
                         <HBox spacing="20">
-                            <!-- Card 1: Pendapatan -->
                             <VBox spacing="10" HBox.hgrow="ALWAYS" prefWidth="250"
                                   style="-fx-background-color:white; -fx-background-radius:15;
                                          -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),12,0,0,3); -fx-padding:18;">
@@ -100,7 +98,6 @@
                                 <Label text="Transaksi berstatus lunas" style="-fx-font-size:10; -fx-text-fill:#9ca3af;"/>
                             </VBox>
 
-                            <!-- Card 2: Pengeluaran -->
                             <VBox spacing="10" HBox.hgrow="ALWAYS" prefWidth="250"
                                   style="-fx-background-color:white; -fx-background-radius:15;
                                          -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),12,0,0,3); -fx-padding:18;">
@@ -109,7 +106,6 @@
                                 <Label text="Biaya operasional laundry" style="-fx-font-size:10; -fx-text-fill:#9ca3af;"/>
                             </VBox>
 
-                            <!-- Card 3: Pelanggan -->
                             <VBox spacing="10" HBox.hgrow="ALWAYS" prefWidth="250"
                                   style="-fx-background-color:white; -fx-background-radius:15;
                                          -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),12,0,0,3); -fx-padding:18;">
@@ -118,7 +114,6 @@
                                 <Label text="Pendaftaran baru via aplikasi" style="-fx-font-size:10; -fx-text-fill:#9ca3af;"/>
                             </VBox>
 
-                            <!-- Card 4: Promo -->
                             <VBox spacing="10" HBox.hgrow="ALWAYS" prefWidth="250"
                                   style="-fx-background-color:white; -fx-background-radius:15;
                                          -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),12,0,0,3); -fx-padding:18;">
@@ -128,7 +123,6 @@
                             </VBox>
                         </HBox>
 
-                        <!-- Chart Financials -->
                         <VBox spacing="10"
                               style="-fx-background-color:white; -fx-background-radius:15;
                                      -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),12,0,0,3); -fx-padding:18;">
@@ -148,7 +142,6 @@
                 </content>
             </ScrollPane>
 
-            <!-- Subviews -->
             <fx:include fx:id="rekapPendapatan" source="RekapPendapatan.fxml" visible="false" managed="false"/>
             <fx:include fx:id="kelolaPromo" source="KelolaPromo.fxml" visible="false" managed="false"/>
             <fx:include fx:id="pengeluaran" source="Pengeluaran.fxml" visible="false" managed="false"/>

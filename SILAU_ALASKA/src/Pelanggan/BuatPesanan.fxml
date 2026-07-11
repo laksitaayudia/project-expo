@@ -16,23 +16,19 @@
         <VBox spacing="20" style="-fx-background-color:#f4f6f5;">
             <padding><Insets top="28" right="35" bottom="28" left="35"/></padding>
 
-            <!-- Title Header -->
             <VBox spacing="4">
                 <Label text="Buat Pesanan Baru" style="-fx-font-size:24; -fx-font-weight:bold; -fx-text-fill:#111827;"/>
                 <Label text="Isi formulir pesanan laundry" style="-fx-font-size:12; -fx-text-fill:#9ca3af;"/>
             </VBox>
 
-            <!-- Form Container -->
             <VBox spacing="20" maxWidth="650"
                   style="-fx-background-color:white; -fx-background-radius:15;
                          -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),12,0,0,3);">
                 <padding><Insets top="24" right="24" bottom="24" left="24"/></padding>
 
-                <!-- Jenis Layanan -->
                 <VBox spacing="8">
                     <Label text="Jenis Layanan" style="-fx-font-size:13; -fx-font-weight:bold; -fx-text-fill:#374151;"/>
                     <HBox spacing="16">
-                        <!-- Reguler Card Button -->
                         <Button fx:id="btnReguler" onAction="#selectReguler" prefWidth="280" prefHeight="70"
                                 style="-fx-background-color:#f8fafc; -fx-border-color:#1e5af6; -fx-border-width:2; -fx-border-radius:10; -fx-background-radius:10; -fx-cursor:hand;"
                                 alignment="CENTER">
@@ -43,7 +39,6 @@
                                 </VBox>
                             </graphic>
                         </Button>
-                        <!-- Ekspres Card Button -->
                         <Button fx:id="btnEkspres" onAction="#selectEkspres" prefWidth="280" prefHeight="70"
                                 style="-fx-background-color:white; -fx-border-color:#e2e8f0; -fx-border-width:1; -fx-border-radius:10; -fx-background-radius:10; -fx-cursor:hand;"
                                 alignment="CENTER">
@@ -57,7 +52,6 @@
                     </HBox>
                 </VBox>
 
-                <!-- Pilih Waktu Proses -->
                 <VBox spacing="8">
                     <Label text="Pilih Waktu Proses" style="-fx-font-size:13; -fx-font-weight:bold; -fx-text-fill:#374151;"/>
                     <HBox spacing="12">
@@ -70,21 +64,18 @@
                     </HBox>
                 </VBox>
 
-                <!-- Berat Cucian (gram) -->
                 <VBox spacing="6">
                     <Label text="Berat Cucian (gram)" style="-fx-font-size:13; -fx-font-weight:bold; -fx-text-fill:#374151;"/>
                     <TextField fx:id="txtBeratGram" promptText="Contoh: 3500 (3.5 kg)"
                                style="-fx-background-radius:8; -fx-border-radius:8; -fx-border-color:#e2e8f0; -fx-padding:10;"/>
                 </VBox>
 
-                <!-- Catatan (opsional) -->
                 <VBox spacing="6">
                     <Label text="Catatan (opsional)" style="-fx-font-size:13; -fx-font-weight:bold; -fx-text-fill:#374151;"/>
                     <TextField fx:id="txtCatatan" promptText="Ada baju putih, jangan campur..."
                                style="-fx-background-radius:8; -fx-border-radius:8; -fx-border-color:#e2e8f0; -fx-padding:10;"/>
                 </VBox>
 
-                <!-- Submit Button -->
                 <Button text="Buat Pesanan" onAction="#submitPesanan" maxWidth="Infinity" prefHeight="44"
                         style="-fx-background-color:#1e5af6; -fx-text-fill:white; -fx-font-weight:bold; -fx-font-size:14; -fx-background-radius:8; -fx-cursor:hand;"/>
 

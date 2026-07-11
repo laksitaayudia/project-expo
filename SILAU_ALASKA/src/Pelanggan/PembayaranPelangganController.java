@@ -67,14 +67,12 @@ public class PembayaranPelangganController {
 
     @FXML
     public void initialize() {
-        // Setup dropdown metode pembayaran
         cbMetode.setItems(FXCollections.observableArrayList(
                 "Cash",
                 "Transfer",
                 "QRIS",
                 "E-Wallet"));
 
-        // Listeners for auto-calculate payment details
         cbPesanan.setOnAction(e -> hitungPembayaran());
         cbPromo.setOnAction(e -> hitungPembayaran());
 
@@ -82,7 +80,6 @@ public class PembayaranPelangganController {
         refreshData();
     }
 
-    // Hanya promo dengan status "Aktif" yang ditampilkan
     private void refreshCbPromo() {
         String sebelumnya = cbPromo.getValue();
 
@@ -97,8 +94,6 @@ public class PembayaranPelangganController {
 
         cbPromo.setItems(listPromo);
 
-        // Pertahankan pilihan sebelumnya jika masih ada, atau reset ke "Tidak Ada
-        // Promo"
         if (sebelumnya != null && listPromo.contains(sebelumnya)) {
             cbPromo.setValue(sebelumnya);
         } else {
@@ -107,10 +102,8 @@ public class PembayaranPelangganController {
     }
 
     public void refreshData() {
-        // 1. Refresh ComboBox Promo dari data Owner
         refreshCbPromo();
 
-        // 2. Populate ComboBox Pesanan yang belum lunas
         cbPesanan.getItems().clear();
         for (PesananItem p : Data.getDaftarPesanan()) {
             if (p.getPelanggan().equalsIgnoreCase(namaPelanggan)) {
@@ -129,7 +122,6 @@ public class PembayaranPelangganController {
             }
         }
 
-        // 3. Populate Tabel Transaksi khusus milik pelanggan ini
         ObservableList<TransaksiItem> filteredTx = FXCollections.observableArrayList();
         for (TransaksiItem t : Data.getDaftarTransaksi()) {
             if (t.getPelanggan().equalsIgnoreCase(namaPelanggan)) {
@@ -176,7 +168,6 @@ public class PembayaranPelangganController {
             return;
         }
 
-        // Extract biaya dari PesananItem
         String idStr = pesananVal.split(" - ")[0].replace("PSN", "").replace("0", "");
         try {
             int idVal = Integer.parseInt(idStr);
@@ -190,25 +181,21 @@ public class PembayaranPelangganController {
             totalAwal = 0;
         }
 
-        // Hitung diskon dari PromoItem yang dipilih (bukan hardcoded)
         diskon = 0;
         String promoLabel = cbPromo.getValue();
         if (promoLabel != null && !promoLabel.equals("Tidak Ada Promo")) {
-            // Ambil kode promo dari label (kata pertama sebelum spasi)
             String kodePromo = promoLabel.split(" ")[0];
             for (PromoItem promo : Data.getDaftarPromo()) {
                 if (promo.getKode().equalsIgnoreCase(kodePromo)
                         && "Aktif".equalsIgnoreCase(promo.getStatus())) {
-                    // Validasi minimal belanja
                     if (totalAwal >= promo.getMinBelanja()) {
                         if ("Persentase".equalsIgnoreCase(promo.getTipe())) {
                             diskon = (int) (totalAwal * promo.getDiskon() / 100.0);
                         } else {
-                            // Nominal: potongan tetap, tidak boleh melebihi totalAwal
                             diskon = Math.min(promo.getDiskon(), totalAwal);
                         }
                     } else {
-                        diskon = 0; // Belanja belum memenuhi syarat minimum
+                        diskon = 0;
                     }
                     break;
                 }
@@ -245,7 +232,6 @@ public class PembayaranPelangganController {
             return;
         }
 
-        // Validasi ulang minimal belanja jika ada promo dipilih
         String promoLabel = cbPromo.getValue();
         if (promoLabel != null && !promoLabel.equals("Tidak Ada Promo")) {
             String kodePromo = promoLabel.split(" ")[0];
@@ -265,7 +251,6 @@ public class PembayaranPelangganController {
         String formattedDate = LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         String formattedTotal = "Rp" + String.format("%,d", totalBayar).replace(",", ".");
 
-        // Update atau buat transaksi baru
         boolean foundTx = false;
         for (TransaksiItem t : Data.getDaftarTransaksi()) {
             if (t.getIdPesanan().equals(idPesanan)) {
