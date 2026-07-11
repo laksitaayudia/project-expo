@@ -17,6 +17,8 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 
 <BorderPane prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color:#f4f6f5;"
     xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1"
@@ -31,9 +33,15 @@
             </padding>
 
             <HBox alignment="CENTER_LEFT" spacing="8">
-                <StackPane prefHeight="30" prefWidth="30"
-                    style="-fx-background-color: #6495ed; -fx-background-radius: 20;">
-                    <Label style="-fx-font-size:14;" />
+                <StackPane prefHeight="30" prefWidth="30">
+                    <ImageView fitHeight="30.0" fitWidth="30.0" preserveRatio="true">
+                        <image>
+                            <Image url="@/Logo/logo.png" />
+                        </image>
+                        <clip>
+                            <Circle centerX="15" centerY="15" radius="15" />
+                        </clip>
+                    </ImageView>
                 </StackPane>
                 <Label style="-fx-font-size:16; -fx-font-weight:bold; -fx-text-fill:#111827;"
                     text="SILAU" />
