@@ -104,6 +104,29 @@ public class Data {
         AppStorage.simpanPelanggan();
     }
 
+    public static PelangganRegister cariPelangganByNama(String nama) {
+        for (PelangganRegister p : daftarPelanggan) {
+            if (p.getNama().equalsIgnoreCase(nama)) {
+                return p;
+            }
+        }
+        return null;
+    }
+
+    public static void editPelanggan(String namaAsli, PelangganRegister updated) {
+        for (PelangganRegister p : daftarPelanggan) {
+            if (p.getNama().equalsIgnoreCase(namaAsli)) {
+                p.setTelepon(updated.getTelepon());
+                p.setEmail(updated.getEmail());
+                p.setAlamat(updated.getAlamat());
+                p.setUsername(updated.getUsername());
+                p.setPassword(updated.getPassword());
+                break;
+            }
+        }
+        AppStorage.simpanPelanggan();
+    }
+
     private static final ObservableList<PromoItem> daftarPromo = FXCollections.observableArrayList(
             new PromoItem("SILAUCEPAT", 10, "Persentase", 30000, "Aktif"),
             new PromoItem("HEMATLAUNDRY", 5000, "Nominal", 25000, "Aktif")

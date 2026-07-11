@@ -275,6 +275,28 @@ public class DashboardPelangganController {
     }
 
     @FXML
+    private void bukaEditProfil() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Pelanggan/EditProfilPelanggan.fxml"));
+            Parent root = loader.load();
+
+            EditProfilPelangganController controller = loader.getController();
+            controller.setNamaPelanggan(namaPelanggan);
+            controller.setOnSimpanBerhasil(nama -> refreshTampilan());
+
+            Stage dialog = new Stage();
+            dialog.setTitle("Edit Profil");
+            dialog.initModality(Modality.APPLICATION_MODAL);
+            dialog.setScene(new Scene(root));
+            dialog.setResizable(false);
+            dialog.showAndWait();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
     private void showDashboard() {
         setActive(btnDashboard);
         scrollDashboard.setVisible(true);

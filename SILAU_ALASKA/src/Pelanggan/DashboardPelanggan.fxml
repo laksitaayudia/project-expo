@@ -59,7 +59,7 @@
 
             <Region HBox.hgrow="ALWAYS" />
 
-            <StackPane>
+            <StackPane fx:id="paneAvatar" onMouseClicked="#bukaEditProfil" style="-fx-cursor:hand;">
                 <Circle fill="#e5e7eb" radius="18" />
                 <Label fx:id="lblInisial" style="-fx-text-fill:#374151; -fx-font-weight:bold;"
                     text="A" />
