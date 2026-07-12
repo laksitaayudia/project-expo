@@ -162,14 +162,10 @@ public class KelolaPromoController implements Initializable {
         }
     }
 
-    // ── Batal Edit ──
-
     @FXML
     private void batalEdit() {
         resetForm();
     }
-
-    // ── Simpan / Update Promo ──
 
     @FXML
     private void tambahPromo(ActionEvent event) {
@@ -184,7 +180,6 @@ public class KelolaPromoController implements Initializable {
             return;
         }
 
-        // Cek duplikasi: boleh sama jika ini mode edit dan kodenya tidak berubah
         boolean ada = Data.getDaftarPromo().stream().anyMatch(p -> p.getKode().equalsIgnoreCase(kode));
         if (ada && (kodeEditing == null || !kode.equalsIgnoreCase(kodeEditing))) {
             showAlert("Kode promo '" + kode + "' sudah digunakan!");
@@ -220,8 +215,6 @@ public class KelolaPromoController implements Initializable {
         }
     }
 
-    // ── Reset form ke mode Tambah ──
-
     private void resetForm() {
         kodeEditing = null;
         txtKode.clear();
@@ -237,8 +230,6 @@ public class KelolaPromoController implements Initializable {
             btnBatal.setManaged(false);
         }
     }
-
-    // ── Notify & Alert helpers ──
 
     private void notifyDataChanged() {
         tabelPromo.refresh();
