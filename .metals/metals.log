@@ -3898,3 +3898,145 @@ WARNING: Unmatched cancel notification for request id 1
 2026.07.09 19:30:16 INFO  Memory monitor stopped
 2026.07.09 19:30:16 INFO  shutting down Metals
 2026.07.09 19:30:16 INFO  Exiting server
+2026.07.10 02:25:00 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo' for client Visual Studio Code 1.128.0.
+2026.07.10 02:25:00 INFO  Memory monitor started
+2026.07.10 02:25:01 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.10 02:25:01 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 02:25:01 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 02:25:02 WARN  no build tool detected in workspace 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2026.07.10 02:25:02 WARN  Build server is not auto-connectable.
+2026.07.10 02:25:03 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java
+2026.07.10 02:25:03 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 02:25:05 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 02:25:05 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 02:25:06 INFO  time: code lens generation in 3.24s
+2026.07.10 02:25:07 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 02:25:32 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 02:25:38 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 02:27:38 INFO  Shutting down server
+2026.07.10 02:27:38 INFO  Memory monitor stopped
+2026.07.10 02:27:38 INFO  shutting down Metals
+2026.07.10 02:27:38 INFO  Exiting server
+2026.07.10 08:58:08 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo' for client Visual Studio Code 1.128.0.
+2026.07.10 08:58:08 INFO  Memory monitor started
+2026.07.10 08:58:10 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.10 08:58:10 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+Jul 10, 2026 8:58:10 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2026.07.10 08:58:10 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 08:58:11 WARN  no build tool detected in workspace 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2026.07.10 08:58:11 WARN  Build server is not auto-connectable.
+2026.07.10 08:58:11 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java
+2026.07.10 08:58:11 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 08:58:12 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 08:58:12 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 08:58:15 INFO  time: code lens generation in 1.04s
+2026.07.10 08:58:15 INFO  time: code lens generation in 3.65s
+2026.07.10 08:58:15 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 13:57:39 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo' for client Visual Studio Code 1.128.0.
+2026.07.10 13:57:39 INFO  Memory monitor started
+2026.07.10 13:57:43 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.10 13:57:43 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+Jul 10, 2026 1:57:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2026.07.10 13:57:43 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 13:57:43 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 13:57:44 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 13:57:44 WARN  no build tool detected in workspace 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2026.07.10 13:57:45 WARN  Build server is not auto-connectable.
+2026.07.10 13:57:45 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java
+2026.07.10 13:57:45 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 13:57:45 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 13:57:45 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 13:57:47 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 13:57:48 INFO  time: code lens generation in 2.96s
+2026.07.10 13:57:48 INFO  time: code lens generation in 1.84s
+2026.07.10 13:58:23 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+Jul 10, 2026 1:58:37 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.07.10 13:58:38 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.10 13:58:43 INFO  Shutting down server
+2026.07.10 13:58:43 INFO  Memory monitor stopped
+2026.07.10 13:58:43 INFO  shutting down Metals
+2026.07.10 13:58:43 INFO  Exiting server
+2026.07.12 19:55:13 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo' for client Visual Studio Code 1.128.0.
+2026.07.12 19:55:13 INFO  Memory monitor started
+2026.07.12 19:55:14 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.12 19:55:14 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+Jul 12, 2026 7:55:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2026.07.12 19:55:14 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.12 19:55:14 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.12 19:55:14 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.12 19:55:15 WARN  no build tool detected in workspace 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2026.07.12 19:55:16 WARN  Build server is not auto-connectable.
+2026.07.12 19:55:16 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java
+2026.07.12 19:55:16 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.12 19:55:18 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.12 19:55:18 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.12 19:55:19 INFO  time: code lens generation in 3.68s
+2026.07.12 19:55:20 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.12 19:55:20 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.12 19:55:22 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Login\Login.java. Using fallback presentation compiler.
+2026.07.12 19:55:22 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java
+2026.07.12 19:55:22 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+Jul 12, 2026 7:55:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 19
+2026.07.12 19:55:22 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.12 19:55:22 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.12 19:55:23 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.12 19:55:23 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.12 19:55:23 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.12 19:55:23 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.12 19:55:40 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.12 19:56:00 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java
+2026.07.12 19:56:00 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.12 19:56:01 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.12 19:56:00 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.12 19:56:00 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.12 19:56:00 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.12 19:56:01 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java
+2026.07.12 19:56:00 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+Jul 12, 2026 7:56:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 41
+2026.07.12 19:56:01 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:56:00 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:56:02 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:56:02 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:56:10 INFO  Shutting down server
+2026.07.12 19:56:10 INFO  Memory monitor stopped
+2026.07.12 19:56:10 INFO  shutting down Metals
+2026.07.12 19:56:10 INFO  Exiting server
+2026.07.12 19:57:17 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo' for client Visual Studio Code 1.128.0.
+2026.07.12 19:57:17 INFO  Memory monitor started
+2026.07.12 19:57:18 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.12 19:57:18 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:19 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:19 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:19 WARN  no build tool detected in workspace 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2026.07.12 19:57:20 WARN  Build server is not auto-connectable.
+2026.07.12 19:57:20 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java
+2026.07.12 19:57:20 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:23 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:23 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:24 INFO  time: code lens generation in 3.81s
+2026.07.12 19:57:25 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:25 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:41 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:41 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java
+2026.07.12 19:57:41 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.12 19:57:41 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+Jul 12, 2026 7:57:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 17
+2026.07.12 19:57:41 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+Jul 12, 2026 7:57:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 21
+2026.07.12 19:57:41 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.12 19:57:42 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java
+2026.07.12 19:57:41 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+Jul 12, 2026 7:57:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 22
+2026.07.12 19:57:42 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:41 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:42 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:42 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
