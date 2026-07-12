@@ -35,13 +35,4 @@
     <metodeBayar>QRIS</metodeBayar>
     <tanggalBayar>14/05/2025</tanggalBayar>
   </Karyawan.TransaksiItem>
-  <Karyawan.TransaksiItem>
-    <idTransaksi>TRX005</idTransaksi>
-    <idPesanan>PSN005</idPesanan>
-    <pelanggan>p</pelanggan>
-    <total>Rp10.000</total>
-    <statusBayar>Belum Bayar</statusBayar>
-    <metodeBayar>-</metodeBayar>
-    <tanggalBayar>-</tanggalBayar>
-  </Karyawan.TransaksiItem>
 </list>
