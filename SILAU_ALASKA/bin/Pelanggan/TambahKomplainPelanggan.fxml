@@ -22,14 +22,12 @@
 
     <Separator/>
 
-    <!-- Pilih Pesanan -->
     <VBox spacing="4" alignment="CENTER_LEFT">
         <Label text="Pesanan Terkait" style="-fx-font-size:12; -fx-text-fill:#374151; -fx-font-weight:bold;"/>
         <ComboBox fx:id="cbPesanan" prefWidth="330" promptText="-- Pilih Pesanan --"
                   style="-fx-background-color:white; -fx-border-color:#e2e8f0; -fx-border-radius:8; -fx-background-radius:8; -fx-padding:4;"/>
     </VBox>
 
-    <!-- Jenis Komplain -->
     <VBox spacing="4" alignment="CENTER_LEFT">
         <Label text="Jenis Komplain" style="-fx-font-size:12; -fx-text-fill:#374151; -fx-font-weight:bold;"/>
         <ComboBox fx:id="cbJenisKomplain" prefWidth="330" promptText="-- Pilih Jenis Komplain --"
@@ -46,7 +44,6 @@
         </ComboBox>
     </VBox>
 
-    <!-- Deskripsi Masalah -->
     <VBox spacing="4" alignment="CENTER_LEFT">
         <Label text="Deskripsi Masalah" style="-fx-font-size:12; -fx-text-fill:#374151; -fx-font-weight:bold;"/>
         <TextArea fx:id="txtDeskripsi" prefHeight="100" promptText="Jelaskan masalah Anda secara detail..."

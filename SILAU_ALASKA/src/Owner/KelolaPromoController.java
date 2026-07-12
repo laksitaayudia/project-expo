@@ -37,7 +37,6 @@ public class KelolaPromoController implements Initializable {
     @FXML private Button btnSimpan;
     @FXML private Button btnBatal;
 
-    // null = mode tambah, non-null = kode asli promo yang sedang diedit
     private String kodeEditing = null;
 
     private Runnable onDataChanged;
@@ -68,7 +67,6 @@ public class KelolaPromoController implements Initializable {
         }
     }
 
-    // ── Format Kolom Diskon & MinBelanja ──
 
     private void setupFormatKolom() {
         colDiskon.setCellFactory(col -> new TableCell<PromoItem, Integer>() {
@@ -105,8 +103,6 @@ public class KelolaPromoController implements Initializable {
         });
     }
 
-    // ── Kolom Aksi: tombol Edit + Hapus ──
-
     private void setupKolomAksi() {
         colAksi.setStyle("-fx-alignment: CENTER;");
         colAksi.setCellFactory(col -> new TableCell<PromoItem, Void>() {
@@ -133,7 +129,6 @@ public class KelolaPromoController implements Initializable {
                 btnHapus.setOnAction(event -> {
                     PromoItem item = getTableRow() != null ? getTableRow().getItem() : null;
                     if (item != null) {
-                        // Jika sedang mengedit item ini, reset form
                         if (kodeEditing != null && kodeEditing.equalsIgnoreCase(item.getKode())) {
                             resetForm();
                         }
@@ -150,8 +145,6 @@ public class KelolaPromoController implements Initializable {
             }
         });
     }
-
-    // ── Muat data promo ke form untuk diedit ──
 
     private void muatFormEdit(PromoItem item) {
         kodeEditing = item.getKode();

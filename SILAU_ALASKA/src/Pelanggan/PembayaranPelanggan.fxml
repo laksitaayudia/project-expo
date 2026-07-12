@@ -21,32 +21,27 @@
         <HBox spacing="30" style="-fx-background-color:#f4f6f5;">
             <padding><Insets top="28" right="35" bottom="28" left="35"/></padding>
 
-            <!-- Bagian Kiri: Form Pembayaran -->
             <VBox spacing="20" prefWidth="550">
                 <VBox spacing="4">
                     <Label text="Menu Pembayaran" style="-fx-font-size:24; -fx-font-weight:bold; -fx-text-fill:#111827;"/>
                     <Label text="Selesaikan pembayaran pesanan Anda dengan promo &amp; diskon" style="-fx-font-size:12; -fx-text-fill:#9ca3af;"/>
                 </VBox>
 
-                <!-- Form Card -->
                 <VBox spacing="16" style="-fx-background-color:white; -fx-background-radius:15; -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),12,0,0,3);">
                     <padding><Insets top="24" right="24" bottom="24" left="24"/></padding>
 
-                    <!-- Pilih Pesanan -->
                     <VBox spacing="6">
                         <Label text="Pilih Pesanan Terkait" style="-fx-font-size:13; -fx-font-weight:bold; -fx-text-fill:#374151;"/>
                         <ComboBox fx:id="cbPesanan" prefWidth="500" promptText="-- Pilih Pesanan --"
                                   style="-fx-background-color:white; -fx-border-color:#e2e8f0; -fx-border-radius:8; -fx-background-radius:8; -fx-padding:4;"/>
                     </VBox>
 
-                    <!-- Pilih Promo/Diskon -->
                     <VBox spacing="6">
                         <Label text="Pilih Promo / Diskon" style="-fx-font-size:13; -fx-font-weight:bold; -fx-text-fill:#374151;"/>
                         <ComboBox fx:id="cbPromo" prefWidth="500" promptText="-- Pilih Promo (Opsional) --"
                                   style="-fx-background-color:white; -fx-border-color:#e2e8f0; -fx-border-radius:8; -fx-background-radius:8; -fx-padding:4;"/>
                     </VBox>
 
-                    <!-- Metode Pembayaran -->
                     <VBox spacing="6">
                         <Label text="Metode Pembayaran" style="-fx-font-size:13; -fx-font-weight:bold; -fx-text-fill:#374151;"/>
                         <ComboBox fx:id="cbMetode" prefWidth="500" promptText="-- Pilih Metode Pembayaran --"
@@ -55,7 +50,6 @@
 
                     <Separator/>
 
-                    <!-- Summary Area -->
                     <VBox spacing="10" style="-fx-background-color:#f8fafc; -fx-background-radius:10; -fx-padding:14;">
                         <HBox alignment="CENTER_LEFT">
                             <Label text="Total Awal:" style="-fx-font-size:13; -fx-text-fill:#64748b;"/>
@@ -78,14 +72,12 @@
                         </HBox>
                     </VBox>
 
-                    <!-- Bayar Button -->
                     <Button text="Bayar Sekarang" onAction="#prosesBayar" maxWidth="Infinity" prefHeight="44"
                             style="-fx-background-color:#6495ed; -fx-text-fill:white; -fx-font-weight:bold; -fx-font-size:14; -fx-background-radius:8; -fx-cursor:hand;"/>
 
                 </VBox>
             </VBox>
 
-            <!-- Bagian Kanan: Riwayat Pembayaran (Transaksi) -->
             <VBox spacing="20" HBox.hgrow="ALWAYS">
                 <VBox spacing="4">
                     <Label text="Riwayat Transaksi Saya" style="-fx-font-size:24; -fx-font-weight:bold; -fx-text-fill:#111827;"/>

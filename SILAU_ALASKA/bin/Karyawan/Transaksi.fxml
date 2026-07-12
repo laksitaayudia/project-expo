@@ -29,15 +29,11 @@
                         left="35"/>
             </padding>
 
-            <!-- Header -->
 
             <Label text="Manajemen Transaksi"
                    style="-fx-font-size:24;
                           -fx-font-weight:bold;
                           -fx-text-fill:#111827;"/>
-
-            <!-- Card -->
-
             <VBox spacing="0"
                   style="-fx-background-color:white;
                          -fx-background-radius:15;

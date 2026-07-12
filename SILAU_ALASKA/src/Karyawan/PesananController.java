@@ -125,7 +125,19 @@ public class PesananController {
             @Override
             protected void updateItem(Void value, boolean empty) {
                 super.updateItem(value, empty);
-                setGraphic(empty ? null : container);
+                if (empty) {
+                    setGraphic(null);
+                } else {
+                    PesananItem item = getTableView().getItems().get(getIndex());
+                    if ("SELESAI".equalsIgnoreCase(item.getStatus())) {
+                        btnStatus.setDisable(true);
+                        btnEdit.setDisable(true);
+                    } else {
+                        btnStatus.setDisable(false);
+                        btnEdit.setDisable(false);
+                    }
+                    setGraphic(container);
+                }
             }
         });
     }

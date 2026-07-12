@@ -13,6 +13,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import Owner.DashboardOwnerController;
+import Registrasi.PelangganRegister;
+import Owner.KaryawanItem;
+import Karyawan.Data;
 
 public class LoginController {
 
@@ -25,14 +28,14 @@ public class LoginController {
     @FXML
     private PasswordField txtPassword;
 
-    private static final String USER_PELANGGAN = "pelanggan";
-    private static final String PASS_PELANGGAN = "pelanggan123";
+    private static final String USER_PELANGGAN = "p";
+    private static final String PASS_PELANGGAN = "p123";
 
-    private static final String USER_KARYAWAN = "karyawan";
-    private static final String PASS_KARYAWAN = "karyawan123";
+    private static final String USER_KARYAWAN = "k";
+    private static final String PASS_KARYAWAN = "k123";
 
-    private static final String USER_OWNER = "owner";
-    private static final String PASS_OWNER = "owner123";
+    private static final String USER_OWNER = "o";
+    private static final String PASS_OWNER = "o123";
 
     @FXML
     private void login() {
@@ -51,18 +54,45 @@ public class LoginController {
             return;
         }
 
+        
+        if (role.equals("Pelanggan")) {
+            for (PelangganRegister p : Data.getDaftarPelanggan()) {
+                if (p.getUsername().equals(username) && p.getPassword().equals(password)) {
+                    pindahKeDashboard(role, p.getNama());
+                    return;
+                }
+            }
+            if (username.equals(USER_PELANGGAN) && password.equals(PASS_PELANGGAN)) {
+                pindahKeDashboard(role, username);
+                return;
+            }
+            showAlert("Username atau Password salah.");
+            return;
+        }
+
+        if (role.equals("Karyawan")) {
+            for (KaryawanItem k : Data.getDaftarKaryawan()) {
+                if (k.getUsername().equals(username) && k.getPassword().equals(password)) {
+                    if ("Non-Aktif".equalsIgnoreCase(k.getStatus())) {
+                        showAlert("Akun karyawan ini sudah non-aktif. Hubungi owner.");
+                        return;
+                    }
+                    pindahKeDashboard(role, k.getNama());
+                    return;
+                }
+            }
+            if (username.equals(USER_KARYAWAN) && password.equals(PASS_KARYAWAN)) {
+                pindahKeDashboard(role, username);
+                return;
+            }
+            showAlert("Username atau Password salah.");
+            return;
+        }
+
         String userAsli = "";
         String passAsli = "";
 
         switch (role) {
-            case "Pelanggan":
-                userAsli = USER_PELANGGAN;
-                passAsli = PASS_PELANGGAN;
-                break;
-            case "Karyawan":
-                userAsli = USER_KARYAWAN;
-                passAsli = PASS_KARYAWAN;
-                break;
             case "Owner":
                 userAsli = USER_OWNER;
                 passAsli = PASS_OWNER;
@@ -110,7 +140,6 @@ public class LoginController {
             FXMLLoader loader = new FXMLLoader(fxmlUrl);
             Parent root = loader.load();
 
-            // Kalau role-nya Karyawan, kirim data nama+role ke controllernya
             if (role.equals("Karyawan")) {
                 Karyawan.DashboardKaryawanController controller = loader.getController();
                 if (controller != null) {
@@ -135,7 +164,6 @@ public class LoginController {
         } catch (Exception e) {
             e.printStackTrace();
             
-            // Cari root cause terdalam
             Throwable rootCause = e;
             while (rootCause.getCause() != null) {
                 rootCause = rootCause.getCause();

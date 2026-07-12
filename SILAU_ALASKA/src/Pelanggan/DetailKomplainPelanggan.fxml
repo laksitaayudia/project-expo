@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="12" prefWidth="420"
+      style="-fx-background-color:white;"
+      xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="Pelanggan.DetailKomplainPelangganController">
+
+    <padding><Insets top="25" right="25" bottom="25" left="25"/></padding>
+
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Label text="Detail Komplain">
+            <font><Font name="System Bold" size="18.0"/></font>
+        </Label>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label fx:id="lblStatus" style="-fx-font-size:11; -fx-font-weight:bold; -fx-background-radius:12; -fx-padding:4 12;"/>
+    </HBox>
+
+    <Label text="Rincian lengkap komplain yang Anda laporkan" style="-fx-text-fill:#6b7280; -fx-font-size:11;"/>
+
+    <Separator/>
+
+    <VBox spacing="14" alignment="TOP_LEFT">
+
+        <VBox spacing="3" alignment="TOP_LEFT">
+            <Label text="ID KOMPLAIN" style="-fx-font-size:10; -fx-text-fill:#9ca3af; -fx-font-weight:bold;"/>
+            <Label fx:id="lblId" style="-fx-font-size:13; -fx-text-fill:#111827;"/>
+        </VBox>
+
+        <VBox spacing="3" alignment="TOP_LEFT">
+            <Label text="ID PESANAN" style="-fx-font-size:10; -fx-text-fill:#9ca3af; -fx-font-weight:bold;"/>
+            <Label fx:id="lblIdPesanan" style="-fx-font-size:13; -fx-text-fill:#111827;"/>
+        </VBox>
+
+        <VBox spacing="3" alignment="TOP_LEFT">
+            <Label text="JENIS KOMPLAIN" style="-fx-font-size:10; -fx-text-fill:#9ca3af; -fx-font-weight:bold;"/>
+            <Label fx:id="lblJenis" wrapText="true" style="-fx-font-size:13; -fx-text-fill:#111827;"/>
+        </VBox>
+
+        <VBox spacing="3" alignment="TOP_LEFT"
+              style="-fx-background-color:#f8fafc; -fx-background-radius:10;">
+            <padding><Insets top="10" right="12" bottom="10" left="12"/></padding>
+            <Label text="DESKRIPSI MASALAH" style="-fx-font-size:10; -fx-text-fill:#9ca3af; -fx-font-weight:bold;"/>
+            <Label fx:id="lblDeskripsi" wrapText="true" style="-fx-font-size:13; -fx-text-fill:#374151;"/>
+        </VBox>
+
+        <VBox fx:id="boxSolusi" spacing="3" alignment="TOP_LEFT"
+              style="-fx-background-color:#f0fdf4; -fx-background-radius:10;">
+            <padding><Insets top="10" right="12" bottom="10" left="12"/></padding>
+            <Label text="SOLUSI / TANGGAPAN" style="-fx-font-size:10; -fx-text-fill:#16a34a; -fx-font-weight:bold;"/>
+            <Label fx:id="lblSolusi" wrapText="true" style="-fx-font-size:13; -fx-text-fill:#166534;"/>
+        </VBox>
+
+    </VBox>
+
+    <Button text="Tutup" onAction="#tutup" prefWidth="370" prefHeight="38"
+            style="-fx-background-color:#6495ed; -fx-text-fill:white; -fx-font-size:13;
+                   -fx-font-weight:bold; -fx-background-radius:8; -fx-cursor:hand;"/>
+
+</VBox>

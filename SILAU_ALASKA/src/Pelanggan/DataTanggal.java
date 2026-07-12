@@ -7,7 +7,6 @@ public class DataTanggal {
     private static final Map<Integer, String> mapTanggal = new HashMap<>();
 
     static {
-        // Dummy data matching default laundry orders in Karyawan.Data
         mapTanggal.put(1, "12/05/2025");
         mapTanggal.put(2, "12/05/2025");
         mapTanggal.put(3, "13/05/2025");

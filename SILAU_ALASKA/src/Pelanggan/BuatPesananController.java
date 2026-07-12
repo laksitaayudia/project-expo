@@ -25,8 +25,8 @@ public class BuatPesananController {
     @FXML private TextField txtBeratGram;
     @FXML private TextField txtCatatan;
 
-    private String selectedLayanan = "Reguler"; // Reguler or Ekspres
-    private String selectedWaktu = "Pagi"; // Pagi, Siang, Sore
+    private String selectedLayanan = "Reguler";
+    private String selectedWaktu = "Pagi"; 
     private String namaPelanggan = "Budi Santoso";
 
     private Runnable onSimpanBerhasil;

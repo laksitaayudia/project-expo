@@ -50,10 +50,7 @@ public class PromosPelangganController implements Initializable {
         }
     }
 
-    // ── Bangun kartu visual per promo ──
-
     private VBox buatKartuPromo(PromoItem promo) {
-        // ── Bagian atas: badge kode promo ──
         Label lblKode = new Label(promo.getKode());
         lblKode.setStyle(
                 "-fx-font-size:20; -fx-font-weight:bold; -fx-text-fill:white;" +
@@ -62,7 +59,6 @@ public class PromosPelangganController implements Initializable {
         lblKode.setMaxWidth(Double.MAX_VALUE);
         lblKode.setAlignment(Pos.CENTER);
 
-        // ── Besar diskon ──
         String diskonTeks;
         if ("Persentase".equalsIgnoreCase(promo.getTipe())) {
             diskonTeks = promo.getDiskon() + "% OFF";
@@ -74,7 +70,6 @@ public class PromosPelangganController implements Initializable {
         lblDiskon.setAlignment(Pos.CENTER);
         lblDiskon.setMaxWidth(Double.MAX_VALUE);
 
-        // ── Tipe promo (Persentase / Nominal) ──
         Label lblTipe = new Label(promo.getTipe());
         lblTipe.setStyle(
                 "-fx-font-size:11; -fx-font-weight:bold; -fx-text-fill:#6b7280;" +
@@ -83,13 +78,11 @@ public class PromosPelangganController implements Initializable {
         HBox boxTipe = new HBox(lblTipe);
         boxTipe.setAlignment(Pos.CENTER);
 
-        // ── Separator bergaya dashed ──
         Label dashed = new Label("- - - - - - - - - - - - - - - - -");
         dashed.setStyle("-fx-text-fill:#d1d5db; -fx-font-size:10;");
         dashed.setMaxWidth(Double.MAX_VALUE);
         dashed.setAlignment(Pos.CENTER);
 
-        // ── Minimal belanja ──
         String minTeks = "Min. belanja: Rp " +
                 String.format("%,d", promo.getMinBelanja()).replace(",", ".");
         Label lblMin = new Label(minTeks);
@@ -97,7 +90,6 @@ public class PromosPelangganController implements Initializable {
         lblMin.setMaxWidth(Double.MAX_VALUE);
         lblMin.setAlignment(Pos.CENTER);
 
-        // ── Badge status ──
         Label lblStatus = new Label("✓ " + promo.getStatus());
         lblStatus.setStyle(
                 "-fx-font-size:12; -fx-font-weight:bold; -fx-text-fill:#16a34a;" +
@@ -106,7 +98,6 @@ public class PromosPelangganController implements Initializable {
         HBox boxStatus = new HBox(lblStatus);
         boxStatus.setAlignment(Pos.CENTER);
 
-        // ── Gabungkan semua ke kartu ──
         VBox kartu = new VBox(12, lblKode, lblDiskon, boxTipe, dashed, lblMin, boxStatus);
         kartu.setPrefWidth(260);
         kartu.setMaxWidth(260);
@@ -118,7 +109,6 @@ public class PromosPelangganController implements Initializable {
                 "-fx-padding:20;" +
                 "-fx-cursor:hand;");
 
-        // ── Hover effect ──
         kartu.setOnMouseEntered(e -> kartu.setStyle(
                 "-fx-background-color:white;" +
                 "-fx-background-radius:15;" +

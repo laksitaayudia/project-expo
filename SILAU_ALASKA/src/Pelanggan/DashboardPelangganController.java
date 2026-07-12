@@ -108,7 +108,6 @@ public class DashboardPelangganController {
     public void initialize() {
         setActive(btnDashboard);
 
-        // Setup callbacks from nested pages
         if (pesananSayaController != null) {
             pesananSayaController.setOnDataChanged(this::refreshTampilan);
         }
@@ -203,7 +202,6 @@ public class DashboardPelangganController {
         tabelPesanan.setItems(filtered);
         tabelPesanan.refresh();
 
-        // Populate BarChart (Sama dengan Karyawan)
         XYChart.Series<String, Number> series = new XYChart.Series<>();
         series.setName("Pesanan");
         series.getData().add(new XYChart.Data<>("Sen", 4));
@@ -266,6 +264,28 @@ public class DashboardPelangganController {
 
             Stage dialog = new Stage();
             dialog.setTitle("Buat Pesanan Baru");
+            dialog.initModality(Modality.APPLICATION_MODAL);
+            dialog.setScene(new Scene(root));
+            dialog.setResizable(false);
+            dialog.showAndWait();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void bukaEditProfil() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Pelanggan/EditProfilPelanggan.fxml"));
+            Parent root = loader.load();
+
+            EditProfilPelangganController controller = loader.getController();
+            controller.setNamaPelanggan(namaPelanggan);
+            controller.setOnSimpanBerhasil(nama -> refreshTampilan());
+
+            Stage dialog = new Stage();
+            dialog.setTitle("Edit Profil");
             dialog.initModality(Modality.APPLICATION_MODAL);
             dialog.setScene(new Scene(root));
             dialog.setResizable(false);

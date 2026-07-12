@@ -44,7 +44,8 @@
                         <TableColumn fx:id="colJenis" text="JENIS KOMPLAIN" prefWidth="180"/>
                         <TableColumn fx:id="colDeskripsi" text="DESKRIPSI" prefWidth="300"/>
                         <TableColumn fx:id="colStatus" text="STATUS" prefWidth="120"/>
-                        <TableColumn fx:id="colSolusi" text="SOLUSI" prefWidth="250"/>
+                        <TableColumn fx:id="colSolusi" text="SOLUSI" prefWidth="200"/>
+                        <TableColumn fx:id="colAksi" text="AKSI" prefWidth="100"/>
                     </columns>
                     <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
                 </TableView>

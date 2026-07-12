@@ -17,6 +17,8 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 
 <BorderPane prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color:#f4f6f5;"
     xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1"
@@ -31,9 +33,15 @@
             </padding>
 
             <HBox alignment="CENTER_LEFT" spacing="8">
-                <StackPane prefHeight="30" prefWidth="30"
-                    style="-fx-background-color: #6495ed; -fx-background-radius: 20;">
-                    <Label style="-fx-font-size:14;" />
+                <StackPane prefHeight="30" prefWidth="30">
+                    <ImageView fitHeight="30.0" fitWidth="30.0" preserveRatio="true">
+                        <image>
+                            <Image url="@/Logo/logo.png" />
+                        </image>
+                        <clip>
+                            <Circle centerX="15" centerY="15" radius="15" />
+                        </clip>
+                    </ImageView>
                 </StackPane>
                 <Label style="-fx-font-size:16; -fx-font-weight:bold; -fx-text-fill:#111827;"
                     text="SILAU" />
@@ -59,7 +67,7 @@
 
             <Region HBox.hgrow="ALWAYS" />
 
-            <StackPane>
+            <StackPane fx:id="paneAvatar" onMouseClicked="#bukaEditProfil" style="-fx-cursor:hand;">
                 <Circle fill="#e5e7eb" radius="18" />
                 <Label fx:id="lblInisial" style="-fx-text-fill:#374151; -fx-font-weight:bold;"
                     text="A" />
@@ -72,11 +80,9 @@
         </HBox>
     </top>
 
-    <!-- ═══ CONTENT AREA ═══ -->
     <center>
         <StackPane style="-fx-background-color:#f4f6f5;">
 
-            <!-- Dashboard View -->
             <ScrollPane fx:id="scrollDashboard" fitToWidth="true" visible="true" managed="true"
                         style="-fx-background:#f4f6f5; -fx-background-color:#f4f6f5;">
                 <content>
@@ -91,16 +97,10 @@
                                 </HBox>
                             </VBox>
 
-                            <Region HBox.hgrow="ALWAYS"/>
-
-                            <Button text="+ Tambah Pesanan" onAction="#bukaTambahPesanan"
-                                    style="-fx-background-color:#6495ed; -fx-text-fill:white; -fx-font-size:13;
-                                           -fx-font-weight:bold; -fx-background-radius:8; -fx-padding:10 18; -fx-cursor:hand;"/>
                         </HBox>
 
                         <HBox spacing="20">
 
-                            <!-- Card 1: Status Pesanan -->
                             <VBox spacing="14" prefWidth="280"
                                   style="-fx-background-color:white; -fx-background-radius:15;
                                          -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),12,0,0,3);">
@@ -118,7 +118,6 @@
                                 <Label fx:id="lblDicuci" text="—" style="-fx-font-size:20; -fx-font-weight:bold; -fx-text-fill:#111827;"/>
                             </VBox>
 
-                            <!-- Card 2: Grafik Pesanan (Sama dengan Karyawan) -->
                             <VBox spacing="10" HBox.hgrow="ALWAYS"
                                   style="-fx-background-color:white; -fx-background-radius:15;
                                          -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),12,0,0,3);">
@@ -138,7 +137,6 @@
                                 </BarChart>
                             </VBox>
 
-                            <!-- Card 3: Statistik Total -->
                             <VBox spacing="14" prefWidth="260"
                                   style="-fx-background-color:white; -fx-background-radius:15;
                                          -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),12,0,0,3);">
@@ -155,7 +153,6 @@
 
                         </HBox>
 
-                        <!-- Tabel Pesanan Aktif -->
                         <VBox spacing="0"
                               style="-fx-background-color:white; -fx-background-radius:15;
                                      -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.05),12,0,0,3);">

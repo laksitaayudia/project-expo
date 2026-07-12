@@ -3,9 +3,9 @@ package Owner;
 public class PromoItem {
     private String kode;
     private int diskon;
-    private String tipe; // "Persentase" or "Nominal"
+    private String tipe;
     private int minBelanja;
-    private String status; // "Aktif" or "Non-Aktif"
+    private String status;
 
     public PromoItem(String kode, int diskon, String tipe, int minBelanja, String status) {
         this.kode = kode;

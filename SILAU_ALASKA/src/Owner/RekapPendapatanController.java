@@ -70,7 +70,6 @@ public class RekapPendapatanController implements Initializable {
                         total += Integer.parseInt(cleanTotal);
                     }
                 } catch (NumberFormatException e) {
-                    // Ignore parsing error
                 }
             }
         }

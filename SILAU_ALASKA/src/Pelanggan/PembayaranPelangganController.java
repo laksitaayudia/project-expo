@@ -67,14 +67,12 @@ public class PembayaranPelangganController {
 
     @FXML
     public void initialize() {
-        // Setup dropdown metode pembayaran
         cbMetode.setItems(FXCollections.observableArrayList(
                 "Cash",
                 "Transfer",
                 "QRIS",
                 "E-Wallet"));
 
-        // Listeners for auto-calculate payment details
         cbPesanan.setOnAction(e -> hitungPembayaran());
         cbPromo.setOnAction(e -> hitungPembayaran());
 
@@ -82,7 +80,6 @@ public class PembayaranPelangganController {
         refreshData();
     }
 
-    // Hanya promo dengan status "Aktif" yang ditampilkan
     private void refreshCbPromo() {
         String sebelumnya = cbPromo.getValue();
 
@@ -97,8 +94,6 @@ public class PembayaranPelangganController {
 
         cbPromo.setItems(listPromo);
 
-        // Pertahankan pilihan sebelumnya jika masih ada, atau reset ke "Tidak Ada
-        // Promo"
         if (sebelumnya != null && listPromo.contains(sebelumnya)) {
             cbPromo.setValue(sebelumnya);
         } else {
@@ -107,10 +102,8 @@ public class PembayaranPelangganController {
     }
 
     public void refreshData() {
-        // 1. Refresh ComboBox Promo dari data Owner
         refreshCbPromo();
 
-        // 2. Populate ComboBox Pesanan yang belum lunas
         cbPesanan.getItems().clear();
         for (PesananItem p : Data.getDaftarPesanan()) {
             if (p.getPelanggan().equalsIgnoreCase(namaPelanggan)) {
@@ -124,12 +117,19 @@ public class PembayaranPelangganController {
                 }
                 if (!sudahBayar) {
                     cbPesanan.getItems()
-                            .add("PSN00" + p.getId() + " - " + p.getLayanan() + " (" + p.getBerat() + " kg)");
+                            .add(String.format("PSN%03d", p.getId()) + " - " + p.getLayanan() + " (" + p.getBerat() + " kg)");
                 }
             }
         }
-
-        // 3. Populate Tabel Transaksi khusus milik pelanggan ini
+        
+        if (cbPesanan.getItems().isEmpty()) {
+            cbPesanan.setDisable(true);
+            cbPesanan.setPromptText("-- Tidak Ada Pesanan --");
+        } else {
+            cbPesanan.setDisable(false);
+            cbPesanan.setPromptText("-- Pilih Pesanan --");
+        }
+        
         ObservableList<TransaksiItem> filteredTx = FXCollections.observableArrayList();
         for (TransaksiItem t : Data.getDaftarTransaksi()) {
             if (t.getPelanggan().equalsIgnoreCase(namaPelanggan)) {
@@ -176,139 +176,132 @@ public class PembayaranPelangganController {
             return;
         }
 
-        // Extract biaya dari PesananItem
-        String idStr = pesananVal.split(" - ")[0].replace("PSN", "").replace("0", "");
-        try {
-            int idVal = Integer.parseInt(idStr);
-            for (PesananItem p : Data.getDaftarPesanan()) {
-                if (p.getId() == idVal) {
-                    totalAwal = p.getBiaya();
-                    break;
+            String idStr = pesananVal.split(" - ")[0].replace("PSN", "");        
+            try {
+                int idVal = Integer.parseInt(idStr);
+                for (PesananItem p : Data.getDaftarPesanan()) {
+                    if (p.getId() == idVal) {
+                        totalAwal = p.getBiaya();
+                        break;
+                    }
                 }
+            } catch (NumberFormatException e) {
+                totalAwal = 0;
             }
-        } catch (NumberFormatException e) {
-            totalAwal = 0;
-        }
 
-        // Hitung diskon dari PromoItem yang dipilih (bukan hardcoded)
-        diskon = 0;
-        String promoLabel = cbPromo.getValue();
-        if (promoLabel != null && !promoLabel.equals("Tidak Ada Promo")) {
-            // Ambil kode promo dari label (kata pertama sebelum spasi)
-            String kodePromo = promoLabel.split(" ")[0];
-            for (PromoItem promo : Data.getDaftarPromo()) {
-                if (promo.getKode().equalsIgnoreCase(kodePromo)
-                        && "Aktif".equalsIgnoreCase(promo.getStatus())) {
-                    // Validasi minimal belanja
-                    if (totalAwal >= promo.getMinBelanja()) {
-                        if ("Persentase".equalsIgnoreCase(promo.getTipe())) {
-                            diskon = (int) (totalAwal * promo.getDiskon() / 100.0);
+            diskon = 0;
+            String promoLabel = cbPromo.getValue();
+            if (promoLabel != null && !promoLabel.equals("Tidak Ada Promo")) {
+                String kodePromo = promoLabel.split(" ")[0];
+                for (PromoItem promo : Data.getDaftarPromo()) {
+                    if (promo.getKode().equalsIgnoreCase(kodePromo)
+                            && "Aktif".equalsIgnoreCase(promo.getStatus())) {
+                        if (totalAwal >= promo.getMinBelanja()) {
+                            if ("Persentase".equalsIgnoreCase(promo.getTipe())) {
+                                diskon = (int) (totalAwal * promo.getDiskon() / 100.0);
+                            } else {
+                                diskon = Math.min(promo.getDiskon(), totalAwal);
+                            }
                         } else {
-                            // Nominal: potongan tetap, tidak boleh melebihi totalAwal
-                            diskon = Math.min(promo.getDiskon(), totalAwal);
+                            diskon = 0;
                         }
-                    } else {
-                        diskon = 0; // Belanja belum memenuhi syarat minimum
+                        break;
                     }
+                }
+            }
+
+            totalBayar = totalAwal - diskon;
+            updateSummaryLabels();
+        }
+
+        private void updateSummaryLabels() {
+            lblTotalAwal.setText("Rp " + String.format("%,d", totalAwal).replace(",", "."));
+            lblDiskon.setText("-Rp " + String.format("%,d", diskon).replace(",", "."));
+            lblTotalBayar.setText("Rp " + String.format("%,d", totalBayar).replace(",", "."));
+        }
+
+        private void resetForm() {
+            cbPesanan.getSelectionModel().clearSelection();
+            cbPromo.setValue("Tidak Ada Promo");
+            cbMetode.getSelectionModel().clearSelection();
+            totalAwal = 0;
+            diskon = 0;
+            totalBayar = 0;
+            updateSummaryLabels();
+        }
+
+        @FXML
+        private void prosesBayar() {
+            String pesananVal = cbPesanan.getValue();
+            String metodeVal = cbMetode.getValue();
+
+            if (pesananVal == null || metodeVal == null) {
+                showAlert("Pesanan dan Metode Pembayaran wajib dipilih.");
+                return;
+            }
+
+            String promoLabel = cbPromo.getValue();
+            if (promoLabel != null && !promoLabel.equals("Tidak Ada Promo")) {
+                String kodePromo = promoLabel.split(" ")[0];
+                for (PromoItem promo : Data.getDaftarPromo()) {
+                    if (promo.getKode().equalsIgnoreCase(kodePromo)) {
+                        if (totalAwal < promo.getMinBelanja()) {
+                            showAlert("Promo \"" + kodePromo + "\" membutuhkan minimal belanja Rp"
+                                    + String.format("%,d", promo.getMinBelanja()).replace(",", ".")
+                                    + ". Diskon tidak diterapkan.");
+                        }
+                        break;
+                    }
+                }
+            }
+
+            String idPesanan = pesananVal.split(" - ")[0];
+            String formattedDate = LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+            String formattedTotal = "Rp" + String.format("%,d", totalBayar).replace(",", ".");
+
+            boolean foundTx = false;
+            for (TransaksiItem t : Data.getDaftarTransaksi()) {
+                if (t.getIdPesanan().equals(idPesanan)) {
+                    t.setStatusBayar("Sudah Bayar");
+                    t.setMetodeBayar(metodeVal);
+                    t.setTanggalBayar(formattedDate);
+                    t.setTotal(formattedTotal);
+                    foundTx = true;
                     break;
                 }
             }
-        }
 
-        totalBayar = totalAwal - diskon;
-        updateSummaryLabels();
-    }
+            if (!foundTx) {
+                String newIdTx = "TRX00" + (Data.getDaftarTransaksi().size() + 1);
+                TransaksiItem newTx = new TransaksiItem(
+                        newIdTx,
+                        idPesanan,
+                        namaPelanggan,
+                        formattedTotal,
+                        "Sudah Bayar",
+                        metodeVal,
+                        formattedDate);
+                Data.tambahTransaksi(newTx);
+            }
 
-    private void updateSummaryLabels() {
-        lblTotalAwal.setText("Rp " + String.format("%,d", totalAwal).replace(",", "."));
-        lblDiskon.setText("-Rp " + String.format("%,d", diskon).replace(",", "."));
-        lblTotalBayar.setText("Rp " + String.format("%,d", totalBayar).replace(",", "."));
-    }
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Sukses");
+            alert.setHeaderText(null);
+            alert.setContentText("Pembayaran Berhasil!\nTotal Akhir (Setelah Potongan Diskon): " + formattedTotal);
+            alert.showAndWait();
 
-    private void resetForm() {
-        cbPesanan.getSelectionModel().clearSelection();
-        cbPromo.setValue("Tidak Ada Promo");
-        cbMetode.getSelectionModel().clearSelection();
-        totalAwal = 0;
-        diskon = 0;
-        totalBayar = 0;
-        updateSummaryLabels();
-    }
+            refreshData();
 
-    @FXML
-    private void prosesBayar() {
-        String pesananVal = cbPesanan.getValue();
-        String metodeVal = cbMetode.getValue();
-
-        if (pesananVal == null || metodeVal == null) {
-            showAlert("Pesanan dan Metode Pembayaran wajib dipilih.");
-            return;
-        }
-
-        // Validasi ulang minimal belanja jika ada promo dipilih
-        String promoLabel = cbPromo.getValue();
-        if (promoLabel != null && !promoLabel.equals("Tidak Ada Promo")) {
-            String kodePromo = promoLabel.split(" ")[0];
-            for (PromoItem promo : Data.getDaftarPromo()) {
-                if (promo.getKode().equalsIgnoreCase(kodePromo)) {
-                    if (totalAwal < promo.getMinBelanja()) {
-                        showAlert("Promo \"" + kodePromo + "\" membutuhkan minimal belanja Rp"
-                                + String.format("%,d", promo.getMinBelanja()).replace(",", ".")
-                                + ". Diskon tidak diterapkan.");
-                    }
-                    break;
-                }
+            if (onDataChanged != null) {
+                onDataChanged.run();
             }
         }
 
-        String idPesanan = pesananVal.split(" - ")[0];
-        String formattedDate = LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-        String formattedTotal = "Rp" + String.format("%,d", totalBayar).replace(",", ".");
-
-        // Update atau buat transaksi baru
-        boolean foundTx = false;
-        for (TransaksiItem t : Data.getDaftarTransaksi()) {
-            if (t.getIdPesanan().equals(idPesanan)) {
-                t.setStatusBayar("Sudah Bayar");
-                t.setMetodeBayar(metodeVal);
-                t.setTanggalBayar(formattedDate);
-                t.setTotal(formattedTotal);
-                foundTx = true;
-                break;
-            }
-        }
-
-        if (!foundTx) {
-            String newIdTx = "TRX00" + (Data.getDaftarTransaksi().size() + 1);
-            TransaksiItem newTx = new TransaksiItem(
-                    newIdTx,
-                    idPesanan,
-                    namaPelanggan,
-                    formattedTotal,
-                    "Sudah Bayar",
-                    metodeVal,
-                    formattedDate);
-            Data.tambahTransaksi(newTx);
-        }
-
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Sukses");
-        alert.setHeaderText(null);
-        alert.setContentText("Pembayaran Berhasil!\nTotal Akhir (Setelah Potongan Diskon): " + formattedTotal);
-        alert.showAndWait();
-
-        refreshData();
-
-        if (onDataChanged != null) {
-            onDataChanged.run();
+        private void showAlert(String pesan) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Peringatan");
+            alert.setHeaderText(null);
+            alert.setContentText(pesan);
+            alert.showAndWait();
         }
     }
-
-    private void showAlert(String pesan) {
-        Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setTitle("Peringatan");
-        alert.setHeaderText(null);
-        alert.setContentText(pesan);
-        alert.showAndWait();
-    }
-}

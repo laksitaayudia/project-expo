@@ -10,6 +10,8 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -26,6 +28,12 @@
             <padding>
                 <Insets bottom="25" left="30" right="30" top="25" />
             </padding>
+
+            <ImageView fitHeight="70.0" fitWidth="70.0" preserveRatio="true">
+                <image>
+                    <Image url="@/Logo/logo.png" />
+                </image>
+            </ImageView>
 
             <Label text="SILAU">
                 <font>
