@@ -3,82 +3,16 @@
     <id>
       <value>1</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleIntegerProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null">
-                <lock/>
-                <queueLength>0</queueLength>
-              </queue>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </id>
     <pelanggan>
       <value>Budi Santoso</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleStringProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </pelanggan>
     <layanan>
       <value>Reguler — Pagi</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleStringProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </layanan>
     <tanggal>
@@ -89,79 +23,16 @@
     <berat>
       <value>3.5</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleDoubleProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </berat>
     <biaya>
       <value>35000</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleIntegerProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </biaya>
     <status>
       <value>MENUNGGU</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleStringProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </status>
   </Karyawan.PesananItem>
@@ -169,85 +40,16 @@
     <id>
       <value>2</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleIntegerProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </id>
     <pelanggan>
       <value>Siti Aminah</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleStringProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </pelanggan>
     <layanan>
       <value>Ekspres — Sore</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleStringProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </layanan>
     <tanggal>
@@ -258,85 +60,16 @@
     <berat>
       <value>2.0</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleDoubleProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </berat>
     <biaya>
       <value>50000</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleIntegerProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </biaya>
     <status>
       <value>DICUCI</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleStringProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </status>
   </Karyawan.PesananItem>
@@ -344,85 +77,16 @@
     <id>
       <value>3</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleIntegerProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </id>
     <pelanggan>
       <value>Andi Wijaya</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleStringProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </pelanggan>
     <layanan>
       <value>Reguler — Sore</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleStringProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </layanan>
     <tanggal>
@@ -433,85 +97,16 @@
     <berat>
       <value>4.2</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleDoubleProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </berat>
     <biaya>
       <value>42000</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleIntegerProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </biaya>
     <status>
       <value>MENUNGGU</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleStringProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </status>
   </Karyawan.PesananItem>
@@ -519,85 +114,16 @@
     <id>
       <value>4</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleIntegerProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </id>
     <pelanggan>
       <value>Rina Kartika</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleStringProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </pelanggan>
     <layanan>
       <value>Ekspres — Pagi</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleStringProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </layanan>
     <tanggal>
@@ -608,263 +134,16 @@
     <berat>
       <value>1.8</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleDoubleProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </berat>
     <biaya>
       <value>45000</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleIntegerProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </biaya>
     <status>
       <value>SELESAI</value>
       <valid>true</valid>
-<<<<<<< HEAD
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleStringProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-      <name></name>
-    </status>
-  </Karyawan.PesananItem>
-  <Karyawan.PesananItem>
-    <id>
-      <value>5</value>
-      <valid>true</valid>
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleIntegerProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-      <name></name>
-    </id>
-    <pelanggan>
-      <value>p</value>
-      <valid>true</valid>
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleStringProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-      <name></name>
-    </pelanggan>
-    <layanan>
-      <value>Reguler — Sore</value>
-      <valid>true</valid>
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleStringProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-      <name></name>
-    </layanan>
-    <tanggal>
-      <value>04/07/2026</value>
-      <valid>true</valid>
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleStringProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null">
-                <lock/>
-                <queueLength>0</queueLength>
-              </queue>
-              <next class="java.lang.ref.WeakReference" reference=".."/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../javafx.beans.WeakInvalidationListener/ref/queue"/>
-              <next class="java.lang.ref.WeakReference" reference=".."/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-      <name></name>
-    </tanggal>
-    <berat>
-      <value>1.0</value>
-      <valid>true</valid>
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleDoubleProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-      <name></name>
-    </berat>
-    <biaya>
-      <value>10000</value>
-      <valid>true</valid>
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleIntegerProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-      <name></name>
-    </biaya>
-    <status>
-      <value>MENUNGGU</value>
-      <valid>true</valid>
-      <helper class="com.sun.javafx.binding.ExpressionHelper$Generic">
-        <observable class="javafx.beans.property.SimpleStringProperty" reference="../.."/>
-        <invalidationListeners>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <javafx.beans.WeakInvalidationListener>
-            <ref>
-              <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../../../Karyawan.PesananItem/id/helper/invalidationListeners/javafx.beans.WeakInvalidationListener/ref/queue"/>
-            </ref>
-          </javafx.beans.WeakInvalidationListener>
-          <null/>
-          <null/>
-        </invalidationListeners>
-        <invalidationSize>2</invalidationSize>
-        <changeSize>0</changeSize>
-        <locked>false</locked>
-      </helper>
-=======
->>>>>>> 6257ae0b4ae1f6e4a8116be9f32a64f830095d11
       <name></name>
     </status>
   </Karyawan.PesananItem>
