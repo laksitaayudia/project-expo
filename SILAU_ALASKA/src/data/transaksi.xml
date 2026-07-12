@@ -39,9 +39,9 @@
     <idTransaksi>TRX005</idTransaksi>
     <idPesanan>PSN005</idPesanan>
     <pelanggan>p</pelanggan>
-    <total>Rp115.000</total>
-    <statusBayar>Sudah Bayar</statusBayar>
-    <metodeBayar>Transfer</metodeBayar>
-    <tanggalBayar>11/07/2026</tanggalBayar>
+    <total>Rp10.000</total>
+    <statusBayar>Belum Bayar</statusBayar>
+    <metodeBayar>-</metodeBayar>
+    <tanggalBayar>-</tanggalBayar>
   </Karyawan.TransaksiItem>
 </list>
