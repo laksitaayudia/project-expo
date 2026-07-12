@@ -4007,3 +4007,36 @@ WARNING: Unmatched cancel notification for request id 41
 2026.07.12 19:56:10 INFO  Memory monitor stopped
 2026.07.12 19:56:10 INFO  shutting down Metals
 2026.07.12 19:56:10 INFO  Exiting server
+2026.07.12 19:57:17 INFO  Started: Metals version 1.6.7 in folders 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo' for client Visual Studio Code 1.128.0.
+2026.07.12 19:57:17 INFO  Memory monitor started
+2026.07.12 19:57:18 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.07.12 19:57:18 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:19 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:19 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:19 WARN  no build tool detected in workspace 'C:\Users\User\OneDrive\Dokumen\GitHub\project-expo'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2026.07.12 19:57:20 WARN  Build server is not auto-connectable.
+2026.07.12 19:57:20 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java
+2026.07.12 19:57:20 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:23 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:23 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:24 INFO  time: code lens generation in 3.81s
+2026.07.12 19:57:25 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:25 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:41 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:41 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java
+2026.07.12 19:57:41 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.12 19:57:41 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+Jul 12, 2026 7:57:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 17
+2026.07.12 19:57:41 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+Jul 12, 2026 7:57:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 21
+2026.07.12 19:57:41 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\Data.java. Using fallback presentation compiler.
+2026.07.12 19:57:42 WARN  no build target for: C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java
+2026.07.12 19:57:41 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+Jul 12, 2026 7:57:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 22
+2026.07.12 19:57:42 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:41 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:42 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
+2026.07.12 19:57:42 INFO  no build target found for C:\Users\User\OneDrive\Dokumen\GitHub\project-expo\SILAU_ALASKA\src\Karyawan\DashboardKaryawanController.java. Using fallback presentation compiler.
