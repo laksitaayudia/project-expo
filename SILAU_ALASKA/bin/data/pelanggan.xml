@@ -15,4 +15,12 @@
     <username>siti</username>
     <password>siti123</password>
   </Registrasi.PelangganRegister>
+  <Registrasi.PelangganRegister>
+    <nama>Kiki</nama>
+    <telepon>087568764</telepon>
+    <email>kiki@gmail.com</email>
+    <alamat>Jakal</alamat>
+    <username>kiki</username>
+    <password>123</password>
+  </Registrasi.PelangganRegister>
 </list>
