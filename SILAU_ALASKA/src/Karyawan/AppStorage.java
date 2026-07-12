@@ -89,7 +89,7 @@ public class AppStorage {
         try (BufferedWriter w = Files.newBufferedWriter(FILE_PROMO, StandardCharsets.UTF_8)) {
             List<PromoItem> list = new ArrayList<>(Data.getDaftarPromo());
             xstream.toXML(list, w);
-        } catch (IOException e) {
+        } catch (IOException e) {.
             System.err.println("[AppStorage] Gagal menyimpan promo: " + e.getMessage());
         }
     }
