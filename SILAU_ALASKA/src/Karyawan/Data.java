@@ -56,13 +56,7 @@ public class Data {
     }
 
     private static final ObservableList<KomplainItem> daftarKomplain = FXCollections.observableArrayList(
-            new KomplainItem(
-                    1,
-                    "PSN001",
-                    "Baju tertukar",
-                    "Kemeja biru tidak ada di dalam paket",
-                    "Selesai",
-                    "Kemeja ditemukan dan dikembalikan")
+            new KomplainItem(1, "PSN001", "Baju tertukar", "Kemeja biru tidak ada di dalam paket", "Selesai", "Kemeja ditemukan dan dikembalikan")
     );
 
     public static ObservableList<KomplainItem> getDaftarKomplain() {

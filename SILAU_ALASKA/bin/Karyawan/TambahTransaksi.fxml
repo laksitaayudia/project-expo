@@ -5,73 +5,73 @@
 <?import javafx.scene.layout.*?>
 
 <VBox xmlns="http://javafx.com/javafx/9"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="Karyawan.TambahTransaksiController"
-      spacing="18"
-      alignment="TOP_CENTER"
-      style="-fx-background-color:#f4f6f5;">
+       xmlns:fx="http://javafx.com/fxml/1"
+       fx:controller="Karyawan.TambahTransaksiController"
+       spacing="18"
+       alignment="TOP_CENTER"
+       style="-fx-background-color:#f4f6f5;">
 
-    <padding>
-        <Insets top="25" right="35" bottom="25" left="35"/>
-    </padding>
+       <padding>
+              <Insets top="25" right="35" bottom="25" left="35" />
+       </padding>
 
-    <Label text="Tambah Transaksi"
-           style="-fx-font-size:24;
+       <Label text="Tambah Transaksi"
+              style="-fx-font-size:24;
                   -fx-font-weight:bold;
-                  -fx-text-fill:#111827;"/>
+                  -fx-text-fill:#111827;" />
 
-    <VBox spacing="12"
-          maxWidth="420"
-          style="-fx-background-color:white;
+       <VBox spacing="12"
+              maxWidth="420"
+              style="-fx-background-color:white;
                  -fx-background-radius:15;
                  -fx-padding:20;
                  -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.08),12,0,0,3);">
 
-        <Label text="ID Pesanan"/>
+              <Label text="ID Pesanan" />
 
-        <ComboBox fx:id="cbPesanan"/>
+              <ComboBox fx:id="cbPesanan" />
 
-        <Label text="Nama Pelanggan"/>
+              <Label text="Nama Pelanggan" />
 
-        <TextField fx:id="txtPelanggan"
-                   editable="false"/>
+              <TextField fx:id="txtPelanggan"
+                     editable="false" />
 
-        <Label text="Total"/>
+              <Label text="Total" />
 
-        <TextField fx:id="txtTotal"
-                   editable="false"/>
+              <TextField fx:id="txtTotal"
+                     editable="false" />
 
-        <Label text="Status Pembayaran"/>
+              <Label text="Status Pembayaran" />
 
-        <ComboBox fx:id="cbStatus"/>
+              <ComboBox fx:id="cbStatus" />
 
-        <Label text="Metode Pembayaran"/>
+              <Label text="Metode Pembayaran" />
 
-        <ComboBox fx:id="cbMetode"/>
+              <ComboBox fx:id="cbMetode" />
 
-        <Label text="Tanggal Bayar"/>
+              <Label text="Tanggal Bayar" />
 
-        <DatePicker fx:id="dpTanggal"/>
+              <DatePicker fx:id="dpTanggal" />
 
-        <HBox spacing="12"
-              alignment="CENTER_RIGHT">
+              <HBox spacing="12"
+                     alignment="CENTER_RIGHT">
 
-            <Button text="Batal"
-                    onAction="#batal"
-                    style="-fx-background-color:#9ca3af;
+                     <Button text="Batal"
+                            onAction="#batal"
+                            style="-fx-background-color:#9ca3af;
                            -fx-text-fill:white;
                            -fx-font-weight:bold;
-                           -fx-background-radius:8;"/>
+                           -fx-background-radius:8;" />
 
-            <Button text="Simpan"
-                    onAction="#simpan"
-                    style="-fx-background-color:#6495ed;
+                     <Button text="Simpan"
+                            onAction="#simpan"
+                            style="-fx-background-color:#6495ed;
                            -fx-text-fill:white;
                            -fx-font-weight:bold;
-                           -fx-background-radius:8;"/>
+                           -fx-background-radius:8;" />
 
-        </HBox>
+              </HBox>
 
-    </VBox>
+       </VBox>
 
 </VBox>

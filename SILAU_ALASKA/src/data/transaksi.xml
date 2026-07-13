@@ -35,4 +35,22 @@
     <metodeBayar>QRIS</metodeBayar>
     <tanggalBayar>14/05/2025</tanggalBayar>
   </Karyawan.TransaksiItem>
+  <Karyawan.TransaksiItem>
+    <idTransaksi>TRX005</idTransaksi>
+    <idPesanan>PSN005</idPesanan>
+    <pelanggan>Kiki</pelanggan>
+    <total>Rp12.000</total>
+    <statusBayar>Belum Bayar</statusBayar>
+    <metodeBayar>-</metodeBayar>
+    <tanggalBayar>-</tanggalBayar>
+  </Karyawan.TransaksiItem>
+  <Karyawan.TransaksiItem>
+    <idTransaksi>TRX006</idTransaksi>
+    <idPesanan>PSN006</idPesanan>
+    <pelanggan>koko</pelanggan>
+    <total>Rp25.000</total>
+    <statusBayar>Sudah Bayar</statusBayar>
+    <metodeBayar>Cash</metodeBayar>
+    <tanggalBayar>13/07/2026</tanggalBayar>
+  </Karyawan.TransaksiItem>
 </list>
