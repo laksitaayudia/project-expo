@@ -34,27 +34,90 @@ public class PesananItem {
         this.status = new SimpleStringProperty(status);
     }
 
-    public int getId() { return id.get(); }
-    public String getPelanggan() { return pelanggan.get(); }
-    public String getLayanan() { return layanan.get(); }
-    public String getTanggal() { return tanggal.get(); }
-    public double getBerat() { return berat.get(); }
-    public int getBiaya() { return biaya.get(); }
-    public String getStatus() { return status.get(); }
+    // Getter
+    public int getId() {
+        return id.get();
+    }
 
-    public void setId(int id) { this.id.set(id); }
-    public void setPelanggan(String pelanggan) { this.pelanggan.set(pelanggan); }
-    public void setLayanan(String layanan) { this.layanan.set(layanan); }
-    public void setTanggal(String tanggal) { this.tanggal.set(tanggal); }
-    public void setBerat(double berat) { this.berat.set(berat); }
-    public void setBiaya(int biaya) { this.biaya.set(biaya); }
-    public void setStatus(String status) { this.status.set(status); }
+    public String getPelanggan() {
+        return pelanggan.get();
+    }
 
-    public SimpleIntegerProperty idProperty() { return id; }
-    public SimpleStringProperty pelangganProperty() { return pelanggan; }
-    public SimpleStringProperty layananProperty() { return layanan; }
-    public SimpleStringProperty tanggalProperty() { return tanggal; }
-    public SimpleDoubleProperty beratProperty() { return berat; }
-    public SimpleIntegerProperty biayaProperty() { return biaya; }
-    public SimpleStringProperty statusProperty() { return status; }
+    public String getLayanan() {
+        return layanan.get();
+    }
+
+    public String getTanggal() {
+        return tanggal.get();
+    }
+
+    public double getBerat() {
+        return berat.get();
+    }
+
+    public int getBiaya() {
+        return biaya.get();
+    }
+
+    public String getStatus() {
+        return status.get();
+    }
+
+    // Setter
+    public void setId(int id) {
+        this.id.set(id);
+    }
+
+    public void setPelanggan(String pelanggan) {
+        this.pelanggan.set(pelanggan);
+    }
+
+    public void setLayanan(String layanan) {
+        this.layanan.set(layanan);
+    }
+
+    public void setTanggal(String tanggal) {
+        this.tanggal.set(tanggal);
+    }
+
+    public void setBerat(double berat) {
+        this.berat.set(berat);
+    }
+
+    public void setBiaya(int biaya) {
+        this.biaya.set(biaya);
+    }
+
+    public void setStatus(String status) {
+        this.status.set(status);
+    }
+
+    // Property (untuk binding JavaFX / TableView)
+    public SimpleIntegerProperty idProperty() {
+        return id;
+    }
+
+    public SimpleStringProperty pelangganProperty() {
+        return pelanggan;
+    }
+
+    public SimpleStringProperty layananProperty() {
+        return layanan;
+    }
+
+    public SimpleStringProperty tanggalProperty() {
+        return tanggal;
+    }
+
+    public SimpleDoubleProperty beratProperty() {
+        return berat;
+    }
+
+    public SimpleIntegerProperty biayaProperty() {
+        return biaya;
+    }
+
+    public SimpleStringProperty statusProperty() {
+        return status;
+    }
 }

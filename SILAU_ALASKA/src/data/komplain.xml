@@ -7,4 +7,12 @@
     <status>Selesai</status>
     <solusi>Kemeja ditemukan dan dikembalikan</solusi>
   </Karyawan.KomplainItem>
+  <Karyawan.KomplainItem>
+    <id>2</id>
+    <idPesanan>PSN006</idPesanan>
+    <jenisKomplain>Baju tertukar</jenisKomplain>
+    <deskripsi>Baju saya tertukar</deskripsi>
+    <status>Diproses</status>
+    <solusi>-</solusi>
+  </Karyawan.KomplainItem>
 </list>

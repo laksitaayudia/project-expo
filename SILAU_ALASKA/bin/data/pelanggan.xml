@@ -23,4 +23,12 @@
     <username>kiki</username>
     <password>123</password>
   </Registrasi.PelangganRegister>
+  <Registrasi.PelangganRegister>
+    <nama>koko</nama>
+    <telepon>0123456789</telepon>
+    <email>koko@gmail.com</email>
+    <alamat>Nglanjaran</alamat>
+    <username>koko</username>
+    <password>123</password>
+  </Registrasi.PelangganRegister>
 </list>
