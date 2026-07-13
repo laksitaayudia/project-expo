@@ -24,6 +24,7 @@ public class PesananController {
     @FXML private TableColumn<PesananItem, Integer> colIdF;
     @FXML private TableColumn<PesananItem, String> colPelangganF;
     @FXML private TableColumn<PesananItem, String> colLayananF;
+    @FXML private TableColumn<PesananItem, String> colTanggalF;
     @FXML private TableColumn<PesananItem, Double> colBeratF;
     @FXML private TableColumn<PesananItem, Integer> colBiayaF;
     @FXML private TableColumn<PesananItem, String> colStatusF;
@@ -50,6 +51,7 @@ public class PesananController {
         colIdF.setCellValueFactory(new PropertyValueFactory<>("id"));
         colPelangganF.setCellValueFactory(new PropertyValueFactory<>("pelanggan"));
         colLayananF.setCellValueFactory(new PropertyValueFactory<>("layanan"));
+        colTanggalF.setCellValueFactory(new PropertyValueFactory<>("tanggal"));
         colBeratF.setCellValueFactory(new PropertyValueFactory<>("berat"));
         colBiayaF.setCellValueFactory(new PropertyValueFactory<>("biaya"));
         colStatusF.setCellValueFactory(new PropertyValueFactory<>("status"));
