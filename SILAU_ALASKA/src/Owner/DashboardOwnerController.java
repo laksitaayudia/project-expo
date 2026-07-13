@@ -173,14 +173,14 @@ public class DashboardOwnerController {
                     }
                 }
 
-                Node legend1 = this.chartKeuangan.lookup(".default-color0.chart-legend-item-symbol");
+                javafx.scene.Node legend1 = chartKeuangan.lookup(".default-color0.chart-legend-item-symbol");
                 if (legend1 != null) {
-                legend1.setStyle("-fx-background-color: #10b981;");
+                    legend1.setStyle("-fx-background-color: #10b981;");
                 }
 
-                Node legend2 = this.chartKeuangan.lookup(".default-color1.chart-legend-item-symbol");
+                javafx.scene.Node legend2 = chartKeuangan.lookup(".default-color1.chart-legend-item-symbol");
                 if (legend2 != null) {
-                legend2.setStyle("-fx-background-color: #ef4444;");
+                    legend2.setStyle("-fx-background-color: #ef4444;");
                 }
             });
         }
