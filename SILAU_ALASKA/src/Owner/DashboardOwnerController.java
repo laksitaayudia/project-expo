@@ -62,13 +62,11 @@ public class DashboardOwnerController {
     @FXML
     private DaftarKaryawanController daftarKaryawanController;
 
-    // Header Info
     @FXML
     private Label lblNamaUser;
     @FXML
     private Label lblInisial;
 
-    // Dashboard Cards
     @FXML
     private Label lblPendapatan;
     @FXML
@@ -78,7 +76,6 @@ public class DashboardOwnerController {
     @FXML
     private Label lblPromoCount;
 
-    // Chart
     @FXML
     private BarChart<String, Number> chartKeuangan;
 
@@ -117,7 +114,6 @@ public class DashboardOwnerController {
                             }
                         }
                     } catch (NumberFormatException e) {
-                        // Ignore
                     }
                 }
             }
@@ -168,13 +164,23 @@ public class DashboardOwnerController {
             javafx.application.Platform.runLater(() -> {
                 for (XYChart.Data<String, Number> item : seriesPendapatan.getData()) {
                     if (item != null && item.getNode() != null) {
-                        item.getNode().setStyle("-fx-bar-fill:#10b981;"); // Green
+                        item.getNode().setStyle("-fx-bar-fill:#10b981;");
                     }
                 }
                 for (XYChart.Data<String, Number> item : seriesPengeluaran.getData()) {
                     if (item != null && item.getNode() != null) {
-                        item.getNode().setStyle("-fx-bar-fill:#ef4444;"); // Red
+                        item.getNode().setStyle("-fx-bar-fill:#ef4444;");
                     }
+                }
+
+                javafx.scene.Node legend1 = chartKeuangan.lookup(".default-color0.chart-legend-item-symbol");
+                if (legend1 != null) {
+                    legend1.setStyle("-fx-background-color: #10b981;");
+                }
+
+                javafx.scene.Node legend2 = chartKeuangan.lookup(".default-color1.chart-legend-item-symbol");
+                if (legend2 != null) {
+                    legend2.setStyle("-fx-background-color: #ef4444;");
                 }
             });
         }

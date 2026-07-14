@@ -5,7 +5,7 @@
     <email>budi@gmail.com</email>
     <alamat>Jl. Mawar No. 12</alamat>
     <username>budi</username>
-    <password>budi123</password>
+    <password>b123</password>
   </Registrasi.PelangganRegister>
   <Registrasi.PelangganRegister>
     <nama>Siti Aminah</nama>
@@ -13,22 +13,6 @@
     <email>siti@yahoo.com</email>
     <alamat>Jl. Melati No. 5</alamat>
     <username>siti</username>
-    <password>siti123</password>
-  </Registrasi.PelangganRegister>
-  <Registrasi.PelangganRegister>
-    <nama>Kiki</nama>
-    <telepon>087568764</telepon>
-    <email>kiki@gmail.com</email>
-    <alamat>Jakal</alamat>
-    <username>kiki</username>
-    <password>123</password>
-  </Registrasi.PelangganRegister>
-  <Registrasi.PelangganRegister>
-    <nama>koko</nama>
-    <telepon>0123456789</telepon>
-    <email>koko@gmail.com</email>
-    <alamat>Nglanjaran</alamat>
-    <username>koko</username>
-    <password>123</password>
+    <password>s123</password>
   </Registrasi.PelangganRegister>
 </list>

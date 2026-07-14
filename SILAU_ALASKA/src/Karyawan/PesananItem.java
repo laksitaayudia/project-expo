@@ -34,7 +34,6 @@ public class PesananItem {
         this.status = new SimpleStringProperty(status);
     }
 
-    // Getter
     public int getId() {
         return id.get();
     }
@@ -63,7 +62,6 @@ public class PesananItem {
         return status.get();
     }
 
-    // Setter
     public void setId(int id) {
         this.id.set(id);
     }
@@ -92,7 +90,6 @@ public class PesananItem {
         this.status.set(status);
     }
 
-    // Property (untuk binding JavaFX / TableView)
     public SimpleIntegerProperty idProperty() {
         return id;
     }

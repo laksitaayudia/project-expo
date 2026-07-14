@@ -13,8 +13,7 @@ public class Data {
             new PesananItem(1, "Budi Santoso", "Reguler — Pagi", "12/05/2025", 3.5, 35000, "MENUNGGU"),
             new PesananItem(2, "Siti Aminah", "Ekspres — Sore", "12/05/2025", 2.0, 50000, "DICUCI"),
             new PesananItem(3, "Andi Wijaya", "Reguler — Sore", "13/05/2025", 4.2, 42000, "MENUNGGU"),
-            new PesananItem(4, "Rina Kartika", "Ekspres — Pagi", "14/05/2025", 1.8, 45000, "SELESAI")
-    );
+            new PesananItem(4, "Rina Kartika", "Ekspres — Pagi", "14/05/2025", 1.8, 45000, "SELESAI"));
 
     public static ObservableList<PesananItem> getDaftarPesanan() {
         return daftarPesanan;
@@ -29,17 +28,43 @@ public class Data {
         AppStorage.simpanPesanan();
     }
 
+    public static void updatePesanan(PesananItem newItem) {
+        for (int i = 0; i < daftarPesanan.size(); i++) {
+            if (daftarPesanan.get(i).getId() == newItem.getId()) {
+                daftarPesanan.set(i, newItem);
+                break;
+            }
+        }
+        AppStorage.simpanPesanan();
+
+        String idPesananTerkait = String.format("PSN%03d", newItem.getId());
+        String formattedTotal = "Rp" + String.format("%,d", newItem.getBiaya()).replace(",", ".");
+        for (TransaksiItem t : daftarTransaksi) {
+            if (t.getIdPesanan().equalsIgnoreCase(idPesananTerkait)) {
+                t.setPelanggan(newItem.getPelanggan());
+                t.setTotal(formattedTotal);
+            }
+        }
+        AppStorage.simpanTransaksi();
+    }
+
     public static void hapusPesanan(int id) {
         daftarPesanan.removeIf(item -> item.getId() == id);
         AppStorage.simpanPesanan();
+
+        String idPesananTerkait = String.format("PSN%03d", id);
+        daftarTransaksi.removeIf(trx -> trx.getIdPesanan().equalsIgnoreCase(idPesananTerkait));
+        AppStorage.simpanTransaksi();
+
+        daftarKomplain.removeIf(komplain -> komplain.getIdPesanan().equalsIgnoreCase(idPesananTerkait));
+        AppStorage.simpanKomplain();
     }
 
     private static final ObservableList<TransaksiItem> daftarTransaksi = FXCollections.observableArrayList(
             new TransaksiItem("TRX001", "PSN001", "Budi Santoso", "Rp35.000", "Sudah Bayar", "Cash", "12/05/2025"),
             new TransaksiItem("TRX002", "PSN002", "Siti Aminah", "Rp50.000", "Belum Bayar", "-", "-"),
             new TransaksiItem("TRX003", "PSN003", "Andi Wijaya", "Rp42.000", "Sudah Bayar", "Transfer", "13/05/2025"),
-            new TransaksiItem("TRX004", "PSN004", "Rina Kartika", "Rp45.000", "Sudah Bayar", "QRIS", "14/05/2025")
-    );
+            new TransaksiItem("TRX004", "PSN004", "Rina Kartika", "Rp45.000", "Sudah Bayar", "QRIS", "14/05/2025"));
 
     public static ObservableList<TransaksiItem> getDaftarTransaksi() {
         return daftarTransaksi;
@@ -56,8 +81,8 @@ public class Data {
     }
 
     private static final ObservableList<KomplainItem> daftarKomplain = FXCollections.observableArrayList(
-            new KomplainItem(1, "PSN001", "Baju tertukar", "Kemeja biru tidak ada di dalam paket", "Selesai", "Kemeja ditemukan dan dikembalikan")
-    );
+            new KomplainItem(1, "PSN001", "Baju tertukar", "Kemeja biru tidak ada di dalam paket", "Selesai",
+                    "Kemeja ditemukan dan dikembalikan"));
 
     public static ObservableList<KomplainItem> getDaftarKomplain() {
         return daftarKomplain;
@@ -86,9 +111,10 @@ public class Data {
     }
 
     private static final ObservableList<PelangganRegister> daftarPelanggan = FXCollections.observableArrayList(
-            new PelangganRegister("Budi Santoso", "081234567890", "budi@gmail.com", "Jl. Mawar No. 12", "budi", "budi123"),
-            new PelangganRegister("Siti Aminah", "085678901234", "siti@yahoo.com", "Jl. Melati No. 5", "siti", "siti123")
-    );
+            new PelangganRegister("Budi Santoso", "081234567890", "budi@gmail.com", "Jl. Mawar No. 12", "budi",
+                    "budi123"),
+            new PelangganRegister("Siti Aminah", "085678901234", "siti@yahoo.com", "Jl. Melati No. 5", "siti",
+                    "siti123"));
 
     public static ObservableList<PelangganRegister> getDaftarPelanggan() {
         return daftarPelanggan;
@@ -124,8 +150,7 @@ public class Data {
 
     private static final ObservableList<PromoItem> daftarPromo = FXCollections.observableArrayList(
             new PromoItem("SILAUCEPAT", 10, "Persentase", 30000, "Aktif"),
-            new PromoItem("HEMATLAUNDRY", 5000, "Nominal", 25000, "Aktif")
-    );
+            new PromoItem("HEMATLAUNDRY", 5000, "Nominal", 25000, "Aktif"));
 
     public static ObservableList<PromoItem> getDaftarPromo() {
         return daftarPromo;
@@ -157,8 +182,7 @@ public class Data {
 
     private static final ObservableList<PengeluaranItem> daftarPengeluaran = FXCollections.observableArrayList(
             new PengeluaranItem(1, "2025-05-12", "Bahan Baku", 150000, "Pembelian deterjen"),
-            new PengeluaranItem(2, "2025-05-14", "Operasional", 75000, "Perbaikan pipa air")
-    );
+            new PengeluaranItem(2, "2025-05-14", "Operasional", 75000, "Perbaikan pipa air"));
 
     public static ObservableList<PengeluaranItem> getDaftarPengeluaran() {
         return daftarPengeluaran;
@@ -178,7 +202,7 @@ public class Data {
         return daftarPengeluaran.stream().mapToInt(PengeluaranItem::getId).max().orElse(0) + 1;
     }
 
-        private static final ObservableList<KaryawanItem> daftarKaryawan = FXCollections.observableArrayList();
+    private static final ObservableList<KaryawanItem> daftarKaryawan = FXCollections.observableArrayList();
 
     public static ObservableList<KaryawanItem> getDaftarKaryawan() {
         return daftarKaryawan;

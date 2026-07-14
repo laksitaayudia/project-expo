@@ -5,15 +5,22 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class TambahPesananController {
 
-    @FXML private TextField txtPelanggan;
-    @FXML private ComboBox<String> cbLayanan;
-    @FXML private TextField txtBerat;
-    @FXML private TextField txtBiaya;
+    @FXML
+    private TextField txtPelanggan;
+    @FXML
+    private ComboBox<String> cbLayanan;
+    @FXML
+    private DatePicker dpTanggal;
+    @FXML
+    private TextField txtBerat;
+    @FXML
+    private TextField txtBiaya;
 
     private Runnable onSimpanBerhasil;
     private PesananItem itemEdit;
@@ -62,6 +69,16 @@ public class TambahPesananController {
         cbLayanan.setValue(item.getLayanan());
         txtBerat.setText(String.valueOf(item.getBerat()));
         txtBiaya.setText(String.valueOf(item.getBiaya()));
+
+        if (item.getTanggal() != null && !item.getTanggal().isEmpty()) {
+            try {
+                java.time.format.DateTimeFormatter formatter = java.time.format.DateTimeFormatter
+                        .ofPattern("dd/MM/yyyy");
+                dpTanggal.setValue(java.time.LocalDate.parse(item.getTanggal(), formatter));
+            } catch (Exception e) {
+
+            }
+        }
     }
 
     @FXML
@@ -69,13 +86,27 @@ public class TambahPesananController {
 
         String pelanggan = txtPelanggan.getText();
         String layanan = cbLayanan.getValue();
+        java.time.LocalDate tanggal = dpTanggal.getValue();
         String beratText = txtBerat.getText();
         String biayaText = txtBiaya.getText();
 
         if (pelanggan == null || pelanggan.isEmpty() || layanan == null
-                || beratText == null || beratText.isEmpty()
+                || tanggal == null || beratText == null || beratText.isEmpty()
                 || biayaText == null || biayaText.isEmpty()) {
-            showAlert("Semua kolom wajib diisi.");
+            showAlert("Semua kolom (termasuk Tanggal) wajib diisi.");
+            return;
+        }
+
+        // Cek apakah pelanggan terdaftar
+        boolean pelangganDitemukan = false;
+        for (Registrasi.PelangganRegister p : Data.getDaftarPelanggan()) {
+            if (p.getNama().equalsIgnoreCase(pelanggan)) {
+                pelangganDitemukan = true;
+                break;
+            }
+        }
+        if (!pelangganDitemukan) {
+            showAlert("Pelanggan belum terdaftar, harap daftar dulu!");
             return;
         }
 
@@ -90,14 +121,32 @@ public class TambahPesananController {
             return;
         }
 
+        java.time.format.DateTimeFormatter formatter = java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String tanggalStr = tanggal.format(formatter);
+
         if (itemEdit != null) {
-            Data.hapusPesanan(itemEdit.getId());
-            PesananItem hasilEdit = new PesananItem(itemEdit.getId(), pelanggan, layanan, berat, biaya, itemEdit.getStatus());
-            Data.tambahPesanan(hasilEdit);
+            PesananItem hasilEdit = new PesananItem(itemEdit.getId(), pelanggan, layanan, tanggalStr, berat, biaya, itemEdit.getStatus());
+            Data.updatePesanan(hasilEdit);
         } else {
             int idBaru = Data.idBerikutnya();
-            PesananItem pesananBaru = new PesananItem(idBaru, pelanggan, layanan, berat, biaya, "MENUNGGU");
+            PesananItem pesananBaru = new PesananItem(idBaru, pelanggan, layanan, tanggalStr, berat, biaya, "MENUNGGU");
             Data.tambahPesanan(pesananBaru);
+            
+            // Generate Transaksi otomatis (Belum Bayar)
+            int nextTrxId = Data.getDaftarTransaksi().stream()
+                    .mapToInt(t -> {
+                        try {
+                            return Integer.parseInt(t.getIdTransaksi().replace("TRX", ""));
+                        } catch (Exception e) { return 0; }
+                    })
+                    .max().orElse(0) + 1;
+                    
+            String newIdTx = String.format("TRX%03d", nextTrxId);
+            String idPes = String.format("PSN%03d", idBaru);
+            String formattedTotal = "Rp" + String.format("%,d", biaya).replace(",", ".");
+            
+            TransaksiItem newTx = new TransaksiItem(newIdTx, idPes, pelanggan, formattedTotal, "Belum Bayar", "-", "-");
+            Data.tambahTransaksi(newTx);
         }
 
         if (onSimpanBerhasil != null) {

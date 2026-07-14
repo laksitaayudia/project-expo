@@ -34,6 +34,12 @@
     </VBox>
 
     <VBox spacing="4" alignment="CENTER_LEFT">
+        <Label text="Tanggal Pesanan"
+            style="-fx-font-size:12; -fx-text-fill:#374151; -fx-font-weight:bold;" />
+        <DatePicker fx:id="dpTanggal" prefWidth="330" promptText="Pilih Tanggal" />
+    </VBox>
+
+    <VBox spacing="4" alignment="CENTER_LEFT">
         <Label text="Layanan" style="-fx-font-size:12; -fx-text-fill:#374151; -fx-font-weight:bold;" />
         <ComboBox fx:id="cbLayanan" prefWidth="330">
             <items>
